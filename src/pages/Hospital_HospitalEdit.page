@@ -1,0 +1,26 @@
+<!--
+ - Created by BRITENET on 13.12.2018.
+ -->
+
+<apex:page standardController="Hospital__c" id="Hospital_HospitalEdit">
+    <apex:form id="firstForm">
+        <apex:messages ></apex:messages>
+        <apex:pageBlock title="{!$Label.HospitalEditPage}">
+            <apex:pageBlockSection title="{!$Label.Basic_Info}" columns="1">
+                <apex:inputField value="{!Hospital__c.Name}" required="true"/>
+                <apex:inputField value="{!Hospital__c.Website__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="{!$Label.Address}" columns="1">
+                <apex:inputField value="{!Hospital__c.Country__c}"/>
+                <apex:inputField value="{!Hospital__c.City__c}"/>
+                <apex:inputField value="{!Hospital__c.Street__c}"/>
+                <apex:inputField value="{!Hospital__c.PostalCode__c}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <div align="center">
+            <apex:commandButton value="{!$Label.Save}" status="status" reRender="firstForm" action="{!save}"/>
+            <apex:commandButton value="{!$Label.Cancel}" status="status" reRender="firstForm" action="{!cancel}"/>
+        </div>
+    </apex:form>
+    <c:Hospital_StatusComponent />
+</apex:page>

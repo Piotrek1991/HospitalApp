@@ -1,0 +1,10 @@
+<!--
+ - Created by BRITENET on 13.12.2018.
+ -->
+
+<apex:page controller="Hospital_DoctorSearchController" id="Hospital_DoctorSearchExportToCsv"
+           cache="true" contentType="application/octet-stream#Hosp_DoctorListCSV.csv" language="en-US">"{!$ObjectType.Doctor__c.fields.Name.Label}","{!$ObjectType.Doctor__c.fields.Email__c.Label}","{!$ObjectType.Doctor__c.fields.Country__c.Label}"
+ <apex:repeat value="{!doctorsToExport}" var="doctor">
+"{!doctor.FirstNameLastName__c}","{!doctor.Email__c}","{!doctor.Country__c}"
+ </apex:repeat>
+</apex:page>

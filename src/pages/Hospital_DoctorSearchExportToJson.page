@@ -1,0 +1,5 @@
+<!--
+ - Created by BRITENET on 20.12.2018.
+ -->
+
+<apex:page id="Hospital_DoctorSearchExportToJson" controller="Hospital_DoctorSearchController" contentType="application/x-JavaScript;#doctorJson_Utf8.txt" showHeader="false" standardStylesheets="false" sidebar="false" action="{!generateDoctorsInJson}">{!doctorsInJson}</apex:page>

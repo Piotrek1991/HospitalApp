@@ -1,0 +1,57 @@
+<!--
+ - Created by BRITENET on 10.12.2018.
+ -->
+
+<apex:page id="Hospital_ContractView" controller="Hospital_ContractSearchController"
+           tabStyle="Contract__c">
+    <apex:form id="form">
+        <apex:pageBlock title="{!$Label.Contracts}">
+            <apex:messages ></apex:messages>
+            <apex:pageBlockTable value="{!contracts}" var="contract" id="contracts_list">
+                <apex:column headerValue="{!$Label.Action}" id="two">
+                    <apex:commandLink value="{!$Label.DisMiss}"
+                                      status="status"
+                                      onClick="if(!confirm('{! $Label.Are_you_sure }')){return false};" action="{!removeContract}" rendered="{!contract.End_Date__c> TODAY()}">
+                        <apex:param value="{!contract.Id}" assignTo="{!selectedContractId}" name="selectedContractId" />
+                    </apex:commandLink>
+                </apex:column>
+                <apex:column value="{!contract.Name}">
+                    <apex:facet name="header">
+                        <apex:commandLink action="{!sortByName}"
+                                          status="status"
+                                          reRender="contracts_list">
+                        </apex:commandLink>
+                    </apex:facet>
+                </apex:column>
+                <apex:column value="{!contract.Email__c}">
+                    <apex:facet name="header">
+                        <apex:commandLink action="{!sortByEmail}"
+                                          status="status"
+                                          reRender="contracts_list">{!$ObjectType.Contract__c.fields.Email__c.Label}
+                        </apex:commandLink>
+                    </apex:facet>
+                </apex:column>
+                <apex:column value="{!contract.Start_Date__c}">
+                    <apex:facet name="header">
+                        <apex:commandLink action="{!sortByEndDay}"
+                                          status="status"
+                                          reRender="contracts_list">{!$ObjectType.Contract__c.fields.Start_Date__c.Label}
+                        </apex:commandLink>
+                    </apex:facet>
+                </apex:column>
+                <apex:column value="{!contract.End_Date__c}">
+                    <apex:facet name="header">
+                        <apex:commandLink action="{!sortByStartDay}"
+                                          status="status"
+                                          reRender="contracts_list">{!$ObjectType.Contract__c.fields.End_Date__c.Label}
+                        </apex:commandLink>
+                    </apex:facet>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:actionFunction action="{!removeContract}" name="removeContract" reRender="form">
+            <apex:param name="contract.id" value="" assignTo="{!selectedContractId}"/>
+        </apex:actionFunction>
+    </apex:form>
+    <c:Hospital_StatusComponent />
+</apex:page>

@@ -1,0 +1,65 @@
+<!--
+ - Created by BRITENET on 07.12.2018.
+ -->
+
+<apex:page controller="Hospital_DoctorSearchController" id="Hospital_DoctorSearch" tabStyle="Doctor__c">
+    <apex:form id="firstForm">
+        <apex:pageBlock title="{!$Label.SearchForm}" id="doctorSearch">
+            <apex:outputPanel >
+                <apex:messages ></apex:messages>
+            </apex:outputPanel>
+            <apex:pageBlockSection columns="2">
+                <apex:inputField value="{!doctor.First_Name__c}"/>
+                <apex:inputField value="{!doctor.Email__c}"/>
+                <apex:inputField value="{!doctor.Last_Name__c}" required="true"/>
+                <apex:inputField value="{!doctor.Country__c}"/>
+            </apex:pageBlockSection>
+            <div id="buttons" align="center">
+                <apex:commandButton value="{!$Label.Search}" action="{!searchDoctors}"
+                                    reRender="firstForm" status="status"></apex:commandButton>
+                <apex:commandButton value="{!$Label.Clear}" action="{!reset}"
+                                    reRender="firstForm" status="status"></apex:commandButton>
+                <apex:commandButton value="{!$Label.ExportToCSV}" action="{!exportToCsv}"></apex:commandButton>
+                <apex:commandButton value="{!$Label.ExportToXls}" action="{!exportToXls}"></apex:commandButton>
+                <apex:commandButton value="{!$Label.ExportToXlsX}" action="{!exportToXlsX}"></apex:commandButton>
+                <apex:commandButton value="{!$Label.ExportToJSON}" action="{!exportToJson}"></apex:commandButton>
+            </div>
+            <apex:pageBlockTable id="blockTable" value="{!doctors}" var="doctor" columns="4" columnsWidth="10%,30%,30%,30%">
+                <apex:column headerValue="{!$Label.Action}" id="actionSection">
+                    <apex:commandButton value="{!$Label.Edit}" status="status"
+                                        onclick="window.open('/{!doctor.id}/e?retURL={!doctor.id}')"
+                                        reRender="actionSection"/>
+                    <apex:commandButton value="{!$Label.View}" onclick="window.open('/{!doctor.id}')"/>
+                </apex:column>
+                <apex:column value="{!doctor.FirstNameLastName__c}">
+                    <apex:facet name="header">
+                        <apex:commandLink action="{!sortByLastName}" status="status"
+                                          reRender="doctorSearch">{!$ObjectType.Doctor__c.fields.Name.Label}{!orderSignName}
+                        </apex:commandLink>
+                    </apex:facet>
+                </apex:column>
+                <apex:column value="{!doctor.Email__c}">
+                    <apex:facet name="header">
+                        <apex:commandLink action="{!sortByEmail}" status="status"
+                                          reRender="doctorSearch">{!$ObjectType.Doctor__c.fields.Email__c.Label}{!orderSignEmail}
+                        </apex:commandLink>
+                    </apex:facet>
+                </apex:column>
+                <apex:column value="{!doctor.Country__c}">
+                    <apex:facet name="header">
+                        <apex:commandLink action="{!sortByCountry}" status="status"
+                                          reRender="doctorSearch">{!$ObjectType.Doctor__c.fields.Country__c.Label}{!orderSignCountry}
+                        </apex:commandLink>
+                    </apex:facet>
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:panelGrid rendered="{! doctorsToExport.size >0}" columns="4">
+                <apex:commandLink status="status" reRender="blockTable" action="{!first}">{!$Label.First}</apex:commandlink>
+                <apex:commandLink status="status" reRender="blockTable" action="{!previous}" rendered="{!hasPrevious}">{!$Label.Previous}</apex:commandlink>
+                <apex:commandLink status="status" reRender="blockTable" action="{!next}" rendered="{!hasNext}">{!$Label.Next}</apex:commandlink>
+                <apex:commandLink status="status" reRender="blockTable" action="{!last}">{!$Label.Last}</apex:commandlink>
+            </apex:panelGrid>
+        </apex:pageBlock>
+    </apex:form>
+    <c:Hospital_StatusComponent />
+</apex:page>

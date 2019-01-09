@@ -1,0 +1,22 @@
+<!--
+ - Created by BRITENET on 13.12.2018.
+ -->
+
+<apex:page controller="Hospital_DoctorSearchController" id="Hospital_DoctorSearchExportToXlsX" readOnly="true"
+           contentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet#HospDoctorsXlSX.xlsx"
+           showHeader="false" standardStylesheets="false">
+    <apex:pageBlock >
+        <table>
+            <tr>
+                <td>{!$ObjectType.Doctor__c.fields.Name.Label}</td>
+                <td>{!$ObjectType.Doctor__c.fields.Email__c.Label}</td>
+                <td>{!$ObjectType.Doctor__c.fields.Country__c.Label}</td>
+            </tr>
+        </table>
+        <apex:dataTable value="{! doctorsToExport }" var="doctor">
+            <apex:column value="{! doctor.FirstNameLastName__c } "/>
+            <apex:column value="{! doctor.Email__c }"/>
+            <apex:column value="{! doctor.Country__c }"/>
+        </apex:dataTable>
+    </apex:pageBlock>
+</apex:page>

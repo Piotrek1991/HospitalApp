@@ -1,0 +1,22 @@
+<!--
+ - Created by BRITENET on 20.12.2018.
+ -->
+
+<apex:page id="Hospital_DoctorPublicSite" standardController="Doctor__c" extensions="Hospital_DoctorPublicSiteController">
+
+    <apex:pageBlock title="Random doctors">
+        <apex:outputPanel >
+            <apex:pageBlockTable value="{!randomDoctors}" var="doctor">
+                <apex:column headerValue="{!$ObjectType.Doctor__c.fields.Name.label}"
+                             value="{!doctor.FirstNameLastName__c }"/>
+                <apex:column headerValue="{!$ObjectType.Doctor__c.fields.Email__c.label}"
+                             value="{!doctor.Email__c }"/>
+                <apex:column headerValue="{!$ObjectType.Doctor__c.fields.City__c.label}"
+                             value="{!doctor.City__c }"/>
+                <apex:column headerValue="{!$ObjectType.Doctor__c.fields.Country__c.label}"
+                             value="{!doctor.Country__c}"/>
+            </apex:pageBlockTable>
+        </apex:outputPanel>
+    </apex:pageBlock>
+    <c:Hospital_StatusComponent />
+</apex:page>

@@ -1,0 +1,17 @@
+<!--
+ - Created by BRITENET on 08.01.2019.
+ -->
+
+<apex:component id="Hospital_StatusSlds">
+    <apex:actionStatus id="statusSlds">
+        <apex:facet name="start">
+            <div class="demo-only" style="height: 6rem;">
+                <div role="status" class="slds-spinner slds-spinner_medium">
+                    <span class="slds-assistive-text">Loading</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </apex:facet>
+    </apex:actionStatus>
+</apex:component>

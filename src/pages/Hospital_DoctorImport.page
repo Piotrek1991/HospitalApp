@@ -1,0 +1,74 @@
+<!--
+ - Created by BRITENET on 18.12.2018.
+ -->
+
+<apex:page id="Hospital_DoctorImport" controller="Hospital_DoctorImportController">
+
+    <apex:outputPanel id="messages">
+        <apex:pageMessages showDetail="false"/>
+    </apex:outputPanel>
+    <apex:form id="formInputField">
+        <apex:pageBlock id="blockInputField" title="{!$Label.Doctors_to_import}" mode="edit">
+            <apex:pageBlockSection columns="2">
+                <apex:inputFile value="{!csvFileBody}" filename="{!fileName}" fileSize="{!fileSize}"
+                                contentType="{!contentType}"/>
+            </apex:pageBlockSection>
+            <div style="text-align: center;">
+                <apex:commandButton value="{!$Label.Process}"
+                                    action="{!importCSVFile}"/>
+            </div>
+        </apex:pageBlock>
+    </apex:form>
+
+    <apex:form id="apexForm">
+        <apex:pageBlock id="doctorsTable" rendered="{!doneUploading}">
+            <apex:outputPanel >
+                <apex:commandButton value="{!$Label.SelectAll}" action="{!selectCheckBox}" status="status"
+                                    reRender="apexForm"/>
+                <apex:commandButton value="{!$Label.ClearAll}" action="{!clearAllCheckBox}" status="status"
+                                    reRender="apexForm"/>
+                <apex:commandButton value="{!$Label.Deselect}" action="{!deselectCheckBox}" status="status"
+                                    reRender="apexForm"/>
+            </apex:outputPanel>
+            <apex:pageBlockTable id="doctorColumn" value="{!(mapDoctorImportWrapper)}" var="oneDoctor"
+                                 rendered="{!!isEmptyMap}">
+                <apex:column headerValue="{!$Label.To_import}">
+                    <apex:inputCheckbox id="checkBox" value="{!mapDoctorImportWrapper[oneDoctor].doctorIsSelectedWrapper}"></apex:inputCheckbox>
+                </apex:column>
+                <apex:column headerValue="{!$ObjectType.Doctor__c.fields.Last_Name__c.Label}"
+                             value="{!mapDoctorImportWrapper[oneDoctor].doctorWrapper.Last_Name__c}">
+                </apex:column>
+                <apex:column headerValue="{!$ObjectType.Doctor__c.fields.First_Name__c.Label}"
+                             value="{!mapDoctorImportWrapper[oneDoctor].doctorWrapper.First_Name__c}">
+                </apex:column>
+                <apex:column headerValue="{!$ObjectType.Doctor__c.fields.City__c.Label}"
+                             value="{!mapDoctorImportWrapper[oneDoctor].doctorWrapper.City__c}">
+                </apex:column>
+                <apex:column headerValue="{!$ObjectType.Doctor__c.fields.Country__c.Label}"
+                             value="{!mapDoctorImportWrapper[oneDoctor].doctorWrapper.Country__c}">
+                </apex:column>
+                <apex:column headerValue="{!$Label.Status}">
+                <apex:commandLink value="{!$Label.Success}"
+                                  action="{!URLFOR($Action.Doctor__c.View, mapDoctorImportWrapper[oneDoctor].doctorWrapper.Id)}"
+                                  immediate="true"
+                                  target="_blank"
+                                  rendered="{!mapDoctorImportWrapper[oneDoctor].doctorWrapper.Id != null}">
+                    <apex:param name="doctorId" value="{!mapDoctorImportWrapper[oneDoctor].doctorWrapper.Id}" assignTo="{!currentDoctorId}"/>
+                </apex:commandLink>
+                <apex:outputLabel value="{!mapDoctorImportWrapper[oneDoctor].doctorWrapperStatus}"
+                                  rendered="{!mapDoctorImportWrapper[oneDoctor].doctorWrapper.Id = null}">
+                </apex:outputLabel>
+            </apex:column>
+            </apex:pageBlockTable>
+            <apex:outputPanel rendered="{!!isEmptyMap}">
+                <div style="text-align: center;">
+                    <apex:commandButton action="{!importDoctorsToDataBase}" value="{!$Label.Import}"
+                                        reRender="apexForm" />
+                    <apex:commandButton action="{!clear}" value="{!$Label.Clear}" status="status"
+                                        reRender="apexForm"/>
+                </div>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+    <c:Hospital_StatusComponent />
+</apex:page>

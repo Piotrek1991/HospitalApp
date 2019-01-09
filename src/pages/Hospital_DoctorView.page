@@ -1,0 +1,240 @@
+<!--
+ - Created by BRITENET on 17.12.2018.
+ -->
+
+<apex:page standardController="Doctor__c" extensions="Hospital_DoctorViewPageController" id="Hospital_DoctorView"
+           renderAs="{!renderingService}" standardStylesheets="true" showHeader="true">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <link rel="stylesheet" href="/resources/demos/style.css"/>
+    <head>
+        <style>
+            .column {
+                float: left;
+                width: 20%;
+            }
+            .content {
+                width: 80%;
+            }
+            .datePicker {
+                z-index: 200;
+            }
+        </style>
+    </head>
+    <apex:pageMessages ></apex:pageMessages>
+    <apex:pageBlock id="pageBlock" title="{!$Label.Doctor}" mode="edit">
+        <apex:pageMessages ></apex:pageMessages>
+            <div style="text-align:center" class="column">
+                <apex:image width="200" value="{!URLFOR($Action.Attachment.Download, avatarSrc.Id)}"
+                            id="doctorCustomAvatar" rendered="{!hasAvatar}"/>
+                <apex:image width="200" value="{!$Resource.Hospital_DefaultPicture}" id="doctorDefaultAvatar"
+                            rendered="{!NOT(hasAvatar)}"/>
+                <div>
+                    <apex:form rendered="{!printToPDF}">
+                        <apex:commandButton value="{!$Label.Upload_Picture}" status="status" reRender="pageBlock"
+                                            action="{!changeRecordPicture}"></apex:commandButton>
+                        <apex:commandButton value="{!$Label.Delete_Picture}" action="{!deletePicture}" status="status"
+                                            reRender="pageBlock"></apex:commandButton>
+                    </apex:form>
+                </div>
+            </div>
+            <div class="column content">
+                <apex:pageBlockSection title="{!$Label.Basic_Info}" columns="2">
+                    <apex:outputField value="{!Doctor__c.First_Name__c}"/>
+                    <apex:outputField value="{!Doctor__c.Last_Name__c}"/>
+                    <apex:outputField value="{!Doctor__c.Email__c}"/>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputText value="{!$ObjectType.Doctor__c.fields.Phone__c.Label}"/>
+                        <apex:form >
+                            <apex:pageBlockSectionItem >
+                                <apex:outputField value="{!Doctor__c.Phone__c}" id="pageBlock"></apex:outputField>
+                                <apex:commandButton rendered="{!printToPDF}" status="status"
+                                                    style="margin-left:10px" value="{!$Label.CopyPhone}"
+                                                    onClick="ClipBoard('{!$Component.docPhone}', '{!$Component.holdtext}');"
+                                                    rerender="pageBlock">
+                                </apex:commandButton>
+                            </apex:pageBlockSectionItem>
+                        </apex:form>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="{!$Label.Address}" columns="2">
+                    <apex:outputField value="{!Doctor__c.City__c}"/>
+                    <apex:outputField value="{!Doctor__c.Street__c}"/>
+                    <apex:outputField value="{!Doctor__c.Country__c}"/>
+                </apex:pageBlockSection>
+            </div>
+            <div style="clear: both"></div>
+        <div align="center">
+            <apex:form rendered="{!printToPDF}">
+                <apex:commandButton value="{!$Label.Edit}" status="status" reRender="pageBlock" action="{!edit}"/>
+                <apex:commandButton value="{!$Label.Hire}" status="status" reRender="pageBlock"
+                                    onClick="jQuery('#dialog').dialog('open'); return false;"/>
+                <apex:commandButton value="{!$Label.Delete}" status="status" reRender="pageBlock"
+                                    onClick="if(!confirm('{!$Label.Are_you_sure}')){return false};"
+                                    action="{!delete}"/>
+                <apex:commandButton value="{!$Label.ExportToPDF}" action="{!exportToPDF}" >
+                    <apex:param assignTo="{!renderedFileName}" value="Contact-List.pdf"/>
+                </apex:commandButton>
+            </apex:form>
+        </div>
+        <apex:pageBlockSection title="{!$Label.Tracking_history}" columns="1">
+            <apex:relatedList list="Histories"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="{!$Label.Contracts}" columns="1">
+            <apex:form >
+                <apex:pageBlockTable value="{!contracts}" var="contract" id="contracts_list">
+                    <apex:column rendered="{!printToPDF}" headerValue="{!$Label.Action}" id="two">
+                        <apex:commandLink value="{!$Label.DisMiss}" status="status"
+                                          action="{!removeContract}" rendered="{!contract.End_Date__c> TODAY()}"
+                                          reRender="pageBlock">
+                            <apex:param value="{!contract.Id}" assignTo="{!selectedContractId}"
+                                        name="selectedContractId"/>
+                        </apex:commandLink>
+                    </apex:column>
+                    <apex:column value="{!contract.Name}">
+                        <apex:facet name="header">
+                            <apex:commandLink action="{!sortByName}" status="status"
+                                              reRender="contracts_list">{!$ObjectType.Contract__c.fields.Name.Label}
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    <apex:column value="{!contract.Email__c}">
+                        <apex:facet name="header">
+                            <apex:commandLink action="{!sortByEmail}" status="status"
+                                              reRender="contracts_list">{!$ObjectType.Contract__c.fields.Email__c.Label}
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    <apex:column value="{!contract.Start_Date__c}">
+                        <apex:facet name="header">
+                            <apex:commandLink action="{!sortByEndDay}" status="status"
+                                              reRender="contracts_list">{!$ObjectType.Contract__c.fields.Start_Date__c.Label}
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    <apex:column value="{!contract.End_Date__c}">
+                        <apex:facet name="header">
+                            <apex:commandLink action="{!sortByStartDay}" status="status"
+                                              reRender="contracts_list">{!$ObjectType.Contract__c.fields.End_Date__c.Label}
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:form>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <div id="dialog">
+        <apex:pageBlock title="{!$Label.Hire_Label} {!doctor.Name}" id="blockModalWindow" mode="edit"
+                        rendered="{!printToPDF}">
+            <apex:form id="formModalWindow">
+                <div id="myMessagess">
+                    <apex:outputPanel id="messages">
+                        <apex:pageMessages id="messageTxt" showDetail="false"/>
+                        <script>
+                            var messageID = '{!$Component.messageTxt}';
+                        </script>
+                    </apex:outputPanel>
+                </div>
+                <apex:pageBlockSection id="searchForm" title="{!$Label.SearchForm}" columns="2">
+                    <apex:inputField value="{!hospital.Name}" required="true"/>
+                    <apex:inputField value="{!hospital.Country__c}"/>
+                    <apex:inputField value="{!hospital.Website__c}"/>
+                </apex:pageBlockSection>
+                <center>
+                    <apex:commandButton value="{!$Label.Search}" action="{!searchHospitals}" status="status"
+                                        reRender="resultsDiv, messages"/>
+                    <apex:commandButton value="{!$Label.Clear}" action="{!clearSearchForm}" status="status"
+                                        reRender="searchForm, resultsDiv, contractDetailsDiv, formModalWindow, buttons, contractDetailsDiv"
+                                        immediate="true"/>
+                </center>
+                <apex:outputPanel id="resultsDiv">
+                    <apex:pageBlockSection id="results" title="{!$Label.Results}" columns="1"
+                                           rendered="{!hospitals.size > 0}">
+                        <apex:pageBlockTable value="{!wrappers}" var="hosp" columns="4"
+                                             columnsWidth="10%,30%,30%,30%">
+                            <apex:column headerValue="{!$Label.Action}">
+                                <apex:commandButton value="Select" reRender="contractDetailsDiv, buttons, results"
+                                                    action="{!changeSelect}" rendered="{!!hosp.isSelected}"
+                                                    immediate="true" status="status">
+                                    <apex:param name="hospitalId" value="{!hosp.hospitalId}"
+                                                assignTo="{!selectedHospitalId}"/>
+                                </apex:commandButton>
+                            </apex:column>
+                            <apex:column headerValue="{!$ObjectType.Hospital__c.fields.Name.Label}"
+                                         value="{!hosp.hospitalName}"/>
+                            <apex:column headerValue="{!$ObjectType.Hospital__c.fields.Country__c.Label}"
+                                         value="{!hosp.hospitalCountry}"/>
+                            <apex:column headerValue="{!$ObjectType.Hospital__c.fields.City__c.Label}"
+                                         value="{!hosp.hospitalCity}"/>
+                        </apex:pageBlockTable>
+                    </apex:pageBlockSection>
+                </apex:outputPanel>
+                <apex:outputPanel id="contractDetailsDiv">
+                    <apex:pageBlockSection id="contractDetails" title="{!$Label.Contract_Details}" columns="2"
+                                           rendered="{!selectedHospitalId != null}">
+                        <apex:outputField value="{!doctor.Name}"/>
+                        <apex:outputField value="{!selectedHospital.Name}"/>
+                        <apex:inputField id="startDay" value="{!contract.Start_Date__c}" required="true"/>
+                        <script>
+                            var messageAfterWrongDate = '{!$Component.startDay}';
+                        </script>
+                        <apex:inputField value="{!contract.End_Date__c}" required="true"/>
+                    </apex:pageBlockSection>
+                    <apex:outputPanel rendered="{!selectedHospitalId != null}" id="buttons">
+                        <div style="text-align: center;">
+                            <apex:commandButton value="{!$Label.Hire}" action="{!hireDoctor}" status="status"
+                                                reRender="contracts_list, messages" onComplete="checkHideModal()"/>
+                            <apex:commandButton value="{!$Label.Cancel}" action="{!cancel}"
+                                                immediate="true" status="status" onClick="hideModal()"
+                                                reRender="searchForm, resultsDiv, contractDetailsDiv, buttons, messages"/>
+                        </div>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+                <apex:actionFunction name="clearFieldsAndResultList" action="{!clearFieldsAndResult}" status="status"
+                                     reRender="blockModalWindow, messages" immediate="true">
+                </apex:actionFunction>
+            </apex:form>
+            <c:Hospital_StatusComponent />
+        </apex:pageBlock>
+    </div>
+    <script type="text/javascript">
+        function checkHideModal() {
+            let errors = document.getElementById(messageID).textContent;
+            if (!(errors.indexOf('Er') != -1)) {
+                hideModal();
+            }
+        }
+
+        function hideModal() {
+            clearFieldsAndResultList();
+            $('#dialog').dialog('close');
+        }
+
+        $(function () {
+            var dialog, form,
+                    dialog = $("#dialog").dialog({
+                        autoOpen: false,
+                        height: 800,
+                        width: 600,
+                        modal: true,
+                        close: function () {
+                            hideModal();
+                        }
+                    });
+        });
+
+        function ClipBoard(copytextid, holdtextid) {
+            copyToClipboard(copytextid);
+        }
+
+        function copyToClipboard(elementId) {
+            var aux = document.createElement("input");
+            aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+            document.body.appendChild(aux);
+            aux.select();
+            document.execCommand("copy");
+            document.body.removeChild(aux);
+        }
+    </script>
+</apex:page>

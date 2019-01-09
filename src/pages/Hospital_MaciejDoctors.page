@@ -1,0 +1,365 @@
+<!--
+ - Created by BRITENET on 03.01.2019.
+ -->
+
+<apex:page id="Hospital_MaciejDoctors" controller="Hospital_MaciejDoctorsController">
+
+    <apex:includeScript value="{! URLFOR($Resource.jQueryUI,'jquery-ui-1.12.1/external/jquery/jquery.js')}"/>
+    <style>
+        .msgIcon {
+            display: none!important
+        }
+        .customMessage * {
+            color: #fff!important;
+        }
+        .customMessage {
+            opacity: 1!important;
+            max-width: 1800px;
+            font-size: 16px;
+            border: 0px;
+            padding: 10px;
+            font-family: "Salesforce Sans", Arial, sans-serif;
+        }
+        .message {
+            opacity: 1
+        }
+    </style>
+    <apex:slds/>
+    <apex:outputPanel id="messages">
+        <apex:pageMessages/>
+    </apex:outputPanel>
+    <div class="slds-grid">
+        <div class="slds-col">
+            <div class="slds-media">
+                <div class="slds-media__figure">
+                </div>
+                <div class="slds-media__body">
+                </div>
+            </div>
+        </div>
+        <div id="searchDoctor" class="slds-col slds-no-flex slds-align-middle">
+            <apex:form>
+                <apex:commandButton styleClass="slds-button slds-button--brand slds-m-top--medium"
+                                    reRender="modalEditDoc, modal-content-id-1s" status="statusSlds"
+                                    value="{!$Label.New_Doctor}"
+                                    onComplete="showNewModalDialog(); return false"/>
+                <apex:actionFunction name="clearFieldsAndResultDoctorsSearch"
+                                     action="{!clearFieldsAndResultDoctors}" status="statusSlds"
+                                     reRender="modalEditDoc, modalEditOutputPanel">
+                </apex:actionFunction>
+            </apex:form>
+        </div>
+    </div>
+    <div id="successToast" class="demo-only" style="display: none; height: 4rem;">
+        <div class="slds-notify_container slds-is-relative">
+            <div class="slds-notify slds-notify_toast slds-theme_success" role="status">
+                <span class="slds-assistive-text">success</span>
+                <span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top"
+                      title="Description of icon when needed">
+                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xlink:href="{!URLFOR($Resource.slds275, 'icons/utility-sprite/svg/symbols.svg#success')}"></use>
+                        </svg>
+                    </span>
+                <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small ">
+                        <apex:outputPanel id="successToastOutputPanel">
+                                {!messageSuccessToast}
+                        </apex:outputPanel>
+                    </h2>
+                </div>
+                <div class="slds-notify__close">
+                    <button class="slds-button slds-button_icon slds-button_icon-inverse" title="Close"
+                            onClick="hideToast('successToast')">
+                        <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xlink:href="{!URLFOR($Resource.slds275, 'icons/utility-sprite/svg/symbols.svg#close')}"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="errorToast" class="demo-only" style="display: none; height: 4rem;">
+        <div class="slds-notify_container slds-is-relative">
+            <div class="slds-notify slds-notify_toast slds-theme_error" role="status">
+                <span class="slds-assistive-text">error</span>
+                <span class="slds-icon_container slds-icon-utility-error slds-m-right_small slds-no-flex slds-align-top"
+                      title="Description of icon when needed">
+                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xlink:href="{!URLFOR($Resource.slds275, 'icons/utility-sprite/svg/symbols.svg#error')}"></use>
+                        </svg>
+                    </span>
+                <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small ">
+                        <apex:outputPanel id="errorToastOutputPanel">
+                                {!messageErrorToast}
+                        </apex:outputPanel>
+                    </h2>
+                </div>
+                <div class="slds-notify__close">
+                    <button class="slds-button slds-button_icon slds-button_icon-inverse" title="Close"
+                            onClick="hideToast('errorToast')">
+                        <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xlink:href="{!URLFOR($Resource.slds275, 'icons/utility-sprite/svg/symbols.svg#close')}"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div aria-labelledby="searchHospitalForm">
+        <fieldset class="slds-box slds-theme--default slds-container--small slds-m-around_medium">
+            <legend id="newaccountform"
+                    class="slds-text-heading--medium slds-p-vertical--medium">{!$Label.SearchForm}
+            </legend>
+            <form class="slds-form--stacked">
+                <div class="slds-form-element">
+                    <div class="slds-form-element__control">
+                        <apex:form>
+                            <apex:inputField value="{! doctorSearchData.Last_Name__c }" required="true"
+                                             html-placeholder="{!$ObjectType.Doctor__c.fields.Last_Name__c.label}"
+                                             styleClass="slds-input slds-m-bottom_x-small"/>
+                            <apex:inputField value="{! doctorSearchData.First_Name__c }"
+                                             html-placeholder="{!$ObjectType.Doctor__c.fields.First_Name__c.label}"
+                                             styleClass="slds-input slds-m-bottom_x-small"/>
+                            <apex:inputField value="{! doctorSearchData.City__c }"
+                                             html-placeholder="{!$ObjectType.Doctor__c.fields.City__c.label}"
+                                             styleClass="slds-input slds-m-bottom_x-small"/>
+                            <apex:inputField value="{! doctorSearchData.Country__c }"
+                                             html-placeholder="{!$ObjectType.Doctor__c.fields.Country__c.label}"
+                                             styleClass="slds-input slds-m-bottom_x-small"/>
+                            <apex:commandbutton value="{!$Label.Search}" status="statusSlds"
+                                                reRender="doctorsResultsPanelList, messages"
+                                                action="{!searchDoctors}"
+                                                onComplete="overridePageMessages()"
+                                                styleClass="slds-button slds-button--brand slds-m-top--medium">
+                            </apex:commandbutton>
+                        </apex:form>
+                    </div>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+    <apex:outputPanel id="doctorsResultsPanelList">
+        <apex:outputPanel id="doctorResult" rendered="{!isSearchSuccessful}">
+            <table id="doctorsResultsList" class="slds-table slds-table_cell-buffer slds-table_bordered">
+                <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate" title="Actions">Actions</div>
+                    </th>
+                    <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate"
+                             title="{!$ObjectType.Doctor__c.fields.Last_Name__c.label}">
+                                {!$ObjectType.Doctor__c.fields.Last_Name__c.label}
+                        </div>
+                    </th>
+                    <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate"
+                             title="{!$ObjectType.Doctor__c.fields.First_Name__c.label}">
+                                {!$ObjectType.Doctor__c.fields.First_Name__c.label}
+                        </div>
+                    </th>
+                    <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate"
+                             title="{!$ObjectType.Doctor__c.fields.City__c.label}">
+                                {!$ObjectType.Doctor__c.fields.City__c.label}
+                        </div>
+                    </th>
+                    <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate" title="{!$ObjectType.Doctor__c.fields.Country__c.label}">
+                                {!$ObjectType.Doctor__c.fields.Country__c.label}
+                        </div>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <apex:repeat value="{!doctorsFromMaciej}" var="doc">
+                    <tr class="slds-hint-parent">
+                        <td data-label="Account Name">
+                            <div class="slds-truncate">
+                                <apex:form>
+                                    <apex:commandButton action="{!editDoctors}" status="statusSlds"
+                                                        onComplete="showModalDialog(); return false"
+                                                        reRender="modalEditDoc, modalEditOutputPanel, messagesInUpdateModal"
+                                                        styleClass="slds-button slds-button--brand slds-m-top--medium"
+                                                        value="{!$Label.Edit}">
+                                        <apex:param name="doctorIdToDelete" value="{!doc.doctorId}"
+                                                    assignTo="{!selectedDoctorId}"/>
+                                    </apex:commandButton>
+                                    <apex:commandButton value="{!$Label.Delete}" status="statusSlds"
+                                                        reRender="modalEditDoc, doctorsResultsPanelList, messages,
+                                                                messagesInUpdateModal, successToastOutputPanel, errorToastOutputPanel"
+                                                        action="{!deleteDoctors}"
+                                                        onComplete="checkHideDeleteToast({!isAnyProblemWithCallout})"
+                                                        styleClass="slds-button slds-button--brand slds-m-top--medium">
+                                        <apex:param name="doctorIdToDelete" value="{!doc.doctorId}"
+                                                    assignTo="{!selectedDoctorId}"/>
+                                    </apex:commandButton>
+                                </apex:form>
+                            </div>
+                        </td>
+                        <td data-label="{!$ObjectType.Doctor__c.fields.Last_Name__c.label}">
+                            <div class="slds-truncate"
+                                 title="{!$ObjectType.Doctor__c.fields.Last_Name__c.label}">{!doc.name}
+                            </div>
+                        </td>
+                        <td data-label="{!$ObjectType.Doctor__c.fields.First_Name__c.label}">
+                            <div class="slds-truncate"
+                                 title="{!$ObjectType.Doctor__c.fields.First_Name__c.label}">{!doc.firstName}
+                            </div>
+                        </td>
+                        <td data-label="{!$ObjectType.Doctor__c.fields.City__c.label}">
+                            <div class="slds-truncate"
+                                 title="{!$ObjectType.Doctor__c.fields.City__c.label}">{!doc.city}
+                            </div>
+                        </td>
+                        <td data-label="{!$ObjectType.Doctor__c.fields.Country__c.label}">
+                            <div class="slds-truncate"
+                                 title="{!$ObjectType.Doctor__c.fields.Country__c.label}">{!doc.country}
+                            </div>
+                        </td>
+                    </tr>
+                </apex:repeat>
+                </tbody>
+            </table>
+        </apex:outputPanel>
+    </apex:outputPanel>
+    <div id="modalEditDoc" style="display: none; height: 640px;">
+        <div class="demo-only">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                     aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                                title="Close">
+                            <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+
+                            </svg>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!$Label.Doctor}</h2>
+                    </header>
+                    <apex:form>
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <apex:outputPanel id="modalEditOutputPanel">
+                                <apex:inputField value="{!doctorCreateData.Last_Name__c}" required="true"
+                                                 html-placeholder="{!$ObjectType.Doctor__c.fields.Last_Name__c.label}"
+                                                 styleClass="slds-input slds-m-bottom_x-small"/>
+                                <apex:inputField value="{!doctorCreateData.First_Name__c}"
+                                                 html-placeholder="{!$ObjectType.Doctor__c.fields.First_Name__c.label}"
+                                                 styleClass="slds-input slds-m-bottom_x-small"/>
+                                <apex:inputField value="{!doctorCreateData.City__c}"
+                                                 html-placeholder="{!$ObjectType.Doctor__c.fields.City__c.label}"
+                                                 styleClass="slds-input slds-m-bottom_x-small"/>
+                                <apex:inputField value="{!doctorCreateData.Country__c}"
+                                                 html-placeholder="{!$ObjectType.Doctor__c.fields.Country__c.label}"
+                                                 styleClass="slds-input slds-m-bottom_x-small"/>
+                            </apex:outputPanel>
+                        </div>
+                        <footer class="slds-modal__footer">
+                            <apex:commandbutton value="{!$Label.Save}" status="statusSlds"
+                                                reRender="modalEditOutputPanel, doctorsResultsPanelList, modalEditDoc, modal-content-id-1,
+                                                         messagesInUpdateModal, successToastOutputPanel, errorToastOutputPanel"
+                                                action="{!upsertDoctors}"
+                                                styleClass="slds-button slds-button--brand slds-m-top--medium"
+                                                onComplete="hideModal({!isAnyProblemWithCallout});"/>
+                            <apex:commandButton
+                                    styleClass="slds-button slds-button--brand slds-m-top--medium"
+                                    value="{!$Label.Cancel}" immediate="true" status="statusSlds"
+                                    reRender="doctorsResultsPanelList, modalEditDoc, modalEditOutputPanel, messages, modal-content-id-1,
+                                     messagesInUpdateModal, successToastOutputPanel, errorToastOutputPanel"
+                                    onComplete="hideModalCancel();"/>
+                        </footer>
+                        <apex:outputPanel id="messagesInUpdateModal">
+                            <apex:pageMessages/>
+                        </apex:outputPanel>
+                    </apex:form>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+        <script type="text/javascript">
+
+        function checkHideDeleteToast(isProblemWithDelete) {
+              if(!isProblemWithDelete) {
+                    showToast('successToast');
+                    hideToast('errorToast');
+              } else {
+                    showToast('errorToast');
+                    hideToast('successToast');
+               }
+        }
+
+        function showToast(toastId) {
+            document.getElementById(toastId).style.display = "block";
+        }
+
+        function hideToast(toastId) {
+            document.getElementById(toastId).style.display = "none";
+        return false;
+        }
+
+        function showHireDialog() {
+           document.getElementById("modalEditDoc").style.display = "block";
+        }
+
+        function showNewModalDialog(){
+            showModalDialog();
+            clearFieldsAndResultDoctorsSearch();
+        }
+
+        function showModalDialog() {
+           document.getElementById("modalEditDoc").style.display = "block";
+       }
+
+        function hideModal(isAnyProblem) {
+           if(!isAnyProblem){
+                showToast('successToast');
+                clearFieldsAndResultDoctorsSearch();
+                document.getElementById("modalEditDoc").style.display = "none";
+           }
+           return false;
+        }
+
+        function hideModalCancel(){
+             document.getElementById("modalEditDoc").style.display = "none";
+             return false;
+        }
+
+        function openModal(doctorId) {
+            openDoctorForm(doctorId);
+            j$('#backdrop').addClass('slds-backdrop--open');
+            j$('#modal').addClass('slds-fade-in-open');
+        }
+
+        function toastLaunch(){
+            var element = document.getElementById("ToastMessage");
+            element.classList.toggle("slds-hidden");
+        }
+
+        function overridePageMessages(){
+            hideToast('errorToast');
+            hideToast('successToast');
+
+            var textureEffect = 'slds-theme--alert-texture';
+
+            $('.warningM3').addClass('slds-notify slds-notify--toast slds-theme--warning customMessage '+textureEffect);
+            $('.confirmM3').addClass('slds-notify slds-notify--alert slds-theme--success  customMessage '+textureEffect);
+            $('.errorM3').addClass('slds-notify slds-notify--alert slds-theme--error customMessage '+textureEffect);
+            $('.infoM3').addClass('slds-notify slds-notify--toast customMessage '+textureEffect);
+
+            $('.errorM3').removeClass('errorM3');
+            $('.confirmM3').removeClass('confirmM3');
+            $('.infoM3').removeClass('infoM3');
+            $('.warningM3').removeClass('warningM3');
+        }
+        </script>
+    </div>
+    <c:Hospital_StatusSlds/>
+</apex:page>
