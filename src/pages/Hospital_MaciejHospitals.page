@@ -118,16 +118,20 @@
             <legend id="newaccountform"
                     class="slds-text-heading--medium slds-p-vertical--medium">{!$Label.SearchForm}
             </legend>
-            <form class="slds-form--stacked">
+            <section >
+            <form class="slds-form--stacked" >
                 <div class="slds-form-element">
-                    <div class="slds-form-element__control">
+                    <div class="slds-modal__content slds-p-around_medium" aria-describedby="form-error-01">
                         <apex:form>
-                            <apex:inputField value="{!hospitalSearchData.Name}" required="true"
+                            <label class="slds-form-element__label">{!$ObjectType.Hospital__c.fields.Name.label}</label>
+                            <apex:inputField id="my-error-message" value="{!hospitalSearchData.Name}" required="true"
                                              html-placeholder="{!$ObjectType.Hospital__c.fields.Name.label}"
                                              styleClass="slds-input slds-m-bottom_x-small"/>
+                            <label class="slds-form-element__label">{!$ObjectType.Hospital__c.fields.City__c.label}</label>
                             <apex:inputField value="{! hospitalSearchData.City__c }"
                                              html-placeholder="{!$ObjectType.Hospital__c.fields.City__c.label}"
                                              styleClass="slds-input slds-m-bottom_x-small"/>
+                            <label class="slds-form-element__label">{!$ObjectType.Hospital__c.fields.Country__c.label}</label>
                             <apex:inputField value="{!hospitalSearchData.Country__c}"
                                              html-placeholder="{!$ObjectType.Hospital__c.fields.Country__c.label}"
                                              styleClass="slds-input slds-m-bottom_x-small"/>
@@ -140,6 +144,7 @@
                     </div>
                 </div>
             </form>
+            </section>
         </fieldset>
     </div>
 
@@ -185,6 +190,7 @@
                                     <apex:commandButton value="{!$Label.Delete}" status="statusSlds"
                                                         reRender="modalEditDoc, hospitalsResultsPanelList, messages,
                                                          messagesInUpdateModal, successToastOutputPanel, errorToastOutputPanel"
+                                                        onClick="confirm('{!$Label.Are_you_sure}');"
                                                         action="{!deleteHospital}"
                                                         onComplete="checkHideDeleteToast({!isAnyProblemWithCallout})"
                                                         styleClass="slds-button slds-button--brand slds-m-top--medium">
@@ -241,12 +247,15 @@
                     <apex:form>
                         <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
                             <apex:outputPanel id="modalEditOutputPanel">
+                                <label class="slds-form-element__label">{!$ObjectType.Hospital__c.fields.Name.label}</label>
                                 <apex:inputField value="{!hospitalCreateData.Name}" required="true"
                                                  html-placeholder="{!$ObjectType.Hospital__c.fields.Name.label}"
                                                  styleClass="slds-input slds-m-bottom_x-small"/>
+                                <label class="slds-form-element__label">{!$ObjectType.Hospital__c.fields.City__c.label}</label>
                                 <apex:inputField value="{!hospitalCreateData.City__c }" required="true"
-                                                 html-placeholder="{! $ObjectType.Hospital__c.fields.City__c.label}"
+                                                 html-placeholder="{!$ObjectType.Hospital__c.fields.City__c.label}"
                                                  styleClass="slds-input slds-m-bottom_x-small"/>
+                                <label class="slds-form-element__label">{!$ObjectType.Hospital__c.fields.Country__c.label}</label>
                                 <apex:inputField value="{!hospitalCreateData.Country__c}"
                                                  html-placeholder="{!$ObjectType.Hospital__c.fields.Country__c.label}"
                                                  styleClass="slds-input slds-m-bottom_x-small"/>
@@ -256,7 +265,7 @@
                         <footer class="slds-modal__footer">
                             <apex:commandbutton value="{!$Label.Save}" status="statusSlds"
                                                 reRender="modalEditOutputPanel, hospitalsResultsPanelList,
-                                                 modalEditDoc, modal-content-id-1, messagesInUpdateModal, successToastOutputPanel, errorToastOutputPanel"
+                                                 modalEditDoc, modal-content-id-1, successToastOutputPanel, errorToastOutputPanel"
                                                 action="{!insertHospital}"
                                                 styleClass="slds-button slds-button--brand slds-m-top--medium"
                                                 onComplete="hideModal({!isAnyInsertProblem});"/>
