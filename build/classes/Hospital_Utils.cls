@@ -89,8 +89,8 @@ public with sharing class Hospital_Utils {
     public static String loginToOriginalOrgGetSessionId() {
         String username = 'piotr.toporowski@britenet.com.pl';
         String password = 'infobot2dP0AAU5iIESMQjwYlmRbIb4yk';
-        String ClientId = '3MVG9fTLmJ60pJ5KOWKrx4ZK68vNlIfnjAFm2vxDVqcwXikS7Ue3byomd2pAWj6eXVJeneqz6k4r4IG2mux60';
-        String ClientSecret = '6606012055671277163';
+        String ClientId = '3MVG9fTLmJ60pJ5KOWKrx4ZK68goavCnXgI68S_kBtQzLYwfd3ZCYdTFrWRAzmo.NGqTUKnYhQWakXFjWazKw';
+        String ClientSecret = '2653801794561711335';
         return getAccessToken(username, password, ClientId, ClientSecret);
     }
 

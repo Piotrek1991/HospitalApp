@@ -43,6 +43,18 @@
                                     value="{!$Label.New_Hospital}" status="statusSlds"
                                     reRender="modalEditDoc, modal-content-id-1s, modalHeader"
                                     onComplete="showNewModalDialog(); return false"/>
+                <apex:commandButton styleClass="slds-button slds-button--brand slds-m-top--medium"
+                                    value="Sort by name" status="statusSlds"
+                                    reRender="modalEditDoc, modal-content-id-1s, modalHeader,hospitalsResultsPanelList"
+                                    action="{!sortByName}"/>
+                <apex:commandButton styleClass="slds-button slds-button--brand slds-m-top--medium"
+                                    value="Sort by city" status="statusSlds"
+                                    reRender="modalEditDoc, modal-content-id-1s, modalHeader,hospitalsResultsPanelList"
+                                    action="{!sortByCity}"/>
+                <apex:commandButton styleClass="slds-button slds-button--brand slds-m-top--medium"
+                                    value="Sort by country" status="statusSlds"
+                                    reRender="modalEditDoc, modal-content-id-1s, modalHeader,hospitalsResultsPanelList"
+                                    action="{!sortByCountry}"/>
                 <apex:actionFunction name="clearFieldsAndResultHospitalSearch"
                                      action="{!clearFieldsAndResultHospitals}" status="statusSlds"
                                      reRender="modalEditDoc, modalEditOutputPanel, modalHeader">
@@ -152,14 +164,28 @@
         <apex:outputPanel id="hospitalResult" rendered="{!hospitalsFromMaciej.size > 0}">
             <table id="hospitalsResultsList" class="slds-table slds-table_cell-buffer slds-table_bordered">
                 <thead>
-                <tr class="slds-line-height_reset">
+                  <tr class="slds-line-height_reset">
                     <th class="slds-text-title_caps" scope="col">
                         <div class="slds-truncate" title="{!$Label.Action}">{!$Label.Action}</div>
                     </th>
                     <th class="slds-text-title_caps" scope="col">
+                        <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="0">
                         <div class="slds-truncate"
-                             title="{!$ObjectType.Hospital__c.fields.Name.label}">{!$ObjectType.Hospital__c.fields.Name.label}
+                             title="{!$ObjectType.Hospital__c.fields.Name.label}">
+                            <!--<apex:form >-->
+                            <!--<apex:commandButton value="{!$ObjectType.Hospital__c.fields.Name.label}" status="statusSlds"-->
+                                                <!--reRender="modalEditDoc, hospitalsResultsPanelList, messages,-->
+                                                         <!--messagesInUpdateModal, successToastOutputPanel, errorToastOutputPanel"-->
+                                                <!--onClick="confirm('{!$Label.Are_you_sure}');"-->
+                                                <!--action="{!deleteHospital}"-->
+                                                <!--onComplete="checkHideDeleteToast({!isAnyProblemWithCallout})"-->
+                                                <!--styleClass="none"-->
+                            <!--&gt;-->
+                            <!--</apex:commandButton>-->
+                            <!--</apex:form>-->
+                                {!$ObjectType.Hospital__c.fields.Name.label}
                         </div>
+                        </a>
                     </th>
                     <th class="slds-text-title_caps" scope="col">
                         <div class="slds-truncate"
@@ -171,10 +197,10 @@
                              title="{!$ObjectType.Hospital__c.fields.Country__c.label}">{!$ObjectType.Hospital__c.fields.Country__c.label}
                         </div>
                     </th>
-                </tr>
+                  </tr>
                 </thead>
                 <tbody>
-                <apex:repeat value="{!hospitalsFromMaciej}" var="hosp">
+                  <apex:repeat value="{!hospitalsFromMaciej}" var="hosp">
                     <tr class="slds-hint-parent">
                         <td data-label="Account Name">
                             <div class="slds-truncate">
@@ -218,7 +244,7 @@
                             </div>
                         </td>
                     </tr>
-                </apex:repeat>
+                  </apex:repeat>
                 </tbody>
             </table>
         </apex:outputPanel>

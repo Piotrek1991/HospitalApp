@@ -153,7 +153,8 @@
         <apex:outputPanel id="doctorResult" rendered="{!isSearchSuccessful}">
             <table id="doctorsResultsList" class="slds-table slds-table_cell-buffer slds-table_bordered">
                 <thead>
-                <tr class="slds-line-height_reset">
+                <apex:form>
+                  <tr class="slds-line-height_reset">
                     <th class="slds-text-title_caps" scope="col">
                         <div class="slds-truncate" title="Actions">Actions</div>
                     </th>
@@ -180,7 +181,8 @@
                                 {!$ObjectType.Doctor__c.fields.Country__c.label}
                         </div>
                     </th>
-                </tr>
+                  </tr>
+                </apex:form>
                 </thead>
                 <tbody>
                 <apex:repeat value="{!doctorsFromMaciej}" var="doc">
@@ -274,7 +276,7 @@
                         <footer class="slds-modal__footer">
                             <apex:commandbutton value="{!$Label.Save}" status="statusSlds"
                                                 reRender="modalEditOutputPanel, doctorsResultsPanelList, modalEditDoc, modal-content-id-1,
-                                                         messagesInUpdateModal, successToastOutputPanel, errorToastOutputPanel"
+                                                          successToastOutputPanel, errorToastOutputPanel"
                                                 action="{!upsertDoctors}"
                                                 styleClass="slds-button slds-button--brand slds-m-top--medium"
                                                 onComplete="hideModal({!isAnyProblemWithCallout});"/>

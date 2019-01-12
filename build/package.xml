@@ -3,9 +3,12 @@
     <types>
         <members>Hospital_HospitalREST</members>
         <members>Hospital_HospitalWrapperForREST</members>
+        <members>Hospital_HospitalTriggerHandler</members>
+        <members>Hospital_Utils</members>
         <name>ApexClass</name>
     </types>
     <types>
+        <members>Hospital__c.City__c</members>
         <members>Hospital__c.City__c</members>
         <members>Hospital__c.Country__c</members>
         <members>Hospital__c.Parent_Hospital__c</members>
@@ -18,6 +21,10 @@
     <types>
         <members>Hospital__c</members>
         <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Hospital_Hospital</members>
+        <name>ApexTrigger</name>
     </types>
     <types>
         <members>Country_Picklist</members>

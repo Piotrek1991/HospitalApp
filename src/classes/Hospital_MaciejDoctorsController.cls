@@ -142,4 +142,8 @@ public with sharing class Hospital_MaciejDoctorsController {
             return null;
         }
     }
+
+    public void sortByCountry(){
+
+    }
 }

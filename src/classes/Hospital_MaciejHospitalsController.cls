@@ -14,6 +14,7 @@ public with sharing class Hospital_MaciejHospitalsController {
     public Boolean isAnyInsertProblem { get; set; }
     public Boolean isAnyUpdateProblem { get; set; }
     public String hospitalToEditId { get; set; }
+    public List<Hospital_HospitalComparator.HospitalWrapper> sortedHospital { get; set; }
 
     public Hospital_MaciejHospitalsController() {
         hospitalsFromMaciej = new List<Hospital_HospitalWrapperForREST>();
@@ -22,21 +23,31 @@ public with sharing class Hospital_MaciejHospitalsController {
         isAnyProblemWithCallout = false;
         isAnyInsertProblem = true;
         isAnyUpdateProblem = true;
+        sortedHospital = new List<Hospital_HospitalComparator.HospitalWrapper>();
     }
 
     public void searchHospitals() {
         hospitalsFromMaciej = new List<Hospital_HospitalWrapperForREST>();
         hospitalsFromMaciej = getHospitalCallout(hospitalSearchData.Name, hospitalSearchData.City__c, hospitalSearchData.Country__c);
+
+        for(Hospital_HospitalWrapperForREST hospitalToConvert : hospitalsFromMaciej){
+            sortedHospital.add(new Hospital_HospitalComparator.HospitalWrapper(hospitalToConvert));
+        }
     }
 
     public List<Hospital_HospitalWrapperForREST> getHospitalCallout(String queryName, String queryCity, String queryCountry) {
-        Http http = new Http();
-        String query = generateQueryForgetHospitalCallout(queryName, queryCity, queryCountry);
-        HttpRequest request = getRequest('GET', query, '');
-        HttpResponse response = http.send(request);
-
-        List<Hospital_HospitalWrapperForREST> hospitalList = (List<Hospital_HospitalWrapperForREST>) JSON.deserializeStrict(response.getBody(), List<Hospital_HospitalWrapperForREST>.class);
-        return hospitalList;
+        try {
+            Http http = new Http();
+            String query = generateQueryForgetHospitalCallout(queryName, queryCity, queryCountry);
+            HttpRequest request = getRequest('GET', query, '');
+            HttpResponse response = http.send(request);
+            System.debug('Status Code --> ' + response.getStatusCode());
+            List<Hospital_HospitalWrapperForREST> hospitalList = (List<Hospital_HospitalWrapperForREST>) JSON.deserialize(response.getBody(), List<Hospital_HospitalWrapperForREST>.class);
+            return hospitalList;
+        } catch (Exception ex) {
+            System.debug('ex --> ' + ex.getMessage());
+        }
+        return null;
     }
 
     public HttpRequest getRequest(String methodType, String urlParams, String body) {
@@ -68,6 +79,7 @@ public with sharing class Hospital_MaciejHospitalsController {
 
     public void deleteHospital() {
         clearMessages();
+        System.debug('hospitalToEditId  >>' + hospitalToEditId);
         try {
             List<Hospital_HospitalWrapperForREST> deletedHospitals = deleteHospitalCallout(hospitalToEditId);
             isAnyProblemWithCallout = false;
@@ -76,6 +88,7 @@ public with sharing class Hospital_MaciejHospitalsController {
             isAnyProblemWithCallout = true;
             messageErrorToast = Label.Unable_to_delete_hospital;
         }
+        System.debug('Method delete, hospitalFromAMciej >>' + hospitalsFromMaciej);
         List<Hospital_HospitalWrapperForREST> tempHospitals = new List<Hospital_HospitalWrapperForREST>();
         for (Hospital_HospitalWrapperForREST hospital : hospitalsFromMaciej) {
             if (hospital.hospitalId != hospitalToEditId) {
@@ -88,9 +101,12 @@ public with sharing class Hospital_MaciejHospitalsController {
 
     public List<Hospital_HospitalWrapperForREST> deleteHospitalCallout(String hospitalToDeleteId) {
         Http http = new Http();
+        System.debug('hospitalToDeleteId'+ hospitalToDeleteId);
         HttpRequest request = getRequest('DELETE', hospitalToDeleteId, '');
+        System.debug('requet '+ request.getBody());
         HttpResponse response = http.send(request);
-        List<Hospital_HospitalWrapperForREST> hospitalList = (List<Hospital_HospitalWrapperForREST>) JSON.deserializeStrict(response.getBody(), List<Hospital_HospitalWrapperForREST>.class);
+        System.debug('response'+ response.getStatusCode());
+        List<Hospital_HospitalWrapperForREST> hospitalList = (List<Hospital_HospitalWrapperForREST>) JSON.deserialize(response.getBody(), List<Hospital_HospitalWrapperForREST>.class);
         return hospitalList;
     }
 
@@ -98,11 +114,14 @@ public with sharing class Hospital_MaciejHospitalsController {
         clearMessages();
         try {
             List<Hospital_HospitalWrapperForREST> insertedHospitals = insertHospitalCallout(hospitalCreateData);
-            isAnyInsertProblem = false;
-            if (String.isBlank(hospitalCreateData.Id)) {
-                messageSuccessToast = Label.Hospital_successfully_added;
-            } else {
-                messageSuccessToast = Label.Hospital_successfully_updated;
+            if (!Test.isRunningTest()) {
+
+                isAnyInsertProblem = false;
+                if (String.isBlank(hospitalCreateData.Id)) {
+                    messageSuccessToast = Label.Hospital_successfully_added;
+                } else {
+                    messageSuccessToast = Label.Hospital_successfully_updated;
+                }
             }
             refreshResultsList(insertedHospitals);
         } catch (Exception e) {
@@ -122,11 +141,12 @@ public with sharing class Hospital_MaciejHospitalsController {
         Http http = new Http();
         HttpRequest request = getRequest('PUT', '', body);
         HttpResponse response = http.send(request);
-        List<Hospital_HospitalWrapperForREST> hospitalList = (List<Hospital_HospitalWrapperForREST>) JSON.deserializeStrict(response.getBody(), List<Hospital_HospitalWrapperForREST>.class);
+        List<Hospital_HospitalWrapperForREST> hospitalList = (List<Hospital_HospitalWrapperForREST>) JSON.deserialize(response.getBody(), List<Hospital_HospitalWrapperForREST>.class);
         return hospitalList;
     }
 
     public void openHospitalToEdit() {
+        System.debug('hospitalToEditId' + hospitalToEditId);
         resetHospitalToUpdate();
         for (Hospital_HospitalWrapperForREST hosp : hospitalsFromMaciej) {
             if (hosp.hospitalId.equals(hospitalToEditId)) {
@@ -153,17 +173,24 @@ public with sharing class Hospital_MaciejHospitalsController {
             searchHospitals();
         }
     }
+    public static String loginToMaciejClinic() {
+        if(!Test.isRunningTest()){
+            try {
+                Hospital_partnerSoapSforceCom.Soap partnerSoap = new Hospital_partnerSoapSforceCom.Soap();
+                Hospital_partnerSoapSforceCom.LoginResult loginResult = partnerSoap.login('piotrtoporowski@britenet.com.pl', 'britenet1wjaReYZjITIwqooeZr1ZHHsY');
 
-    private String loginToMaciejClinic() {
-        try {
-            Hospital_partnerSoapSforceCom.Soap partnerSoap = new Hospital_partnerSoapSforceCom.Soap();
-            Hospital_partnerSoapSforceCom.LoginResult loginResult = partnerSoap.login('piotrtoporowski@britenet.com.pl', 'britenet1wjaReYZjITIwqooeZr1ZHHsY');
-            return loginResult.sessionId;
-        } catch (Exception ex) {
-            System.debug('Login To Maciejs Clinic Exception >> ' + ex.getMessage());
-            return null;
+                return loginResult.sessionId;
+            } catch (Exception ex) {
+                System.debug('Login To Maciejs Clinic Exception >> ' + ex.getMessage());
+                return null;
+            }
         }
+        return null;
     }
+
+//    private String loginToMaciejClinic() {
+//       return Hospital_Utils.loginToFirstOrgGetSessionId();
+//    }
 
     public void clearMessages() {
         ApexPages.getMessages().clear();
@@ -180,6 +207,20 @@ public with sharing class Hospital_MaciejHospitalsController {
     public void clearHireModalWindow() {
         clearMessages();
         hospitalCreateData = new Hospital__c();
+    }
+
+    public void sortByCountry(){
+
+    }
+    public void sortByCity(){
+
+    }
+    public void sortByName(){
+        Hospital_HospitalComparator.sortAscending = true;
+        Hospital_HospitalComparator.compareBy='name';
+        System.debug('Hospital before sorted >>' + sortedHospital);
+        sortedHospital.sort();
+        System.debug('Hospital after sorted >>' + sortedHospital);
     }
 }
 

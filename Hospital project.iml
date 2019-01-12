@@ -118,6 +118,9 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Hospital_HospitalTriggerHandler" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Hospital_HospitalWrapperForREST" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
@@ -180,6 +183,10 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="SiteRegisterControllerTest" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Hospital_HospitalComparator" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -343,6 +350,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hospital_DoctorConfirmation" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Hospital_Hospital" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -1891,11 +1901,11 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="Country_Picklist" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="GlobalValueSet" />
-                      <option name="wildcard" value="false" />
                     </MetadataType>
                     <MetadataType>
                       <option name="name" value="GlobalValueSetTranslation" />

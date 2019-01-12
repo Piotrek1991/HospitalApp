@@ -3,7 +3,10 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="JS_1_8_5" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="IlluminatedCloud (New Connection/New Connection)" project-jdk-type="IlluminatedCloud">
+  <component name="ProjectResources">
+    <resource url="antlib:com.salesforce" location="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="IlluminatedCloud (New Connection1/New Connection)" project-jdk-type="IlluminatedCloud">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
