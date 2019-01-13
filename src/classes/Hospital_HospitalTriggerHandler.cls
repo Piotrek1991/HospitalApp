@@ -9,13 +9,15 @@ public class Hospital_HospitalTriggerHandler {
     public static void sendHospitalData(Set<Id> hospitalsIds) {
         System.debug('hospitalsIds' + hospitalsIds);
 
-        List<Hospital__c> hospitals = [SELECT Id, Name, City__c, Country__c, Website__c, Street__c, PostalCode__c FROM Hospital__c WHERE Id IN :hospitalsIds];
+        List<Hospital__c> hospitals = [SELECT Id,External_Id__c, Name, City__c, Country__c, Website__c, Street__c, PostalCode__c FROM Hospital__c WHERE Id IN :hospitalsIds];
         List<Hosp_HospitalWrapper> hospitalsInWrapper = new List<Hosp_HospitalWrapper>();
         for (Hospital__c hospital : hospitals) {
             hospitalsInWrapper.add(new Hosp_HospitalWrapper(hospital));
         }
         String body = '{ "hospitals"  : ' + JSON.serialize(hospitalsInWrapper) + ' }';
         System.debug('body' + body);
+        System.debug('aaaaaaaaaaaaaaa');
+        System.debug('loginToOriginalOrgGetSessionId >> ' + Hospital_Utils.loginToSecondOrgGetSessionId());
 
         Http http = new Http();
         HttpRequest request = getRequest('PUT', '', body);
@@ -24,17 +26,23 @@ public class Hospital_HospitalTriggerHandler {
     }
 
     public static void assignIdToExternalID(Set<Id> hospitalsIds) {
-        List<Hospital__c> hospitals = [SELECT Id, External_Id__c, Name, City__c, Country__c, Website__c, Street__c, PostalCode__c FROM Hospital__c WHERE Id IN :hospitalsIds];
-        List<Hospital__c> hospitalsToUpsert = new List<Hospital__c>();
+        List<Hospital__c> hospitals = [SELECT Id, External_Id__c, Name, City__c, Country__c, Website__c, Street__c, PostalCode__c FROM Hospital__c WHERE External_Id__c IN :hospitalsIds];
+
+        List<Hosp_HospitalWrapper> hospitalsInWrapper = new List<Hosp_HospitalWrapper>();
         for (Hospital__c hospital : hospitals) {
-            for(String hospitalToSet : hospitalsIds){
-                if(hospitalToSet.startsWith(hospital.Id)){
-                    hospital.External_Id__c = hospital.Id;
-                    hospitalsToUpsert.add(hospital);
-                }
-            }
+            hospitalsInWrapper.add(new Hosp_HospitalWrapper(hospital));
         }
-        update hospitalsToUpsert;
+
+        String body = '{ "hospitals"  : ' + JSON.serialize(hospitalsInWrapper) + ' }';
+
+        System.debug('body second method' + body);
+        System.debug('aaaaaaaaaaaaaaa');
+        System.debug('loginToOriginalOrgGetSessionId >> ' + Hospital_Utils.loginToSecondOrgGetSessionId());
+
+        Http http = new Http();
+        HttpRequest request = getRequest('PUT', '', body);
+        HttpResponse response = http.send(request);
+        System.debug('second method response' + response.getStatusCode());
     }
 
     @future(Callout=true)

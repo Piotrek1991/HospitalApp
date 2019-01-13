@@ -16,6 +16,14 @@ public with sharing class Hospital_MaciejHospitalsController {
     public String hospitalToEditId { get; set; }
     public List<Hospital_HospitalComparator.HospitalWrapper> sortedHospital { get; set; }
 
+    public Boolean sortAsc { get; set; }
+    public String showSortByNameSignAsc { get; set; }
+    public String showSortByNameSignDesc { get; set; }
+    public String showSortByCitySignAsc { get; set; }
+    public String showSortByCitySignDesc { get; set; }
+    public String showSortByCountrySignAsc { get; set; }
+    public String showSortByCountrySignDesc { get; set; }
+
     public Hospital_MaciejHospitalsController() {
         hospitalsFromMaciej = new List<Hospital_HospitalWrapperForREST>();
         hospitalSearchData = new Hospital__c();
@@ -24,15 +32,14 @@ public with sharing class Hospital_MaciejHospitalsController {
         isAnyInsertProblem = true;
         isAnyUpdateProblem = true;
         sortedHospital = new List<Hospital_HospitalComparator.HospitalWrapper>();
+        sortAsc = true;
+        hideAllSortOrderSigns();
     }
 
     public void searchHospitals() {
         hospitalsFromMaciej = new List<Hospital_HospitalWrapperForREST>();
         hospitalsFromMaciej = getHospitalCallout(hospitalSearchData.Name, hospitalSearchData.City__c, hospitalSearchData.Country__c);
-
-        for(Hospital_HospitalWrapperForREST hospitalToConvert : hospitalsFromMaciej){
-            sortedHospital.add(new Hospital_HospitalComparator.HospitalWrapper(hospitalToConvert));
-        }
+        sortByName();
     }
 
     public List<Hospital_HospitalWrapperForREST> getHospitalCallout(String queryName, String queryCity, String queryCountry) {
@@ -209,18 +216,55 @@ public with sharing class Hospital_MaciejHospitalsController {
         hospitalCreateData = new Hospital__c();
     }
 
-    public void sortByCountry(){
-
+    public void sortByName() {
+        hideAllSortOrderSigns();
+        if(sortAsc){
+            showSortByNameSignAsc = 'display-block';
+            showSortByNameSignDesc = 'none';
+        } else {
+            showSortByNameSignAsc = 'none';
+            showSortByNameSignDesc = 'display-block';
+        }
+        Hospital_HospitalComparator.compareBy = 'name';
+        hospitalsFromMaciej = Hospital_HospitalComparator.sortResults(hospitalsFromMaciej, sortAsc);
+        flipSortOrder();
     }
-    public void sortByCity(){
-
+    public void sortByCity() {
+        hideAllSortOrderSigns();
+        if(sortAsc){
+            showSortByCitySignAsc = 'display-block';
+            showSortByCitySignDesc = 'none';
+        } else {
+            showSortByCitySignAsc = 'none';
+            showSortByCitySignDesc = 'display-block';
+        }
+        Hospital_HospitalComparator.compareBy = 'city';
+        hospitalsFromMaciej = Hospital_HospitalComparator.sortResults(hospitalsFromMaciej, sortAsc);
+        flipSortOrder();
     }
-    public void sortByName(){
-        Hospital_HospitalComparator.sortAscending = true;
-        Hospital_HospitalComparator.compareBy='name';
-        System.debug('Hospital before sorted >>' + sortedHospital);
-        sortedHospital.sort();
-        System.debug('Hospital after sorted >>' + sortedHospital);
+    public void sortByCountry() {
+        hideAllSortOrderSigns();
+        if(sortAsc){
+            showSortByCountrySignAsc = 'display-block';
+            showSortByCountrySignDesc = 'none';
+        } else {
+            showSortByCountrySignAsc = 'none';
+            showSortByCountrySignDesc = 'display-block';
+        }
+        Hospital_HospitalComparator.compareBy = 'country';
+        hospitalsFromMaciej = Hospital_HospitalComparator.sortResults(hospitalsFromMaciej, sortAsc);
+        flipSortOrder();
+    }
+    private void flipSortOrder() {
+        sortAsc = !sortAsc;
+    }
+    private void hideAllSortOrderSigns() {
+        showSortByNameSignAsc = 'none';
+        showSortByNameSignDesc = 'none';
+        showSortByCitySignAsc = 'none';
+        showSortByCitySignDesc = 'none';
+        showSortByCountrySignAsc = 'none';
+        showSortByCountrySignDesc = 'none';
     }
 }
 

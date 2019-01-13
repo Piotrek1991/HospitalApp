@@ -46,16 +46,13 @@ global with sharing class Hospital_HospitalREST {
                             City__c = hospitalFrom.city,
                             PostalCode__c = hospitalFrom.postalCode,
                             Street__c = hospitalFrom.street));
-
                 }
-
             }
         }
 
         if (hospitalListToUpdate.size() > 0) {
             hospitalSetToInsert.clear();
         }
-
 
         for (Hospital__c hospital : hospitalSetToInsert) {
             hospitalListToInsert.add(hospital);

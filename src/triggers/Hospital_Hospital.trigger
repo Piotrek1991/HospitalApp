@@ -13,6 +13,15 @@ trigger Hospital_Hospital on Hospital__c (after insert, after update, after dele
             isExecuted = true;
         }
 
+        if (Trigger.isInsert) {
+            Boolean isExecuted2 = false;
+            while (!isExecuted2) {
+                System.debug('Trigger.newMap.keySet()'+ Trigger.newMap.keySet());
+                Hospital_HospitalTriggerHandler.assignIdToExternalID(Trigger.newMap.keySet());
+                isExecuted2 = true;
+            }
+        }
+
 
     } else if (Trigger.isDelete) {
         Boolean isExecuted = false;

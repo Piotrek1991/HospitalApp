@@ -9,13 +9,14 @@ public class Hospital_HospitalTriggerHandler {
     public static void sendHospitalData(Set<Id> hospitalsIds){
         System.debug('hospitalsIds' + hospitalsIds);
 
-        List<Hospital__c> hospitals = [SELECT Id, Name, City__c, Country__c, Website__c, Street__c, PostalCode__c FROM Hospital__c WHERE Id IN :hospitalsIds];
+        List<Hospital__c> hospitals = [SELECT Id,External_Id__c, Name, City__c, Country__c, Website__c, Street__c, PostalCode__c FROM Hospital__c WHERE Id IN :hospitalsIds];
         List<Hosp_HospitalWrapper> hospitalsInWrapper = new List<Hosp_HospitalWrapper>();
         for (Hospital__c hospital : hospitals) {
             hospitalsInWrapper.add(new Hosp_HospitalWrapper(hospital));
         }
         String body = '{ "hospitals"  : ' + JSON.serialize(hospitalsInWrapper) + ' }';
         System.debug('body' + body);
+        System.debug('aaaaaaaaaaaaaaa');
         System.debug('loginToOriginalOrgGetSessionId >> ' + Hospital_Utils.loginToOriginalOrgGetSessionId());
 
         Http http = new Http();

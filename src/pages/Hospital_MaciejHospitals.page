@@ -23,6 +23,7 @@
         .message {
             opacity: 1
         }
+
     </style>
     <apex:slds/>
     <apex:outputPanel id="messages">
@@ -43,18 +44,6 @@
                                     value="{!$Label.New_Hospital}" status="statusSlds"
                                     reRender="modalEditDoc, modal-content-id-1s, modalHeader"
                                     onComplete="showNewModalDialog(); return false"/>
-                <apex:commandButton styleClass="slds-button slds-button--brand slds-m-top--medium"
-                                    value="Sort by name" status="statusSlds"
-                                    reRender="modalEditDoc, modal-content-id-1s, modalHeader,hospitalsResultsPanelList"
-                                    action="{!sortByName}"/>
-                <apex:commandButton styleClass="slds-button slds-button--brand slds-m-top--medium"
-                                    value="Sort by city" status="statusSlds"
-                                    reRender="modalEditDoc, modal-content-id-1s, modalHeader,hospitalsResultsPanelList"
-                                    action="{!sortByCity}"/>
-                <apex:commandButton styleClass="slds-button slds-button--brand slds-m-top--medium"
-                                    value="Sort by country" status="statusSlds"
-                                    reRender="modalEditDoc, modal-content-id-1s, modalHeader,hospitalsResultsPanelList"
-                                    action="{!sortByCountry}"/>
                 <apex:actionFunction name="clearFieldsAndResultHospitalSearch"
                                      action="{!clearFieldsAndResultHospitals}" status="statusSlds"
                                      reRender="modalEditDoc, modalEditOutputPanel, modalHeader">
@@ -130,32 +119,34 @@
             <legend id="newaccountform"
                     class="slds-text-heading--medium slds-p-vertical--medium">{!$Label.SearchForm}
             </legend>
-            <section >
-            <form class="slds-form--stacked" >
-                <div class="slds-form-element">
-                    <div class="slds-modal__content slds-p-around_medium" aria-describedby="form-error-01">
-                        <apex:form>
-                            <label class="slds-form-element__label">{!$ObjectType.Hospital__c.fields.Name.label}</label>
-                            <apex:inputField id="my-error-message" value="{!hospitalSearchData.Name}" required="true"
-                                             html-placeholder="{!$ObjectType.Hospital__c.fields.Name.label}"
-                                             styleClass="slds-input slds-m-bottom_x-small"/>
-                            <label class="slds-form-element__label">{!$ObjectType.Hospital__c.fields.City__c.label}</label>
-                            <apex:inputField value="{! hospitalSearchData.City__c }"
-                                             html-placeholder="{!$ObjectType.Hospital__c.fields.City__c.label}"
-                                             styleClass="slds-input slds-m-bottom_x-small"/>
-                            <label class="slds-form-element__label">{!$ObjectType.Hospital__c.fields.Country__c.label}</label>
-                            <apex:inputField value="{!hospitalSearchData.Country__c}"
-                                             html-placeholder="{!$ObjectType.Hospital__c.fields.Country__c.label}"
-                                             styleClass="slds-input slds-m-bottom_x-small"/>
-                            <apex:commandbutton value="{!$Label.Search}" reRender="hospitalsResultsPanelList, messages"
-                                                action="{!searchHospitals}" status="statusSlds"
-                                                onComplete="overridePageMessages()"
-                                                styleClass="slds-button slds-button--brand slds-m-top--medium">
-                            </apex:commandbutton>
-                        </apex:form>
+            <section>
+                <form class="slds-form--stacked">
+                    <div class="slds-form-element">
+                        <div class="slds-modal__content slds-p-around_medium" aria-describedby="form-error-01">
+                            <apex:form>
+                                <label class="slds-form-element__label">{!$ObjectType.Hospital__c.fields.Name.label}</label>
+                                <apex:inputField id="my-error-message" value="{!hospitalSearchData.Name}"
+                                                 required="true"
+                                                 html-placeholder="{!$ObjectType.Hospital__c.fields.Name.label}"
+                                                 styleClass="slds-input slds-m-bottom_x-small"/>
+                                <label class="slds-form-element__label">{!$ObjectType.Hospital__c.fields.City__c.label}</label>
+                                <apex:inputField value="{! hospitalSearchData.City__c }"
+                                                 html-placeholder="{!$ObjectType.Hospital__c.fields.City__c.label}"
+                                                 styleClass="slds-input slds-m-bottom_x-small"/>
+                                <label class="slds-form-element__label">{!$ObjectType.Hospital__c.fields.Country__c.label}</label>
+                                <apex:inputField value="{!hospitalSearchData.Country__c}"
+                                                 html-placeholder="{!$ObjectType.Hospital__c.fields.Country__c.label}"
+                                                 styleClass="slds-input slds-m-bottom_x-small"/>
+                                <apex:commandbutton value="{!$Label.Search}"
+                                                    reRender="hospitalsResultsPanelList, messages"
+                                                    action="{!searchHospitals}" status="statusSlds"
+                                                    onComplete="overridePageMessages()"
+                                                    styleClass="slds-button slds-button--brand slds-m-top--medium">
+                                </apex:commandbutton>
+                            </apex:form>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
             </section>
         </fieldset>
     </div>
@@ -164,43 +155,56 @@
         <apex:outputPanel id="hospitalResult" rendered="{!hospitalsFromMaciej.size > 0}">
             <table id="hospitalsResultsList" class="slds-table slds-table_cell-buffer slds-table_bordered">
                 <thead>
-                  <tr class="slds-line-height_reset">
+                <tr class="slds-line-height_reset">
                     <th class="slds-text-title_caps" scope="col">
                         <div class="slds-truncate" title="{!$Label.Action}">{!$Label.Action}</div>
                     </th>
                     <th class="slds-text-title_caps" scope="col">
-                        <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="0">
                         <div class="slds-truncate"
                              title="{!$ObjectType.Hospital__c.fields.Name.label}">
-                            <!--<apex:form >-->
-                            <!--<apex:commandButton value="{!$ObjectType.Hospital__c.fields.Name.label}" status="statusSlds"-->
-                                                <!--reRender="modalEditDoc, hospitalsResultsPanelList, messages,-->
-                                                         <!--messagesInUpdateModal, successToastOutputPanel, errorToastOutputPanel"-->
-                                                <!--onClick="confirm('{!$Label.Are_you_sure}');"-->
-                                                <!--action="{!deleteHospital}"-->
-                                                <!--onComplete="checkHideDeleteToast({!isAnyProblemWithCallout})"-->
-                                                <!--styleClass="none"-->
-                            <!--&gt;-->
-                            <!--</apex:commandButton>-->
-                            <!--</apex:form>-->
-                                {!$ObjectType.Hospital__c.fields.Name.label}
-                        </div>
-                        </a>
-                    </th>
-                    <th class="slds-text-title_caps" scope="col">
-                        <div class="slds-truncate"
-                             title="{!$ObjectType.Hospital__c.fields.City__c.label}">{!$ObjectType.Hospital__c.fields.City__c.label}
+                            <apex:form>
+                                <apex:commandLink action="{! sortByName }"
+                                                  reRender="modalEditDoc, modalHeader, hospitalsResultsPanelList"
+                                                  style="text-decoration: none; color: #514F4D;">
+                                    <span>{!$ObjectType.Hospital__c.fields.Name.label}</span>
+                                    <span style="display: {! showSortByNameSignDesc };" >&#9660;</span>
+                                    <span style="display: {! showSortByNameSignAsc };">&#9650;</span>
+                                </apex:commandLink>
+                            </apex:form>
                         </div>
                     </th>
                     <th class="slds-text-title_caps" scope="col">
                         <div class="slds-truncate"
-                             title="{!$ObjectType.Hospital__c.fields.Country__c.label}">{!$ObjectType.Hospital__c.fields.Country__c.label}
+                             title="{!$ObjectType.Hospital__c.fields.City__c.label}">
+                            <apex:form>
+                                <apex:commandLink action="{! sortByCity }"
+                                                  reRender="modalEditDoc, modalHeader, hospitalsResultsPanelList"
+                                                  style="text-decoration: none; color: #514F4D;">
+                                    <span>{!$ObjectType.Hospital__c.fields.City__c.label}</span>
+                                    <span style="display: {! showSortByCitySignDesc };" >&#9660;</span>
+                                    <span style="display: {! showSortByCitySignAsc };">&#9650;</span>
+                                </apex:commandLink>
+                            </apex:form>
                         </div>
                     </th>
-                  </tr>
+                    <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate"
+                             title="{!$ObjectType.Hospital__c.fields.Country__c.label}">
+                            <apex:form>
+                                <apex:commandLink action="{! sortByCountry }"
+                                                  reRender="modalEditDoc, modalHeader, hospitalsResultsPanelList"
+                                                  style="text-decoration: none; color: #514F4D;">
+                                    <span>{!$ObjectType.Hospital__c.fields.Country__c.label}</span>
+                                    <span style="display: {! showSortByCountrySignDesc };" >&#9660;</span>
+                                    <span style="display: {! showSortByCountrySignAsc };">&#9650;</span>
+                                </apex:commandLink>
+                            </apex:form>
+                        </div>
+                    </th>
+                </tr>
                 </thead>
                 <tbody>
-                  <apex:repeat value="{!hospitalsFromMaciej}" var="hosp">
+                <apex:repeat value="{!hospitalsFromMaciej}" var="hosp">
                     <tr class="slds-hint-parent">
                         <td data-label="Account Name">
                             <div class="slds-truncate">
@@ -214,11 +218,9 @@
                                                     assignTo="{!hospitalToEditId}"/>
                                     </apex:commandButton>
                                     <apex:commandButton value="{!$Label.Delete}" status="statusSlds"
-                                                        reRender="modalEditDoc, hospitalsResultsPanelList, messages,
+                                                        reRender="hospitalsResultsPanelList, messages,
                                                          messagesInUpdateModal, successToastOutputPanel, errorToastOutputPanel"
-                                                        onClick="confirm('{!$Label.Are_you_sure}');"
-                                                        action="{!deleteHospital}"
-                                                        onComplete="checkHideDeleteToast({!isAnyProblemWithCallout})"
+                                                        onComplete="showToastAndHideOthers('confirmationDialog');"
                                                         styleClass="slds-button slds-button--brand slds-m-top--medium">
                                         <apex:param name="hospitalIdToDelete" value="{!hosp.hospitalId}"
                                                     assignTo="{!hospitalToEditId}"/>
@@ -244,7 +246,7 @@
                             </div>
                         </td>
                     </tr>
-                  </apex:repeat>
+                </apex:repeat>
                 </tbody>
             </table>
         </apex:outputPanel>
@@ -268,7 +270,8 @@
                                 </apex:outputPanel>
                             </apex:outputPanel>
                         </button>
-                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!$Label.Hospital}</h2>
+                        <h2 id="modal-heading-01"
+                            class="slds-text-heading_medium slds-hyphenate">{!$Label.Hospital}</h2>
                     </header>
                     <apex:form>
                         <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
@@ -312,11 +315,47 @@
             <div class="slds-backdrop slds-backdrop_open"></div>
         </div>
     </div>
+
+
+    <div id="confirmationDialog" class="demo-only" style="display: none; height: 640px;">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                 aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Delete</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <p>Do You really want to delete this data?</p>
+                </div>
+                <apex:form>
+
+                    <footer class="slds-modal__footer">
+
+                        <apex:commandButton
+                                styleClass="slds-button slds-button_neutral"
+                                onClick="hideToast('confirmationDialog')"
+                                value="{! $Label.Cancel }"
+                                reRender="hospitalsResultsPanelList, messages, successToastOutputPanel, errorToastOutputPanel"
+                                status="statusSlds">
+                        </apex:commandButton>
+                        <apex:commandButton value="{!$Label.Delete}" status="statusSlds"
+                                            reRender="hospitalsResultsPanelList, messages, successToastOutputPanel, errorToastOutputPanel"
+                                            action="{!deleteHospital}"
+                                            onComplete="checkHideDeleteToast({!isAnyProblemWithCallout})"
+                                            styleClass="slds-button slds-button_brand"/>
+                    </footer>
+                </apex:form>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+
     <script type="text/javascript">
         function checkHideDeleteToast(isProblemWithDelete) {
               if(!isProblemWithDelete) {
                     showToast('successToast');
                     hideToast('errorToast');
+                    hideToast('confirmationDialog');
               } else {
                     showToast('errorToast');
                     hideToast('successToast');
@@ -377,6 +416,14 @@
             $('.infoM3').removeClass('infoM3');
             $('.warningM3').removeClass('warningM3');
         }
+
+        function showToastAndHideOthers(modalIdToShow) {
+            hideToast('successToast');
+            hideToast('errorToast');
+
+            showToast(modalIdToShow);
+        }
+
     </script>
     <c:Hospital_StatusSlds/>
 </apex:page>

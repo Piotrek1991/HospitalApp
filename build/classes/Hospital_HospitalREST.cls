@@ -50,14 +50,23 @@ global with sharing class Hospital_HospitalREST {
             }
         }
 
-        for(Hospital__c hospital : hospitalSetToInsert){
-            hospitalListToInsert.add(hospital);
+        if (hospitalListToUpdate.size() > 0) {
+            hospitalSetToInsert.clear();
         }
 
-        update hospitalListToUpdate;
+        for (Hospital__c hospital : hospitalSetToInsert) {
+            hospitalListToInsert.add(hospital);
+        }
         System.debug('listToCompare >> ' + listToCompare);
-        insert hospitalListToInsert;
-        System.debug('hospitalListToInsert >> ' + listToCompare);
+        System.debug('hospitalListToInsert >> ' + hospitalListToInsert);
+        System.debug('hospitalListToUpdate >> ' + hospitalListToUpdate);
+
+        if (hospitalListToUpdate.size() > 0) {
+            update hospitalListToUpdate;
+        }
+        if (hospitalListToInsert.size() > 0) {
+            insert hospitalListToInsert;
+        }
 
 
         List<Hospital_HospitalWrapperForRest> resultsHospitals = new List<Hospital_HospitalWrapperForRest>();
