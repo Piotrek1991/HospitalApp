@@ -9,7 +9,7 @@ public class Hospital_HospitalTriggerHandler {
     public static void sendHospitalData(Set<Id> hospitalsIds){
         System.debug('hospitalsIds' + hospitalsIds);
 
-        List<Hospital__c> hospitals = [SELECT Id, External_Id__c, Name, City__c, Country__c, Website__c, Street__c, PostalCode__c FROM Hospital__c WHERE Id IN :hospitalsIds];
+        List<Hospital__c> hospitals = [SELECT Id, Name, City__c, Country__c, Website__c, Street__c, PostalCode__c FROM Hospital__c WHERE Id IN :hospitalsIds];
         List<Hosp_HospitalWrapper> hospitalsInWrapper = new List<Hosp_HospitalWrapper>();
         for (Hospital__c hospital : hospitals) {
             hospitalsInWrapper.add(new Hosp_HospitalWrapper(hospital));
@@ -29,7 +29,7 @@ public class Hospital_HospitalTriggerHandler {
         System.debug('hospitalsIds='+hospitalsIds);
         String hospitalToDeleteId;
         for(String hospId : hospitalsIds) {
-            hospitalToDeleteId = hospId.substring(0,15);
+            hospitalToDeleteId = hospId;
             break;
         }
         System.debug('hospitalToDeleteId='+hospitalToDeleteId);
@@ -37,22 +37,6 @@ public class Hospital_HospitalTriggerHandler {
         HttpRequest request = getRequest('DELETE', hospitalToDeleteId, '');
         HttpResponse response = http.send(request);
         System.debug('response='+response.getStatusCode());
-    }
-
-    @future(Callout=true)
-    public static void assignIdToExternalID(Set<Id> hospitalsIds) {
-        List<Hospital__c> hospitals = [SELECT Id, External_Id__c, Name, City__c, Country__c, Website__c, Street__c, PostalCode__c FROM Hospital__c WHERE External_Id__c IN :hospitalsIds];
-        List<Hosp_HospitalWrapper> hospitalsInWrapper = new List<Hosp_HospitalWrapper>();
-        for (Hospital__c hospital : hospitals) {
-            hospitalsInWrapper.add(new Hosp_HospitalWrapper(hospital));
-        }
-        String body = '{ "hospitals"  : ' + JSON.serialize(hospitalsInWrapper) + ' }';
-        System.debug('body' + body);
-
-        Http http = new Http();
-        HttpRequest request = getRequest('PUT', '', body);
-        HttpResponse response = http.send(request);
-        System.debug('response' + response.getStatusCode());
     }
 
 
@@ -70,15 +54,13 @@ public class Hospital_HospitalTriggerHandler {
 
     private class Hosp_HospitalWrapper {
         public String hospitalId { get; set; }
-        public String externalId { get; set; }
         public String name { get; set; }
         public String country { get; set; }
         public String city { get; set; }
         public String postalCode { get; set; }
         public String street { get; set; }
         public Hosp_HospitalWrapper(Hospital__c hospital) {
-            hospitalId = String.valueOf(hospital.Id).substring(0,15);
-            externalId = hospital.External_Id__c;
+            hospitalId = hospital.Id;
             name = hospital.Name;
             country = hospital.Country__c;
             city = hospital.City__c;
@@ -86,4 +68,13 @@ public class Hospital_HospitalTriggerHandler {
             street = hospital.Street__c;
         }
     }
+
+
+
+
+
+
+
+
+
 }

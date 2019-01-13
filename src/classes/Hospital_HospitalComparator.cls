@@ -63,5 +63,23 @@ global class Hospital_HospitalComparator {
             }
 
         }
+
+//            jobsWrapper compareTo = (jobsWrapper)compareTo;
+//            if (outerClass.sortBy.equals('clientAsc')){
+//                return job.client__c.compareTo(compareTo.job.client__c);
+//            } else if (outerClass.sortBy.equals('clientDesc')) {
+//                return job.client__c.compareTo(compareTo.job.client__c) * (-1);
+//            } else if (outerClass.sortBy.equals('SomeDateAsc')) {
+//                if (job.date.isSameDay(compareTo.job.date)) return 0;
+//                if (job.date.daysBetween(compareTo.job.date) > 0) return 1;
+//                return -1;
+//            } else {
+//
+//            }
     }
+
+
+//    OuterClass.sortBy='client';
+//    jobWrapperList.sort();
+
 }

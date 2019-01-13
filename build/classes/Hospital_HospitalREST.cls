@@ -22,46 +22,49 @@ global with sharing class Hospital_HospitalREST {
 
     @HttpPut
     global static List<Hospital_HospitalWrapperForRest> upsertHospitals(List<Hospital_HospitalWrapperForRest> hospitals) {
-
         List<Hospital__c> hospitalListToUpdate = new List<Hospital__c>();
         List<Hospital__c> hospitalListToInsert = new List<Hospital__c>();
+        Set<Hospital__c> hospitalSetToInsert = new Set<Hospital__c>();
         List<Hospital__c> hospitalListToDelete = new List<Hospital__c>();
 
-        List<Hospital__c> listToCompare = [SELECT Id, External_Id__c FROM Hospital__c];
+        List<Hospital__c> listToCompare = [SELECT Id, External_Id__c, Name, City__c, Country__c, Website__c, Street__c, PostalCode__c FROM Hospital__c];
 
-        for (Hospital_HospitalWrapperForRest hosp : hospitals) {
+
+        for (Hospital_HospitalWrapperForRest hospitalFrom : hospitals) {
             for (Hospital__c hospitalFromDataBase : listToCompare) {
-                if (hosp.hospitalId.equals(hospitalFromDataBase.External_Id__c)) {
-                    hospitalFromDataBase.Name = hosp.name;
-                    hospitalFromDataBase.External_Id__c = hosp.externalId;
-                    hospitalFromDataBase.City__c = hosp.city;
-                    hospitalFromDataBase.Country__c = hosp.country;
-                    hospitalFromDataBase.Street__c = hosp.street;
-                    hospitalFromDataBase.PostalCode__c = hosp.postalCode;
+                if (hospitalFrom.hospitalId.equals(hospitalFromDataBase.External_Id__c)) {
+                    hospitalFromDataBase.Name = hospitalFrom.name;
+                    hospitalFromDataBase.PostalCode__c = hospitalFrom.postalCode;
+                    hospitalFromDataBase.City__c = hospitalFrom.city;
+                    hospitalFromDataBase.Country__c = hospitalFrom.country;
                     hospitalListToUpdate.add(hospitalFromDataBase);
+                    break;
                 } else {
-                    hospitalListToInsert.add(new Hospital__c(External_Id__c = hosp.hospitalId,
-                            Name = hosp.name,
-                            Country__c = hosp.country,
-                            City__c = hosp.city,
-                            PostalCode__c = hosp.postalCode,
-                            Street__c = hosp.street));
+                    hospitalSetToInsert.add(new Hospital__c(External_Id__c = hospitalFrom.hospitalId,
+                            Name = hospitalFrom.name,
+                            Country__c = hospitalFrom.country,
+                            City__c = hospitalFrom.city,
+                            PostalCode__c = hospitalFrom.postalCode,
+                            Street__c = hospitalFrom.street));
                 }
             }
         }
 
+        for(Hospital__c hospital : hospitalSetToInsert){
+            hospitalListToInsert.add(hospital);
+        }
+
         update hospitalListToUpdate;
+        System.debug('listToCompare >> ' + listToCompare);
         insert hospitalListToInsert;
+        System.debug('hospitalListToInsert >> ' + listToCompare);
+
 
         List<Hospital_HospitalWrapperForRest> resultsHospitals = new List<Hospital_HospitalWrapperForRest>();
-        for (Hospital__c rawHospital : hospitalListToUpdate) {
-            resultsHospitals.add(new Hospital_HospitalWrapperForRest(rawHospital));
-        }
         for (Hospital__c rawHospital : hospitalListToInsert) {
             resultsHospitals.add(new Hospital_HospitalWrapperForRest(rawHospital));
         }
         return resultsHospitals;
-
     }
 
     @HttpDelete
@@ -69,8 +72,7 @@ global with sharing class Hospital_HospitalREST {
         RestRequest request = RestContext.request;
         String hospitalIds = request.requestURI.substring(request.requestURI.lastIndexOf('/') + 1);
         List<String> ids = hospitalIds.split(',');
-        System.debug('Id from external service' + ids);
-
+        System.debug('Id from external service' +ids );
         List<Hospital__c> listToDel = [
                 SELECT Id,
                         External_Id__c,

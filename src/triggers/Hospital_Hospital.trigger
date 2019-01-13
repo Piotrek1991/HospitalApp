@@ -4,14 +4,14 @@
 
 trigger Hospital_Hospital on Hospital__c (after insert, after update, after delete) {
 
+
     if (Trigger.isInsert || Trigger.isUpdate) {
-//        Boolean isExecuted = false;
-//        while (!isExecuted) {
+        Boolean isExecuted = false;
+        while (!isExecuted) {
             System.debug('Trigger.newMap.keySet()'+ Trigger.newMap.keySet());
             Hospital_HospitalTriggerHandler.sendHospitalData(Trigger.newMap.keySet());
-            Hospital_HospitalTriggerHandler.assignIdToExternalID(Trigger.newMap.keySet());
-//            isExecuted = true;
-//        }
+            isExecuted = true;
+        }
 
 
     } else if (Trigger.isDelete) {
@@ -21,5 +21,7 @@ trigger Hospital_Hospital on Hospital__c (after insert, after update, after dele
             isExecuted = true;
         }
     }
+
+
 
 }
