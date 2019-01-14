@@ -86,8 +86,8 @@ public with sharing class Hospital_Utils {
         String password = 'britenet2OtEnMSu0G1vCAYom3l9u4EeA';
         String ClientId = '3MVG9fTLmJ60pJ5L9cnCubmjX_eLKbZmAPIn3jG3pirLoEoSItoLD82S6Aa.cK.IKpD88y_YhEPmInj3JYCOA';
         String ClientSecret = '4736755902322743893';
-//        return getAccessToken(username, password, ClientId, ClientSecret);
-        return '00D1t000000vXus!AQEAQEujDxOeW0V0_oflJ8vWhNHKGrq2sgxTUocP591EhELkQ0gn8RgS7Crj_zrdOA3NsMG.u2NcN.BDNEDskAurSxeM0Qlg';
+        return getAccessToken(username, password, ClientId, ClientSecret);
+//        return '00D1t000000vXus!AQEAQEujDxOeW0V0_oflJ8vWhNHKGrq2sgxTUocP591EhELkQ0gn8RgS7Crj_zrdOA3NsMG.u2NcN.BDNEDskAurSxeM0Qlg';
     }
 
     public static String loginToOriginalOrgGetSessionId() {

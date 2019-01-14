@@ -2,7 +2,7 @@
  - Created by BRITENET on 13.12.2018.
  -->
 
-<apex:page standardController="Hospital__c" id="Hospital_HospitalEdit">
+<apex:page standardController="Hospital__c" id="Hospital_HospitalEdit" extensions="Hospital_HospitalEditController">
     <apex:form id="firstForm">
         <apex:messages ></apex:messages>
         <apex:pageBlock title="{!$Label.HospitalEditPage}">
@@ -18,7 +18,7 @@
             </apex:pageBlockSection>
         </apex:pageBlock>
         <div align="center">
-            <apex:commandButton value="{!$Label.Save}" status="status" reRender="firstForm" action="{!save}"/>
+            <apex:commandButton value="{!$Label.Save}" status="status" reRender="firstForm" action="{!saveHospital}"/>
             <apex:commandButton value="{!$Label.Cancel}" status="status" reRender="firstForm" action="{!cancel}"/>
         </div>
     </apex:form>

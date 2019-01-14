@@ -12,17 +12,26 @@ public class Hospital_HospitalTriggerHandler {
         List<Hospital__c> hospitals = [SELECT Id,External_Id__c, Name, City__c, Country__c, Website__c, Street__c, PostalCode__c FROM Hospital__c WHERE Id IN :hospitalsIds];
         List<Hosp_HospitalWrapper> hospitalsInWrapper = new List<Hosp_HospitalWrapper>();
         for (Hospital__c hospital : hospitals) {
+            hospital.External_Id__c = hospital.Name + hospital.City__c + hospital.Country__c + hospital.Street__c;
             hospitalsInWrapper.add(new Hosp_HospitalWrapper(hospital));
         }
         String body = '{ "hospitals"  : ' + JSON.serialize(hospitalsInWrapper) + ' }';
         System.debug('body' + body);
         System.debug('aaaaaaaaaaaaaaa');
-        System.debug('loginToOriginalOrgGetSessionId >> ' + Hospital_Utils.loginToOriginalOrgGetSessionId());
+        System.debug('loginToOriginalOrgGetSessionId >> ' + Hospital_Utils.loginToSecondOrgGetSessionId());
 
         Http http = new Http();
         HttpRequest request = getRequest('PUT', '', body);
         HttpResponse response = http.send(request);
         System.debug('response' + response.getStatusCode());
+        response.getBody();
+        System.debug('Respond body >>>> ' + response.getBody());
+        List<Hospital_HospitalWrapperForREST> hospFromSecondOrg= (List<Hospital_HospitalWrapperForREST>)JSON.deserialize(response.getBody(), List<Hospital_HospitalWrapperForREST>.class);
+        String idFromSecondOrg = hospFromSecondOrg.get(0).hospitalId;
+        System.debug('idFromSecondOrg >>>> ' + idFromSecondOrg);
+        Hospital__c hospital = hospitals.get(0);
+        System.debug('hospital' + hospital);
+        hospital.External_Id__c = idFromSecondOrg;
     }
 
         @future(Callout=true)
@@ -60,6 +69,7 @@ public class Hospital_HospitalTriggerHandler {
         public String city { get; set; }
         public String postalCode { get; set; }
         public String street { get; set; }
+        public String externalId{ get; set; }
         public Hosp_HospitalWrapper(Hospital__c hospital) {
             hospitalId = hospital.Id;
             name = hospital.Name;
@@ -67,6 +77,7 @@ public class Hospital_HospitalTriggerHandler {
             city = hospital.City__c;
             postalCode = hospital.PostalCode__c;
             street = hospital.Street__c;
+            externalId = hospital.External_Id__c;
         }
     }
 

@@ -133,7 +133,7 @@ public with sharing class Hospital_MaciejHospitalsController {
             refreshResultsList(insertedHospitals);
         } catch (Exception e) {
             isAnyInsertProblem = true;
-            messageErrorToast = Label.Unable_to_add_hospital;
+            messageErrorToast = e.getMessage();
             System.debug('Is Any Insert Problem >>' + e);
         }
         if (!Test.isRunningTest()) {

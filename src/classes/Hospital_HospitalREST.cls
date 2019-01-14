@@ -22,51 +22,81 @@ global with sharing class Hospital_HospitalREST {
 
     @HttpPut
     global static List<Hospital_HospitalWrapperForRest> upsertHospitals(List<Hospital_HospitalWrapperForRest> hospitals) {
+
+
         List<Hospital__c> hospitalListToUpdate = new List<Hospital__c>();
         List<Hospital__c> hospitalListToInsert = new List<Hospital__c>();
-        Set<Hospital__c> hospitalSetToInsert = new Set<Hospital__c>();
-        List<Hospital__c> hospitalListToDelete = new List<Hospital__c>();
+//        Set<Hospital__c> hospitalSetToInsert = new Set<Hospital__c>();
+//        List<Hospital__c> hospitalListToDelete = new List<Hospital__c>();
 
-        List<Hospital__c> listToCompare = [SELECT Id, External_Id__c, Name, City__c, Country__c, Website__c, Street__c, PostalCode__c FROM Hospital__c];
-
+//        List<Hospital__c> listToCompare = [SELECT Id, External_Id__c, Name, City__c, Country__c, Website__c, Street__c, PostalCode__c FROM Hospital__c];
 
         for (Hospital_HospitalWrapperForRest hospitalFrom : hospitals) {
-            for (Hospital__c hospitalFromDataBase : listToCompare) {
-                if (hospitalFrom.hospitalId.equals(hospitalFromDataBase.External_Id__c)) {
-                    hospitalFromDataBase.Name = hospitalFrom.name;
-                    hospitalFromDataBase.PostalCode__c = hospitalFrom.postalCode;
-                    hospitalFromDataBase.City__c = hospitalFrom.city;
-                    hospitalFromDataBase.Country__c = hospitalFrom.country;
-                    hospitalListToUpdate.add(hospitalFromDataBase);
-                    break;
-                } else {
-                    hospitalSetToInsert.add(new Hospital__c(External_Id__c = hospitalFrom.hospitalId,
-                            Name = hospitalFrom.name,
-                            Country__c = hospitalFrom.country,
-                            City__c = hospitalFrom.city,
-                            PostalCode__c = hospitalFrom.postalCode,
-                            Street__c = hospitalFrom.street));
-                }
-            }
+            hospitalListToInsert.add(new Hospital__c(Id = hospitalFrom.hospitalId,
+                    External_Id__c = hospitalFrom.externalId,
+                    Name = hospitalFrom.name,
+                    Country__c = hospitalFrom.country,
+                    City__c = hospitalFrom.city,
+                    PostalCode__c = hospitalFrom.postalCode,
+                    Street__c = hospitalFrom.street));
         }
 
-        if (hospitalListToUpdate.size() > 0) {
-            hospitalSetToInsert.clear();
-        }
+        upsert hospitalListToInsert;
 
-        for (Hospital__c hospital : hospitalSetToInsert) {
-            hospitalListToInsert.add(hospital);
-        }
-        System.debug('listToCompare >> ' + listToCompare);
-        System.debug('hospitalListToInsert >> ' + hospitalListToInsert);
-        System.debug('hospitalListToUpdate >> ' + hospitalListToUpdate);
 
-        if (hospitalListToUpdate.size() > 0) {
-            update hospitalListToUpdate;
-        }
-        if (hospitalListToInsert.size() > 0) {
-            insert hospitalListToInsert;
-        }
+//        List<Hospital__c> hospitalListToUpdate = new List<Hospital__c>();
+//        List<Hospital__c> hospitalListToInsert = new List<Hospital__c>();
+//        Set<Hospital__c> hospitalSetToInsert = new Set<Hospital__c>();
+//        List<Hospital__c> hospitalListToDelete = new List<Hospital__c>();
+//
+//        List<Hospital__c> listToCompare = [SELECT Id, External_Id__c, Name, City__c, Country__c, Website__c, Street__c, PostalCode__c FROM Hospital__c];
+//
+//        for (Hospital_HospitalWrapperForRest hospitalFrom : hospitals) {
+//            for (Hospital__c hospitalFromDataBase : listToCompare) {
+//                if (String.isNotBlank(hospitalFromDataBase.External_Id__c)) {
+//                    if (hospitalFrom.hospitalId.equals(hospitalFromDataBase.External_Id__c)) {
+//                        hospitalFromDataBase.Name = hospitalFrom.name;
+//                        hospitalFromDataBase.PostalCode__c = hospitalFrom.postalCode;
+//                        hospitalFromDataBase.City__c = hospitalFrom.city;
+//                        hospitalFromDataBase.Country__c = hospitalFrom.country;
+//                        hospitalListToUpdate.add(hospitalFromDataBase);
+//                        break;
+//                    } else {
+//                        hospitalSetToInsert.add(new Hospital__c(External_Id__c = hospitalFrom.hospitalId,
+//                                Name = hospitalFrom.name,
+//                                Country__c = hospitalFrom.country,
+//                                City__c = hospitalFrom.city,
+//                                PostalCode__c = hospitalFrom.postalCode,
+//                                Street__c = hospitalFrom.street));
+//                    }
+//                } else {
+//                    hospitalListToInsert.add(new Hospital__c(Id = hospitalFrom.hospitalId,
+//                            Name = hospitalFrom.name,
+//                            Country__c = hospitalFrom.country,
+//                            City__c = hospitalFrom.city,
+//                            PostalCode__c = hospitalFrom.postalCode,
+//                            Street__c = hospitalFrom.street));
+////                }
+////            }
+//        }
+//
+//        if (hospitalListToUpdate.size() > 0) {
+//            hospitalSetToInsert.clear();
+//        }
+//
+//        for (Hospital__c hospital : hospitalSetToInsert) {
+//            hospitalListToInsert.add(hospital);
+//        }
+//        System.debug('listToCompare >> ' + listToCompare);
+//        System.debug('hospitalListToInsert >> ' + hospitalListToInsert);
+//        System.debug('hospitalListToUpdate >> ' + hospitalListToUpdate);
+//
+//        if (hospitalListToUpdate.size() > 0) {
+//            update hospitalListToUpdate;
+//        }
+//        if (hospitalListToInsert.size() > 0) {
+//            upsert hospitalListToInsert;
+//        }
 
 
         List<Hospital_HospitalWrapperForRest> resultsHospitals = new List<Hospital_HospitalWrapperForRest>();
@@ -93,6 +123,17 @@ global with sharing class Hospital_HospitalREST {
                 FROM Hospital__c
                 WHERE External_Id__c IN :ids
         ];
+        List<Hospital__c> listToDel2 = [
+                SELECT Id,
+                        Name,
+                        Country__c,
+                        City__c,
+                        PostalCode__c,
+                        Street__c
+                FROM Hospital__c
+                WHERE Id IN :ids
+        ];
+        listToDel.addAll(listToDel2);
         delete listToDel;
         List<Hospital_HospitalWrapperForRest> hospitals = new List<Hospital_HospitalWrapperForRest>();
         for (Hospital__c rawHospital : listToDel) {

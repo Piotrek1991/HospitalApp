@@ -10,6 +10,7 @@ global class Hospital_HospitalWrapperForREST {
     webService String city { get; set; }
     webService String postalCode { get; set; }
     webService String street { get; set; }
+    webService String externalId { get; set; }
 
     global Hospital_HospitalWrapperForREST(Hospital__c hospital) {
         hospitalId = hospital.Id;
@@ -18,5 +19,9 @@ global class Hospital_HospitalWrapperForREST {
         city = hospital.City__c;
         postalCode = hospital.PostalCode__c;
         street = hospital.Street__c;
+        externalId = hospital.External_Id__c;
+    }
+
+    global Hospital_HospitalWrapperForREST() {
     }
 }

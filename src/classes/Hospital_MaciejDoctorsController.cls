@@ -15,6 +15,16 @@ public with sharing class Hospital_MaciejDoctorsController {
     public String messageErrorToast { get; set; }
     public Boolean isSearchSuccessful { get; set; }
 
+    public Boolean sortAsc { get; set; }
+    public String showSortByNameSignAsc { get; set; }
+    public String showSortByNameSignDesc { get; set; }
+    public String showSortByFirstNameSignAsc { get; set; }
+    public String showSortByFirstNameSignDesc { get; set; }
+    public String showSortByCitySignAsc { get; set; }
+    public String showSortByCitySignDesc { get; set; }
+    public String showSortByCountrySignAsc { get; set; }
+    public String showSortByCountrySignDesc { get; set; }
+
     public Hospital_MaciejDoctorsController() {
         doctorsService = new Hosp_MaciejSoapForDoctorsWebService.Hosp_SoapForDoctorsWebService();
         doctorsFromMaciej = new List<Hosp_MaciejDoctorWrapperForSoap.Hosp_DoctorWrapperForSoap>();
@@ -27,6 +37,8 @@ public with sharing class Hospital_MaciejDoctorsController {
         doctorsService.SessionHeader.sessionId = loginToMaciejClinic();
         isAnyProblemWithCallout = false;
         isSearchSuccessful = false;
+        sortAsc = true;
+        hideAllSortOrderSigns();
     }
 
     public void searchDoctors() {
@@ -143,7 +155,74 @@ public with sharing class Hospital_MaciejDoctorsController {
         }
     }
 
-    public void sortByCountry(){
+    public void sortByName() {
+        hideAllSortOrderSigns();
+        if(sortAsc){
+            showSortByNameSignAsc = 'display-block';
+            showSortByNameSignDesc = 'none';
+        } else {
+            showSortByNameSignAsc = 'none';
+            showSortByNameSignDesc = 'display-block';
+        }
+        Hospital_DoctorComparator.compareBy = 'name';
+        doctorsFromMaciej = Hospital_DoctorComparator.sortResults(doctorsFromMaciej, sortAsc);
+        flipSortOrder();
+    }
 
+    public void sortByFirstName() {
+        hideAllSortOrderSigns();
+        if(sortAsc){
+            showSortByFirstNameSignAsc = 'display-block';
+            showSortByFirstNameSignDesc = 'none';
+        } else {
+            showSortByFirstNameSignAsc = 'none';
+            showSortByFirstNameSignDesc = 'display-block';
+        }
+        Hospital_DoctorComparator.compareBy = 'firstName';
+        doctorsFromMaciej = Hospital_DoctorComparator.sortResults(doctorsFromMaciej, sortAsc);
+        flipSortOrder();
+    }
+
+    public void sortByCity() {
+        hideAllSortOrderSigns();
+        if(sortAsc){
+            showSortByCitySignAsc = 'display-block';
+            showSortByCitySignDesc = 'none';
+        } else {
+            showSortByCitySignAsc = 'none';
+            showSortByCitySignDesc = 'display-block';
+        }
+        Hospital_DoctorComparator.compareBy = 'city';
+        doctorsFromMaciej = Hospital_DoctorComparator.sortResults(doctorsFromMaciej, sortAsc);
+        flipSortOrder();
+    }
+
+    public void sortByCountry() {
+        hideAllSortOrderSigns();
+        if(sortAsc){
+            showSortByCountrySignAsc = 'display-block';
+            showSortByCountrySignDesc = 'none';
+        } else {
+            showSortByCountrySignAsc = 'none';
+            showSortByCountrySignDesc = 'display-block';
+        }
+        Hospital_DoctorComparator.compareBy = 'country';
+        doctorsFromMaciej = Hospital_DoctorComparator.sortResults(doctorsFromMaciej, sortAsc);
+        flipSortOrder();
+    }
+
+    private void flipSortOrder() {
+        sortAsc = !sortAsc;
+    }
+
+    private void hideAllSortOrderSigns() {
+        showSortByNameSignAsc = 'none';
+        showSortByNameSignDesc = 'none';
+        showSortByFirstNameSignAsc = 'none';
+        showSortByFirstNameSignDesc = 'none';
+        showSortByCitySignAsc = 'none';
+        showSortByCitySignDesc = 'none';
+        showSortByCountrySignAsc = 'none';
+        showSortByCountrySignDesc = 'none';
     }
 }
