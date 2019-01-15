@@ -2,81 +2,30 @@
  * Created by BRITENET on 10.01.2019.
  */
 
-trigger Hospital_Hospital on Hospital__c (after insert, after update, after delete) {
+trigger Hospital_Hospital on Hospital__c (before insert, before update, before delete) {
+//    if (UserInfo.getUserId().equals('0051t000002SGkIAAW')) {
 
-    if (Trigger.isInsert || Trigger.isUpdate) {
-        Boolean isExecuted = false;
-        while (!isExecuted) {
-            System.debug('Trigger.newMap.keySet()'+ Trigger.newMap.keySet());
-            Hospital_HospitalTriggerHandler.sendHospitalData(Trigger.newMap.keySet());
-            isExecuted = true;
-        }
-
-
-    } else if (Trigger.isDelete) {
-        Boolean isExecuted = false;
-        while (!isExecuted) {
-            Hospital_HospitalTriggerHandler.deleteHospitalData(Trigger.oldMap.keySet());
-            isExecuted = true;
+        if (Trigger.isInsert || Trigger.isUpdate) {
+            Boolean isExecuted = false;
+            while (!isExecuted) {
+                List<Hospital_HospitalWrapperForREST> hospitalsInWrapper = new List<Hospital_HospitalWrapperForREST>();
+                for (Hospital__c hosp : Trigger.new) {
+                    hospitalsInWrapper.add(new Hospital_HospitalWrapperForREST(hosp));
+                }
+                String body = '{ "hospitals"  : ' + JSON.serialize(hospitalsInWrapper) + ' }';
+                Hospital_HospitalTriggerHandler.sendHosp(body);
+                isExecuted = true;
+            }
+        } else if (Trigger.isDelete) {
+            Boolean isExecuted = false;
+            while (!isExecuted) {
+                List<String> hospitalsIds = new List<String>();
+                for (Hospital__c hosp : Trigger.oldMap.values()) {
+                    hospitalsIds.add(hosp.External_Id__c);
+                }
+                Hospital_HospitalTriggerHandler.deleteHospitalData(hospitalsIds);
+                isExecuted = true;
+            }
         }
     }
-
-
-
-}
-
-
-
-
-//trigger Hospital_Hospital on Hospital__c (before insert, after delete) {
-//
-//
-//    if (Trigger.isInsert) {
-//        if(Trigger.isBefore){
-//            Boolean isExecuted = false;
-//            while (!isExecuted) {
-//                System.debug('Trigger.newMap.keySet()');
-//                Set<Id> listOfHospital = new Set<Id>();
-//
-//                for(Hospital__c hospital : trigger.new){
-//                    listOfHospital.add(hospital.Id);
-//                }
-//                System.debug('Trigger.newMap.keySet()2222222' + listOfHospital);
-//
-//                Hospital_HospitalTriggerHandler.sendHospitalData(listOfHospital);
-//                System.debug('Trigger.newMap.keySet()2222222' + listOfHospital);
-//
-////            Hospital_HospitalTriggerHandler.assignIdToExternalID(Trigger.newMap.keySet());
-//
-//                isExecuted = true;
-//            }
-//
-//
-//        }
-//
-////    if (Trigger.isInsert) {
-////        if(Trigger.isInsert){
-////            Boolean isExecuted = false;
-////            while (!isExecuted) {
-////                System.debug('Trigger.newMap.keySet()' + Trigger.newMap.keySet());
-////                Hospital_HospitalTriggerHandler.sendHospitalData(Trigger.newMap.keySet());
-////                System.debug('Trigger.newMap.keySet()2222222' + Trigger.newMap.keySet());
-////
-//////            Hospital_HospitalTriggerHandler.assignIdToExternalID(Trigger.newMap.keySet());
-////
-////                isExecuted = true;
-////            }
-////
-////        }
-//
-//
-//    } else if (Trigger.isDelete) {
-//        Boolean isExecuted = false;
-//        while (!isExecuted) {
-//            Hospital_HospitalTriggerHandler.deleteHospitalData(Trigger.oldMap.keySet());
-//            isExecuted = true;
-//        }
-//    }
-//
-//
 //}

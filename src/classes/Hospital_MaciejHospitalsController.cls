@@ -40,6 +40,8 @@ public with sharing class Hospital_MaciejHospitalsController {
         hospitalsFromMaciej = new List<Hospital_HospitalWrapperForREST>();
         hospitalsFromMaciej = getHospitalCallout(hospitalSearchData.Name, hospitalSearchData.City__c, hospitalSearchData.Country__c);
         sortByName();
+        System.debug('hospitalsFromMaciej >> ' + hospitalsFromMaciej);
+
     }
 
     public List<Hospital_HospitalWrapperForREST> getHospitalCallout(String queryName, String queryCity, String queryCountry) {
@@ -49,7 +51,9 @@ public with sharing class Hospital_MaciejHospitalsController {
             HttpRequest request = getRequest('GET', query, '');
             HttpResponse response = http.send(request);
             System.debug('Status Code --> ' + response.getStatusCode());
+            System.debug('response.getBody() --> ' + response.getBody());
             List<Hospital_HospitalWrapperForREST> hospitalList = (List<Hospital_HospitalWrapperForREST>) JSON.deserialize(response.getBody(), List<Hospital_HospitalWrapperForREST>.class);
+            System.debug('hospitalList --> ' + hospitalList);
             return hospitalList;
         } catch (Exception ex) {
             System.debug('ex --> ' + ex.getMessage());
@@ -108,11 +112,14 @@ public with sharing class Hospital_MaciejHospitalsController {
 
     public List<Hospital_HospitalWrapperForREST> deleteHospitalCallout(String hospitalToDeleteId) {
         Http http = new Http();
-        System.debug('hospitalToDeleteId'+ hospitalToDeleteId);
+        for(Hospital_HospitalWrapperForREST hospTemp :hospitalsFromMaciej){
+            if(hospTemp.hospitalId.equals(hospitalToDeleteId)){
+                hospitalToDeleteId = hospTemp.externalId;
+                break;
+            }
+        }
         HttpRequest request = getRequest('DELETE', hospitalToDeleteId, '');
-        System.debug('requet '+ request.getBody());
         HttpResponse response = http.send(request);
-        System.debug('response'+ response.getStatusCode());
         List<Hospital_HospitalWrapperForREST> hospitalList = (List<Hospital_HospitalWrapperForREST>) JSON.deserialize(response.getBody(), List<Hospital_HospitalWrapperForREST>.class);
         return hospitalList;
     }
@@ -145,6 +152,7 @@ public with sharing class Hospital_MaciejHospitalsController {
     public List<Hospital_HospitalWrapperForREST> insertHospitalCallout(Hospital__c hospital) {
         String body = JSON.serialize(new Hospital_HospitalWrapperForREST(hospital), true);
         body = '{ "hospitals"  : [ ' + body + ' ] }';
+        System.debug('body >>>>' + body);
         Http http = new Http();
         HttpRequest request = getRequest('PUT', '', body);
         HttpResponse response = http.send(request);
@@ -158,6 +166,7 @@ public with sharing class Hospital_MaciejHospitalsController {
         for (Hospital_HospitalWrapperForREST hosp : hospitalsFromMaciej) {
             if (hosp.hospitalId.equals(hospitalToEditId)) {
                 hospitalCreateData.Id = hosp.hospitalId;
+                hospitalCreateData.External_Id__c = hosp.externalId;
                 hospitalCreateData.Name = hosp.name;
                 hospitalCreateData.City__c = hosp.city;
                 hospitalCreateData.Country__c = hosp.country;

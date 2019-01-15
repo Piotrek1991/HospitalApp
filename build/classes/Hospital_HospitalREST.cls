@@ -22,72 +22,76 @@ global with sharing class Hospital_HospitalREST {
 
     @HttpPut
     global static List<Hospital_HospitalWrapperForRest> upsertHospitals(List<Hospital_HospitalWrapperForRest> hospitals) {
-//        List<Hospital__c> hospitalListToUpdate = new List<Hospital__c>();
         List<Hospital__c> hospitalListToInsert = new List<Hospital__c>();
-//        Set<Hospital__c> hospitalSetToInsert = new Set<Hospital__c>();
-//        List<Hospital__c> hospitalListToDelete = new List<Hospital__c>();
+        List<Hospital__c> hospitalListToUpdate = new List<Hospital__c>();
 
-//        List<Hospital__c> listToCompare = [SELECT Id, External_Id__c, Name, City__c, Country__c, Website__c, Street__c, PostalCode__c FROM Hospital__c];
+        List<String> externalIds = new List<String>();
 
-        for (Hospital_HospitalWrapperForRest hospitalFrom : hospitals) {
-            hospitalListToInsert.add(new Hospital__c(
-                    External_Id__c = hospitalFrom.externalId,
+        for (Hospital_HospitalWrapperForRest hospital : hospitals) {
+            if(String.isBlank(hospital.externalId)) {
+                hospital.externalId = hospital.name + hospital.city + hospital.country + hospital.street;
+            }
+            externalIds.add(hospital.externalId);
+        }
+
+        List<Hospital__c> listToCompare = [SELECT Id, External_Id__c, Name, City__c, Country__c, Website__c, Street__c, PostalCode__c FROM Hospital__c WHERE External_Id__c IN:externalIds];
+
+        for (Hospital__c hospital : listToCompare) {
+            System.debug('Hospital from compare' + hospital);
+            for (Hospital_HospitalWrapperForRest hospitalExternal : hospitals) {
+                System.debug('Hospital from hospitalExternal' + hospitalExternal);
+                if (String.valueOf(hospital.External_Id__c).equals(hospitalExternal.externalId)) {
+                    hospital.Name = hospitalExternal.name;
+                    hospital.Country__c = hospitalExternal.country;
+                    hospital.City__c = hospitalExternal.city;
+                    hospital.PostalCode__c = hospitalExternal.postalCode;
+                    hospital.Street__c = hospitalExternal.street;
+                    hospitalListToUpdate.add(hospital);
+                }
+            }
+        }
+        System.debug('hospitalListToUpdate >> ' + hospitalListToUpdate);
+
+        if (hospitalListToUpdate.size() > 0) {
+            update hospitalListToUpdate;
+        }
+        System.debug('hospitals >>> ' + hospitals);
+
+        if (listToCompare.size() == 0) {
+            for (Hospital_HospitalWrapperForRest hospitalFrom : hospitals) {
+                hospitalListToInsert.add(new Hospital__c(
+                        External_Id__c = hospitalFrom.externalId,
                         Name = hospitalFrom.name,
                         Country__c = hospitalFrom.country,
                         City__c = hospitalFrom.city,
                         PostalCode__c = hospitalFrom.postalCode,
                         Street__c = hospitalFrom.street));
+            }
+
+        } else {
+            for (Hospital_HospitalWrapperForRest hospitalFrom : hospitals) {
+                for (Hospital__c hospital : listToCompare) {
+                    System.debug('String.valueOf(hospital.External_Id__c)' + String.valueOf(hospital.External_Id__c));
+                    System.debug('hospitalFrom.externalId' + hospitalFrom.hospitalId);
+                    if ( String.isBlank(hospitalFrom.hospitalId) && !String.valueOf(hospital.External_Id__c).equals(hospitalFrom.externalId ) ) {
+                        hospitalListToInsert.add(new Hospital__c(
+                                External_Id__c = hospitalFrom.externalId,
+                                Name = hospitalFrom.name,
+                                Country__c = hospitalFrom.country,
+                                City__c = hospitalFrom.city,
+                                PostalCode__c = hospitalFrom.postalCode,
+                                Street__c = hospitalFrom.street));
+                    }
+                }
+            }
         }
 
-        upsert hospitalListToInsert;
+        System.debug('hospitalListToInsert' + hospitalListToInsert);
+        if (hospitalListToInsert.size() > 0) {
+            insert hospitalListToInsert;
+        }
 
-//        for (Hospital_HospitalWrapperForRest hospitalFrom : hospitals) {
-//            if( hospitalFrom.hospitalId.length() >15 ){
-//                for (Hospital__c hospitalFromDataBase : listToCompare) {
-//                    if (hospitalFrom.hospitalId.equals(hospitalFromDataBase.External_Id__c)) {
-//                        hospitalFromDataBase.Name = hospitalFrom.name;
-//                        hospitalFromDataBase.PostalCode__c = hospitalFrom.postalCode;
-//                        hospitalFromDataBase.City__c = hospitalFrom.city;
-//                        hospitalFromDataBase.Country__c = hospitalFrom.country;
-//                        hospitalListToUpdate.add(hospitalFromDataBase);
-//                        break;
-//                    } else {
-//                        hospitalSetToInsert.add(new Hospital__c(External_Id__c = hospitalFrom.hospitalId,
-//                                Name = hospitalFrom.name,
-//                                Country__c = hospitalFrom.country,
-//                                City__c = hospitalFrom.city,
-//                                PostalCode__c = hospitalFrom.postalCode,
-//                                Street__c = hospitalFrom.street));
-//                    }
-//                }
-//            } else {
-//                hospitalSetToInsert.add(new Hospital__c(External_Id__c = hospitalFrom.hospitalId,
-//                        Name = hospitalFrom.name,
-//                        Country__c = hospitalFrom.country,
-//                        City__c = hospitalFrom.city,
-//                        PostalCode__c = hospitalFrom.postalCode,
-//                        Street__c = hospitalFrom.street));
-//            }
-//        }
-
-//        if (hospitalListToUpdate.size() > 0) {
-//            hospitalSetToInsert.clear();
-//        }
-//
-//        for (Hospital__c hospital : hospitalSetToInsert) {
-//            hospitalListToInsert.add(hospital);
-//        }
-//        System.debug('listToCompare >> ' + listToCompare);
-//        System.debug('hospitalListToInsert >> ' + hospitalListToInsert);
-//        System.debug('hospitalListToUpdate >> ' + hospitalListToUpdate);
-//
-//        if (hospitalListToUpdate.size() > 0) {
-//            update hospitalListToUpdate;
-//        }
-//        if (hospitalListToInsert.size() > 0) {
-//            insert hospitalListToInsert;
-//        }
-
+        hospitalListToInsert.addAll(hospitalListToUpdate);
 
         List<Hospital_HospitalWrapperForRest> resultsHospitals = new List<Hospital_HospitalWrapperForRest>();
         for (Hospital__c rawHospital : hospitalListToInsert) {
@@ -122,7 +126,7 @@ global with sharing class Hospital_HospitalREST {
     }
 
     private static String generateQuery(Map<String, String> pairsNameValue) {
-        String query = 'SELECT Id, Name, Country__c, City__c, PostalCode__c, Street__c FROM Hospital__c';
+        String query = 'SELECT Id, External_Id__c, Name, Country__c, City__c, PostalCode__c, Street__c FROM Hospital__c';
         try {
             Set<String> fields = pairsNameValue.keySet();
             if (!fields.isEmpty()) {

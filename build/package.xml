@@ -5,7 +5,12 @@
         <members>Hospital_HospitalWrapperForREST</members>
         <members>Hospital_HospitalTriggerHandler</members>
         <members>Hospital_Utils</members>
+        <members>Hospital_HospitalEditController</members>
         <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Hospital_HospitalEdit</members>
+        <name>ApexPage</name>
     </types>
     <types>
         <members>Hospital__c.City__c</members>

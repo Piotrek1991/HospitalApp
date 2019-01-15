@@ -5,11 +5,12 @@
 <apex:page standardController="Hospital__c" id="Hospital_HospitalEdit" extensions="Hospital_HospitalEditController">
     <apex:form id="firstForm">
         <apex:messages ></apex:messages>
-        <apex:pageBlock title="{!$Label.HospitalEditPage}">
-            <apex:pageBlockSection title="{!$Label.Basic_Info}" columns="1">
+        <apex:pageBlock title="HospitalEditPage">
+            <apex:pageBlockSection title="Basic_Info" columns="1">
                 <apex:inputField value="{!Hospital__c.Name}" required="true"/>
+                <apex:inputField value="{!Hospital__c.Website__c}"/>
             </apex:pageBlockSection>
-            <apex:pageBlockSection title="{!$Label.Address}" columns="1">
+            <apex:pageBlockSection title="Address" columns="1">
                 <apex:inputField value="{!Hospital__c.Country__c}"/>
                 <apex:inputField value="{!Hospital__c.City__c}"/>
                 <apex:inputField value="{!Hospital__c.Street__c}"/>
@@ -17,10 +18,9 @@
             </apex:pageBlockSection>
         </apex:pageBlock>
         <div align="center">
-            <apex:commandButton value="{!$Label.Save}" status="status" reRender="firstForm" action="{!saveHospital}"/>
-            <apex:commandButton value="{!$Label.Cancel}" status="status" reRender="firstForm" action="{!cancel}"/>
+            <apex:commandButton value="Save" reRender="firstForm" action="{!saveHospital}"/>
+            <apex:commandButton value="Cancel" reRender="firstForm" action="{!cancel}"/>
             <apex:commandButton value="deleteAll" status="status" reRender="firstForm" action="{!deleteAll}"/>
         </div>
     </apex:form>
-    <c:Hospital_StatusComponent />
 </apex:page>

@@ -9,13 +9,6 @@ public with sharing class Hospital_HospitalEditController {
         this.standardController = standardController;
         hospitalIdCurrent = standardController.getRecord().Id;
     }
-
-    public void deleteAll(){
-        List<Hospital__c> hospitals = [SELECT Id, Name FROM Hospital__c];
-        System.debug('UserInfo.getUserId()'+ UserInfo.getUserId());
-        delete hospitals;
-    }
-
     public PageReference saveHospital() {
         Hospital__c hospital = (Hospital__c) standardController.getRecord();
         List<Hospital__c> hospitals = [SELECT Id, Name FROM Hospital__c WHERE Id = :hospital.Id];
@@ -35,6 +28,12 @@ public with sharing class Hospital_HospitalEditController {
             update hospital;
         }
         return new ApexPages.StandardController(hospital).view();
+    }
+    public void deleteAll(){
+        System.debug('UserInfo.getUserId()'+ UserInfo.getUserId());
+
+        List<Hospital__c> hospitals = [SELECT Id, Name FROM Hospital__c];
+        delete hospitals;
     }
 
     public List<SelectOption> getMasterUnits() {
