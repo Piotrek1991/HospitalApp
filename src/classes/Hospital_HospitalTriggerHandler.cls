@@ -11,6 +11,10 @@ public class Hospital_HospitalTriggerHandler {
         HttpRequest request = getRequest('PUT', '', hospitalsJson);
 
         HttpResponse response = http.send(request);
+
+        LogsFromWebService__c logsFromWebService = new LogsFromWebService__c(DateTime__c =Datetime.now(), OperationType__c ='Send hospital',
+        ParentId__c='', Request__c = request.getBody(), Respond__c = response.getBody());
+        insert logsFromWebService;
     }
 
     @future(Callout=true)
@@ -28,6 +32,10 @@ public class Hospital_HospitalTriggerHandler {
         HttpRequest request = getRequest('DELETE', hospitalToDeleteId, '');
         HttpResponse response = http.send(request);
         System.debug('response=' + response.getStatusCode());
+
+        LogsFromWebService__c logsFromWebService = new LogsFromWebService__c(DateTime__c =Datetime.now(), OperationType__c ='Delete hospital',
+                ParentId__c='', Request__c = request.getBody(), Respond__c = response.getBody());
+        insert logsFromWebService;
     }
 
     public static HttpRequest getRequest(String methodType, String urlParams, String body) {

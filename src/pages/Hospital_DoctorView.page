@@ -44,6 +44,7 @@
                     <apex:outputField value="{!Doctor__c.First_Name__c}"/>
                     <apex:outputField value="{!Doctor__c.Last_Name__c}"/>
                     <apex:outputField value="{!Doctor__c.Email__c}"/>
+                    <apex:outputField value="{!Doctor__c.License_Number__c}" rendered="{!isLicenseNoEnabled}"/>
                     <apex:pageBlockSectionItem >
                         <apex:outputText value="{!$ObjectType.Doctor__c.fields.Phone__c.Label}"/>
                         <apex:form >

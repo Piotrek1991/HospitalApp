@@ -33,6 +33,11 @@ public with sharing class Hospital_ViewController {
         editStartDateFlag = false;
         isEnyErrorInModalWindow = false;
     }
+
+    public static Boolean getIsLicenseNoEnabled(){
+        return Hospital_DoctorUtils.isFunctionalityEnabled('HospitalAddressNotEnabled');
+    }
+
     public List<Contract__c> getContracts() {
         contracts = [
                 SELECT Id,

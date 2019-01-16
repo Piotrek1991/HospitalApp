@@ -63,6 +63,10 @@
                             <option name="name" value="Hospital_ContractSearchController" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Hospital_DoctorComparator" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Hospital_DoctorHandler" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -106,6 +110,14 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hospital_GuidUtil" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Hospital_HospitalComparator" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Hospital_HospitalEditController" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hospital_HospitalHierarchyController" />
@@ -185,15 +197,7 @@
                             <option name="name" value="SiteRegisterControllerTest" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="Hospital_HospitalComparator" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="Hospital_DoctorComparator" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="Hospital_HospitalEditController" />
+                            <option name="name" value="Hospital_HospitalBatch" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
@@ -504,7 +508,16 @@
                       <option name="entries">
                         <list>
                           <MetadataEntry>
+                            <option name="name" value="AppFromSecondOrg" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="AppToSecondOrg" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Login_From_Source_Salesforce" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="PiotrHospitals" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -703,27 +716,39 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Doctor__c.City__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Doctor__c.Country__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Doctor__c.Email__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Doctor__c.First_Name__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Doctor__c.FirstNameLastName__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Doctor__c.Last_Name__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Doctor__c.License_Number__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Doctor__c.Phone__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Doctor__c.Street__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Goal.OrigGoalId__c" />
@@ -734,6 +759,10 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hospital__c.Country__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Hospital__c.External_Id__c" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -757,7 +786,7 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="Hospitalsconnection__c.restPassword__c" />
+                            <option name="name" value="Hospital_Custom_Settings__c.Value__c" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Lead.CurrentGenerators__c" />
@@ -785,6 +814,26 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Lead.SICCode__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsFromWebService__c.DateTime__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsFromWebService__c.OperationType__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsFromWebService__c.ParentId__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsFromWebService__c.Request__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsFromWebService__c.Respond__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Metric.OrigMetricId__c" />
@@ -889,6 +938,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="DisMiss" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Do_You_really_want_to_delete_this_data" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Doctor" />
@@ -1215,6 +1267,7 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Doctor__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Document" />
@@ -1245,7 +1298,7 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="Hospitalsconnection__c" />
+                            <option name="name" value="Hospital_Custom_Settings__c" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Idea" />
@@ -1255,6 +1308,10 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LeadCleanInfo" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsFromWebService__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Macro" />
@@ -1367,7 +1424,10 @@
                             <option name="name" value="Hospital__c-en_US" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="Hospitalsconnection__c-en_US" />
+                            <option name="name" value="Hospital_Custom_Settings__c-en_US" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsFromWebService__c-en_US" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -2035,6 +2095,9 @@
                             <option name="name" value="Event-Event Layout" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="FeedItem-Feed Item Layout" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Global-Global Layout" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -2054,6 +2117,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Lead-Lead Layout" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsFromWebService__c-LogsFromWebService Layout" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Macro-Macro Layout" />
@@ -2250,9 +2316,6 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Doctor__c.All_Information" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="Hospital__c.All" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hospital__c.All_Information" />
@@ -2579,6 +2642,9 @@
                           <MetadataEntry>
                             <option name="name" value="My_Public_Doctors_Profile_profilePasswordPolicy1545293417797" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="X8_profilePasswordPolicy1547575316542" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="ProfilePasswordPolicy" />
@@ -2589,6 +2655,9 @@
                         <list>
                           <MetadataEntry>
                             <option name="name" value="My_Public_Doctors_Profile_profileSessionSetting1545293417835" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="X8_profileSessionSetting1547575316586" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -2701,6 +2770,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="ApexDevNet" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="AuthToken" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="MaciejEndPoint" />
@@ -3902,13 +3974,16 @@
                             <option name="name" value="Hospital__c" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="Hospitalsconnection__c" />
+                            <option name="name" value="Hospital_Custom_Settings__c" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Lead" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="ListEmail" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsFromWebService__c" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Opportunity" />
@@ -4177,6 +4252,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Lead" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsFromWebService__c" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Opportunity" />

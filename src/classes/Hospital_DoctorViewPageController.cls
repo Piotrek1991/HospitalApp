@@ -49,6 +49,10 @@ public with sharing class Hospital_DoctorViewPageController {
         return contracts;
     }
 
+    public static Boolean getIsLicenseNoEnabled(){
+        return Hospital_DoctorUtils.isFunctionalityEnabled('DoctorLicenseNotEnabled');
+    }
+
     public void setRunModalWindow() {
         runModalWindow = true;
     }

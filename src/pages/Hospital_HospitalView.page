@@ -27,7 +27,7 @@
             <apex:outputField value="{!Hospital__c.Website__c}"/>
             <apex:outputField value="{!Hospital__c.External_Id__c}"/>
         </apex:pageBlockSection>
-        <apex:pageBlockSection id="sectionAddress" title="{!$Label.Address}" columns="1">
+        <apex:pageBlockSection id="sectionAddress" title="{!$Label.Address}" columns="1" rendered="{!isLicenseNoEnabled}">
             <apex:outputField value="{!Hospital__c.Country__c}"/>
             <apex:outputField value="{!Hospital__c.City__c}"/>
             <div id="map"></div>

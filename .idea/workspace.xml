@@ -2,22 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baa6cb16-da58-4406-adfa-303923bf028f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build/classes/Hospital_HospitalEditController.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/Hospital_HospitalEditController.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/pages/Hospital_HospitalEdit.page" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/pages/Hospital_HospitalEdit.page-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/Hospital_HospitalREST.cls" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Hospital_HospitalREST.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/Hospital_HospitalTriggerHandler.cls" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Hospital_HospitalTriggerHandler.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/package.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/triggers/Hospital_Hospital.trigger" beforeDir="false" afterPath="$PROJECT_DIR$/build/triggers/Hospital_Hospital.trigger" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hospital project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Hospital project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IlluminatedCloud/New_Connection1/OfflineSymbolTable.zip" beforeDir="false" afterPath="$PROJECT_DIR$/IlluminatedCloud/New_Connection1/OfflineSymbolTable.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_DoctorComparator.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_DoctorComparator.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_DoctorComparator.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_DoctorComparator.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_DoctorUtils.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_DoctorUtils.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_DoctorViewPageController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_DoctorViewPageController.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalComparator.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalComparator.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalComparator.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalComparator.cls-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalEditController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalEditController.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalREST.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalREST.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalEditController.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalEditController.cls-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_MaciejHospitalsController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_MaciejHospitalsController.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Hospital_HospitalEdit.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Hospital_HospitalEdit.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger" beforeDir="false" afterPath="$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_ViewController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_ViewController.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Doctor__c.object" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Doctor__c.object" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Hospital__c.object" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Hospital__c.object" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Hospital_DoctorView.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Hospital_DoctorView.page" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Hospital_HospitalView.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Hospital_HospitalView.page" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,49 +36,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="30" column="3" lean-forward="true" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/triggers/Hospital_Hospital.trigger">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/classes/Hospital_HospitalTriggerHandler.cls">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/classes/Hospital_HospitalREST.cls">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="85" column="13" lean-forward="true" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
-              <folding>
-                <element signature="e#1064#1077#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalREST.cls">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="154">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
               <folding>
                 <element signature="e#408#441#0" expanded="true" />
                 <element signature="e#585#618#0" expanded="true" />
@@ -85,6 +47,37 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalBatch.cls">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/build.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="44" lean-forward="true" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/package.xml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -141,11 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/classes/Hosp_MaciejDoctorWrapperForSoap.cls" />
-        <option value="$PROJECT_DIR$/src/classes/Hospital_ViewController.cls" />
-        <option value="$PROJECT_DIR$/src/classes/Hospital_DoctorQueryBuilder.cls" />
-        <option value="$PROJECT_DIR$/src/classes/Hosp_MaciejSoapForDoctorsWebService.cls" />
-        <option value="$PROJECT_DIR$/src/classes/Hospital_MaciejDoctorsCalloutTest.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_MaciejHospitalsMock.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_MaciejHospitalSingleRequestMock.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_DoctorsSOAP.cls" />
@@ -170,7 +158,6 @@
         <option value="$PROJECT_DIR$/build/objects/Hospital__c.object" />
         <option value="$PROJECT_DIR$/build/tests/package.xml" />
         <option value="$PROJECT_DIR$/build/classes/Hospital_Utils.cls" />
-        <option value="$PROJECT_DIR$/src/pages/Hospital_HospitalView.page" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_DoctorComparator.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_Utils.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_MaciejHospitalsControllerTest.cls" />
@@ -186,12 +173,18 @@
         <option value="$PROJECT_DIR$/build/pages/Hospital_HospitalEdit.page" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalEditController.cls" />
         <option value="$PROJECT_DIR$/build/classes/Hospital_HospitalEditController.cls" />
-        <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls" />
         <option value="$PROJECT_DIR$/build/classes/Hospital_HospitalTriggerHandler.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalREST.cls" />
         <option value="$PROJECT_DIR$/build/triggers/Hospital_Hospital.trigger" />
         <option value="$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger" />
         <option value="$PROJECT_DIR$/build/classes/Hospital_HospitalREST.cls" />
+        <option value="$PROJECT_DIR$/src/pages/Hospital_DoctorView.page" />
+        <option value="$PROJECT_DIR$/src/classes/Hospital_DoctorUtils.cls" />
+        <option value="$PROJECT_DIR$/src/classes/Hospital_DoctorViewPageController.cls" />
+        <option value="$PROJECT_DIR$/src/classes/Hospital_ViewController.cls" />
+        <option value="$PROJECT_DIR$/src/pages/Hospital_HospitalView.page" />
+        <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls" />
+        <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalBatch.cls" />
       </list>
     </option>
   </component>
@@ -201,8 +194,8 @@
         <entry key="Hospital project">
           <value>
             <ModuleWorkspaceSettings>
-              <option name="moduleContentsLastModified" value="1547472195050" />
-              <option name="serverMetadataLastPopulated" value="1547055316909" />
+              <option name="moduleContentsLastModified" value="1547579430194" />
+              <option name="serverMetadataLastPopulated" value="1547579102675" />
             </ModuleWorkspaceSettings>
           </value>
         </entry>
@@ -320,7 +313,7 @@
                       <entry key="CLASSES/ASYNCHOSP_MACIEJSOAPFORDOCTORSWEBSERVICE.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_CONTRACTHANDLER.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_CONTRACTSEARCHCONTROLLER.CLS" value="1546591318935" />
-                      <entry key="CLASSES/HOSPITAL_DOCTORCOMPARATOR.CLS" value="1547454247846" />
+                      <entry key="CLASSES/HOSPITAL_DOCTORCOMPARATOR.CLS" value="1547579422175" />
                       <entry key="CLASSES/HOSPITAL_DOCTORHANDLER.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_DOCTORHIRECONTROLL.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_DOCTORIMPORTCONTROLLER.CLS" value="1546591318935" />
@@ -330,18 +323,18 @@
                       <entry key="CLASSES/HOSPITAL_DOCTORSEARCHCONTROLLER.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_DOCTORSSOAP.CLS" value="1546951768578" />
                       <entry key="CLASSES/HOSPITAL_DOCTORSSOAPTEST.CLS" value="1546591318935" />
-                      <entry key="CLASSES/HOSPITAL_DOCTORUTILS.CLS" value="1546591318935" />
-                      <entry key="CLASSES/HOSPITAL_DOCTORVIEWPAGECONTROLLER.CLS" value="1546591318935" />
+                      <entry key="CLASSES/HOSPITAL_DOCTORUTILS.CLS" value="1547574172095" />
+                      <entry key="CLASSES/HOSPITAL_DOCTORVIEWPAGECONTROLLER.CLS" value="1547576065116" />
                       <entry key="CLASSES/HOSPITAL_DOCTORWRAPPERFORSOAP.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_FAULTPARTNERSOAPSFORCECOM.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_GUIDUTIL.CLS" value="1546591318935" />
-                      <entry key="CLASSES/HOSPITAL_HOSPITALCOMPARATOR.CLS" value="1547538022092" />
-                      <entry key="CLASSES/HOSPITAL_HOSPITALEDITCONTROLLER.CLS" value="1547548017026" />
+                      <entry key="CLASSES/HOSPITAL_HOSPITALCOMPARATOR.CLS" value="1547579422175" />
+                      <entry key="CLASSES/HOSPITAL_HOSPITALEDITCONTROLLER.CLS" value="1547579422175" />
                       <entry key="CLASSES/HOSPITAL_HOSPITALHIERARCHYCONTROLLER.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_HOSPITALQUERYBUILDER.CLS" value="1546591318935" />
-                      <entry key="CLASSES/HOSPITAL_HOSPITALREST.CLS" value="1547556481272" />
-                      <entry key="CLASSES/HOSPITAL_HOSPITALTRIGGERHANDLER.CLS" value="1547554476716" />
-                      <entry key="CLASSES/HOSPITAL_HOSPITALWRAPPERFORREST.CLS" value="1547468639693" />
+                      <entry key="CLASSES/HOSPITAL_HOSPITALREST.CLS" value="1547579422175" />
+                      <entry key="CLASSES/HOSPITAL_HOSPITALTRIGGERHANDLER.CLS" value="1547579905833" />
+                      <entry key="CLASSES/HOSPITAL_HOSPITALWRAPPERFORREST.CLS" value="1547579422175" />
                       <entry key="CLASSES/HOSPITAL_MACIEJDOCTORSCALLOUTTEST.CLS" value="1546857583925" />
                       <entry key="CLASSES/HOSPITAL_MACIEJDOCTORSCONTROLLER.CLS" value="1547459296585" />
                       <entry key="CLASSES/HOSPITAL_MACIEJDOCTORSCONTROLLERTEST.CLS" value="1547026010007" />
@@ -353,20 +346,21 @@
                       <entry key="CLASSES/HOSPITAL_PARTNERSOAPSFORCECOM.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_SOBJECTPARTNERSOAPSFORCECOM.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_UTILS.CLS" value="1547449098527" />
-                      <entry key="CLASSES/HOSPITAL_VIEWCONTROLLER.CLS" value="1546591318935" />
+                      <entry key="CLASSES/HOSPITAL_VIEWCONTROLLER.CLS" value="1547576161668" />
                       <entry key="CLASSES/HOSP_MACIEJDOCTORWRAPPERFORSOAP.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSP_MACIEJSOAPFORDOCTORSWEBSERVICE.CLS" value="1546857577506" />
                       <entry key="COMPONENTS/HOSPITAL_DOCTORHIRECOMPONENT.COMPONENT" value="1546520878867" />
                       <entry key="COMPONENTS/HOSPITAL_HOSPITALHIERARCHY.COMPONENT" value="1546520878867" />
                       <entry key="COMPONENTS/HOSPITAL_STATUSCOMPONENT.COMPONENT" value="1546520878867" />
                       <entry key="COMPONENTS/HOSPITAL_STATUSSLDS.COMPONENT" value="1546987965235" />
-                      <entry key="GLOBALVALUESETS/COUNTRY_PICKLIST.GLOBALVALUESET" value="1547128619043" />
+                      <entry key="GLOBALVALUESETS/COUNTRY_PICKLIST.GLOBALVALUESET" value="1547579422175" />
                       <entry key="LAYOUTS/CONTRACT__C-CONTRACT LAYOUT.LAYOUT" value="1546521443432" />
                       <entry key="LAYOUTS/DOCTOR__C-DOCTOR LAYOUT.LAYOUT" value="1546521443432" />
                       <entry key="LAYOUTS/HOSPITAL__C-HOSPITAL LAYOUT.LAYOUT" value="1546521443432" />
                       <entry key="OBJECTS/CONTRACT__C.OBJECT" value="1546521443432" />
-                      <entry key="OBJECTS/DOCTOR__C.OBJECT" value="1546521443432" />
-                      <entry key="OBJECTS/HOSPITAL__C.OBJECT" value="1547128619043" />
+                      <entry key="OBJECTS/DOCTOR__C.OBJECT" value="1547579422175" />
+                      <entry key="OBJECTS/HOSPITAL__C.OBJECT" value="1547579422175" />
+                      <entry key="OBJECTS/LOGSFROMWEBSERVICE__C.OBJECT" value="1547579422175" />
                       <entry key="PAGES/HOSPITAL_CONTRACTVIEW.PAGE" value="1546520878867" />
                       <entry key="PAGES/HOSPITAL_DOCTOREDIT.PAGE" value="1546520878867" />
                       <entry key="PAGES/HOSPITAL_DOCTORIMPORT.PAGE" value="1546520878867" />
@@ -377,10 +371,10 @@
                       <entry key="PAGES/HOSPITAL_DOCTORSEARCHEXPORTTOEXCEL.PAGE" value="1546520878867" />
                       <entry key="PAGES/HOSPITAL_DOCTORSEARCHEXPORTTOJSON.PAGE" value="1546520878867" />
                       <entry key="PAGES/HOSPITAL_DOCTORSEARCHEXPORTTOXLSX.PAGE" value="1546520878867" />
-                      <entry key="PAGES/HOSPITAL_DOCTORVIEW.PAGE" value="1546520878867" />
+                      <entry key="PAGES/HOSPITAL_DOCTORVIEW.PAGE" value="1547573978540" />
                       <entry key="PAGES/HOSPITAL_DOCTORVIEWEXPORTTOPDFHANDLER.PAGE" value="1546520878867" />
                       <entry key="PAGES/HOSPITAL_HOSPITALEDIT.PAGE" value="1547545723145" />
-                      <entry key="PAGES/HOSPITAL_HOSPITALVIEW.PAGE" value="1547307972927" />
+                      <entry key="PAGES/HOSPITAL_HOSPITALVIEW.PAGE" value="1547576239213" />
                       <entry key="PAGES/HOSPITAL_MACIEJDOCTORS.PAGE" value="1547460449042" />
                       <entry key="PAGES/HOSPITAL_MACIEJHOSPITALS.PAGE" value="1547460496506" />
                       <entry key="STATICRESOURCES/RESOURCE.RESOURCE" value="1546521443432" />
@@ -1834,7 +1828,7 @@
             <entry key="New Connection1">
               <value>
                 <MetadataContents>
-                  <option name="lastPopulated" value="1547128592653" />
+                  <option name="lastPopulated" value="1547579346378" />
                   <option name="metadataTypes">
                     <set>
                       <MetadataType>
@@ -1842,10 +1836,10 @@
                           <set>
                             <option value="Custom%3A Support Profile" />
                             <option value="Customer Community Plus Login User" />
-                            <option value="Analytics Cloud Integration User" />
                             <option value="High Volume Customer Portal User" />
-                            <option value="Cross Org Data Proxy User" />
+                            <option value="Analytics Cloud Integration User" />
                             <option value="Force%2Ecom - Free User" />
+                            <option value="Cross Org Data Proxy User" />
                             <option value="PlatformPortal" />
                             <option value="External Identity User" />
                             <option value="Force%2Ecom - App Subscription User" />
@@ -1859,16 +1853,16 @@
                             <option value="My Public Doctors Profile" />
                             <option value="Partner Community User" />
                             <option value="StandardAul" />
-                            <option value="Gold Partner User" />
                             <option value="Chatter Moderator User" />
+                            <option value="Gold Partner User" />
                             <option value="SolutionManager" />
                             <option value="ReadOnly" />
                             <option value="Chatter Free User" />
                             <option value="Guest" />
                             <option value="HighVolumePortal" />
-                            <option value="MarketingProfile" />
                             <option value="Customer Community Login User" />
                             <option value="Customer Portal Manager Standard" />
+                            <option value="MarketingProfile" />
                             <option value="Analytics Cloud Security User" />
                             <option value="Admin" />
                             <option value="Partner App Subscription User" />
@@ -1886,6 +1880,7 @@
                         <option name="members">
                           <set>
                             <option value="ApexDevNet" />
+                            <option value="AuthToken" />
                             <option value="MaciejEndPoint2" />
                             <option value="MaciejEndPoint" />
                             <option value="Animals_rest" />
@@ -1926,9 +1921,9 @@
                             <option value="Security" />
                             <option value="Knowledge" />
                             <option value="IoT" />
+                            <option value="Ideas" />
                             <option value="Case" />
                             <option value="Name" />
-                            <option value="Ideas" />
                             <option value="FieldService" />
                             <option value="OmniChannel" />
                             <option value="Opportunity" />
@@ -1960,6 +1955,14 @@
                       <MetadataType>
                         <option name="members">
                           <set>
+                            <option value="Country_Picklist" />
+                          </set>
+                        </option>
+                        <option name="name" value="GlobalValueSet" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
                             <option value="Case" />
                           </set>
                         </option>
@@ -1971,8 +1974,8 @@
                             <option value="SLDS275" />
                             <option value="jQueryUI" />
                             <option value="resource" />
-                            <option value="SiteSamples" />
                             <option value="Hospital_DefaultPicture" />
+                            <option value="SiteSamples" />
                             <option value="jquery" />
                           </set>
                         </option>
@@ -1989,701 +1992,6 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="ChangePassword" />
-                            <option value="SiteTemplate" />
-                            <option value="InMaintenance" />
-                            <option value="Hospital_DoctorProfileImage" />
-                            <option value="StdExceptionTemplate" />
-                            <option value="Hospital_DoctorEdit" />
-                            <option value="SiteRegister" />
-                            <option value="AnswersHome" />
-                            <option value="Hospital_DoctorPublicSite" />
-                            <option value="Hospital_MaciejDoctors" />
-                            <option value="Hospital_DoctorSearchExportToCsv" />
-                            <option value="SiteLogin" />
-                            <option value="Unauthorized" />
-                            <option value="Hospital_DoctorSearchExportToJson" />
-                            <option value="SiteRegisterConfirm" />
-                            <option value="Hospital_DoctorImport" />
-                            <option value="UnderConstruction" />
-                            <option value="Hospital_MaciejHospitals" />
-                            <option value="Hospital_ContractView" />
-                            <option value="Hospital_DoctorViewExportToPDFHandler" />
-                            <option value="Hospital_HospitalView" />
-                            <option value="FileNotFound" />
-                            <option value="Hospital_DoctorView" />
-                            <option value="ForgotPassword" />
-                            <option value="Exception" />
-                            <option value="Doctors" />
-                            <option value="IdeasHome" />
-                            <option value="Hospital_DoctorSearchExportToXlsX" />
-                            <option value="BandwidthExceeded" />
-                            <option value="ForgotPasswordConfirm" />
-                            <option value="Hospital_HospitalEdit" />
-                            <option value="MyProfilePage" />
-                            <option value="Hospital_DoctorSearchExportToExcel" />
-                            <option value="Hospital_DoctorInfo" />
-                            <option value="Hospital_DoctorSearch" />
-                          </set>
-                        </option>
-                        <option name="name" value="ApexPage" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="SiteFooter" />
-                            <option value="Hospital_StatusComponent" />
-                            <option value="Hospital_StatusSlds" />
-                            <option value="SiteLogin" />
-                            <option value="SitePoweredBy" />
-                            <option value="Hospital_DoctorHireComponent" />
-                            <option value="SiteHeader" />
-                            <option value="Hospital_HospitalHierarchy" />
-                          </set>
-                        </option>
-                        <option name="name" value="ApexComponent" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Account-Account %28Sales%29 Layout" />
-                            <option value="Contact-Contact %28Support%29 Layout" />
-                            <option value="Product2-Product Layout" />
-                            <option value="Lead-Lead Layout" />
-                            <option value="Contact-Contact Layout" />
-                            <option value="Case-Case %28Sales%29 Layout" />
-                            <option value="Lead-Lead %28Support%29 Layout" />
-                            <option value="DandBCompany-D%26B Company Layout" />
-                            <option value="AssetRelationship-Asset Relationship Layout" />
-                            <option value="Case-Case %28Support%29 Layout" />
-                            <option value="Macro-Macro Layout" />
-                            <option value="Order-Order Layout" />
-                            <option value="ScorecardMetric-Scorecard Metric Layout" />
-                            <option value="UserProvisioningRequest-User Provisioning Request Layout" />
-                            <option value="Solution-Solution Layout" />
-                            <option value="Event-Event Layout" />
-                            <option value="Pricebook2-Price Book Layout" />
-                            <option value="UserProvisioningLog-User Provisioning Log Layout" />
-                            <option value="UserProvAccount-User Provisioning Account Layout" />
-                            <option value="Contact-Contact %28Marketing%29 Layout" />
-                            <option value="Task-Task Layout" />
-                            <option value="Doctor__c-Doctor Layout" />
-                            <option value="Hospital__c-Hospital Layout" />
-                            <option value="Asset-Asset Layout" />
-                            <option value="Opportunity-Opportunity Layout" />
-                            <option value="OrderItem-Order Product Layout" />
-                            <option value="DuplicateRecordSet-Duplicate Record Set Layout" />
-                            <option value="OpportunityLineItem-Opportunity Product Layout" />
-                            <option value="Case-Case Layout" />
-                            <option value="Contract-Contract Layout" />
-                            <option value="Account-Account Layout" />
-                            <option value="Campaign-Campaign Layout" />
-                            <option value="CommunityMemberLayout-Community Member Layout" />
-                            <option value="ScorecardAssociation-Scorecard Association Layout" />
-                            <option value="Opportunity-Opportunity %28Sales%29 Layout" />
-                            <option value="SocialPersona-Social Persona Layout" />
-                            <option value="Scorecard-Scorecard Layout" />
-                            <option value="Case-Case %28Marketing%29 Layout" />
-                            <option value="PricebookEntry-Price Book Entry Layout" />
-                            <option value="Contract__c-Contract Layout" />
-                            <option value="CaseClose-Close Case Layout" />
-                            <option value="Idea-Idea Layout" />
-                            <option value="ContentVersion-Content Version Layout" />
-                            <option value="Opportunity-Opportunity %28Support%29 Layout" />
-                            <option value="Global-Global Layout" />
-                            <option value="Account-Account %28Marketing%29 Layout" />
-                            <option value="Lead-Lead %28Sales%29 Layout" />
-                            <option value="EmailMessage-Email Message Layout" />
-                            <option value="SocialPost-Social Post Layout" />
-                            <option value="CampaignMember-Campaign Member Page Layout" />
-                            <option value="Account-Account %28Support%29 Layout" />
-                            <option value="QuickText-Quick Text Layout" />
-                            <option value="Contact-Contact %28Sales%29 Layout" />
-                            <option value="User-User Layout" />
-                            <option value="Lead-Lead %28Marketing%29 Layout" />
-                            <option value="Opportunity-Opportunity %28Marketing%29 Layout" />
-                          </set>
-                        </option>
-                        <option name="name" value="Layout" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Metric.Progress" />
-                            <option value="Metric.Completion" />
-                          </set>
-                        </option>
-                        <option name="name" value="RecordType" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Doctor__c.Check_correct_email" />
-                            <option value="Contract__c.Contract_in_past" />
-                            <option value="Contract__c.Check_contract_period" />
-                            <option value="Doctor__c.Check_Corret_Phone" />
-                          </set>
-                        </option>
-                        <option name="name" value="ValidationRule" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Campaign.ViewCampaignInfluenceReport" />
-                            <option value="Opportunity.DeliveryStatus" />
-                            <option value="Case.UpsellCrosssellOpportunity" />
-                            <option value="Account.Billing" />
-                          </set>
-                        </option>
-                        <option name="name" value="WebLink" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Hospital Home Page" />
-                          </set>
-                        </option>
-                        <option name="name" value="HomePageLayout" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Internal Zone" />
-                          </set>
-                        </option>
-                        <option name="name" value="Community" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Order" />
-                            <option value="Account" />
-                            <option value="User" />
-                            <option value="Contact" />
-                            <option value="Case" />
-                            <option value="FlowInterview" />
-                            <option value="Campaign" />
-                            <option value="ListEmail" />
-                            <option value="Opportunity" />
-                            <option value="Hospitalsconnection__c" />
-                            <option value="Doctor__c" />
-                            <option value="Lead" />
-                            <option value="Asset" />
-                            <option value="Hospital__c" />
-                          </set>
-                        </option>
-                        <option name="name" value="SharingRules" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="DirectorDirectSales" />
-                            <option value="SVPSalesMarketing" />
-                            <option value="COO" />
-                            <option value="MarketingTeam" />
-                            <option value="DirectorChannelSales" />
-                            <option value="InstallationRepairServices" />
-                            <option value="SVPHumanResources" />
-                            <option value="SVPCustomerServiceSupport" />
-                            <option value="VPInternationalSales" />
-                            <option value="ChannelSalesTeam" />
-                            <option value="CEO" />
-                            <option value="EasternSalesTeam" />
-                            <option value="CustomerSupportInternational" />
-                            <option value="CFO" />
-                            <option value="WesternSalesTeam" />
-                            <option value="CustomerSupportNorthAmerica" />
-                            <option value="VPMarketing" />
-                            <option value="VPNorthAmericanSales" />
-                          </set>
-                        </option>
-                        <option name="name" value="Role" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Create New" />
-                          </set>
-                        </option>
-                        <option name="name" value="HomePageComponent" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Salesforce_Org_Piotr" />
-                          </set>
-                        </option>
-                        <option name="name" value="AuthProvider" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="MaciejAccount" />
-                          </set>
-                        </option>
-                        <option name="name" value="NamedCredential" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Contact.Standard_Contact_Match_Rule_v1_1" />
-                            <option value="Account.Standard_Account_Match_Rule_v1_0" />
-                            <option value="Lead.Standard_Lead_Match_Rule_v1_0" />
-                            <option value="Doctor__c.Doctor_Matching_Rule" />
-                          </set>
-                        </option>
-                        <option name="name" value="MatchingRule" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Lead" />
-                            <option value="Case" />
-                          </set>
-                        </option>
-                        <option name="name" value="AssignmentRules" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Country_Picklist" />
-                          </set>
-                        </option>
-                        <option name="name" value="GlobalValueSet" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Campaign.Data_Quality_Score__c" />
-                            <option value="Hospital__c.Parent_Hospital__c" />
-                            <option value="Contract.Data_Quality_Score__c" />
-                            <option value="Lead.Data_Quality_Description__c" />
-                            <option value="Hospital__c.Phone__c" />
-                            <option value="User.DB_Region__c" />
-                            <option value="Activity.Data_Quality_Description__c" />
-                            <option value="Case.SLAViolation__c" />
-                            <option value="Lead.Primary__c" />
-                            <option value="Lead.CurrentGenerators__c" />
-                            <option value="Doctor__c.Country__c" />
-                            <option value="Doctor__c.Last_Name__c" />
-                            <option value="Hospital__c.Website__c" />
-                            <option value="Contract__c.End_Date__c" />
-                            <option value="Account.NumberofLocations__c" />
-                            <option value="Contract__c.Email__c" />
-                            <option value="Opportunity.MainCompetitors__c" />
-                            <option value="Account.UpsellOpportunity__c" />
-                            <option value="Account.SLASerialNumber__c" />
-                            <option value="Contract.Data_Quality_Description__c" />
-                            <option value="Account.CustomerPriority__c" />
-                            <option value="Hospital__c.PostalCode__c" />
-                            <option value="Activity.Data_Quality_Score__c" />
-                            <option value="Doctor__c.Email__c" />
-                            <option value="Lead.DB_Lead_Age__c" />
-                            <option value="Opportunity.OrderNumber__c" />
-                            <option value="Case.EngineeringReqNumber__c" />
-                            <option value="Hospital__c.Street__c" />
-                            <option value="Metric.OrigMetricId__c" />
-                            <option value="Contract__c.Closed_contract__c" />
-                            <option value="Doctor__c.FirstNameLastName__c" />
-                            <option value="Account.SLAExpirationDate__c" />
-                            <option value="Contact.Data_Quality_Description__c" />
-                            <option value="Contract__c.IsFinished__c" />
-                            <option value="User.Other_Salesforce_Org_Username__c" />
-                            <option value="Lead.DB_Created_Date_without_Time__c" />
-                            <option value="Doctor__c.City__c" />
-                            <option value="Doctor__c.Street__c" />
-                            <option value="Case.Data_Quality_Description__c" />
-                            <option value="Case.PotentialLiability__c" />
-                            <option value="Campaign.DB_Campaign_Tactic__c" />
-                            <option value="Opportunity.Data_Quality_Description__c" />
-                            <option value="Activity.DB_Activity_Type__c" />
-                            <option value="Hospitalsconnection__c.restPassword__c" />
-                            <option value="Opportunity.TrackingNumber__c" />
-                            <option value="Hospital__c.Country__c" />
-                            <option value="Account.Active__c" />
-                            <option value="Account.Data_Quality_Score__c" />
-                            <option value="Opportunity.DB_Competitor__c" />
-                            <option value="CaseComment.ParentOrigin" />
-                            <option value="Opportunity.DeliveryInstallationStatus__c" />
-                            <option value="Contact.Level__c" />
-                            <option value="Goal.OrigGoalId__c" />
-                            <option value="Account.SLA__c" />
-                            <option value="Case.Data_Quality_Score__c" />
-                            <option value="Opportunity.Data_Quality_Score__c" />
-                            <option value="Lead.Data_Quality_Score__c" />
-                            <option value="Campaign.Data_Quality_Description__c" />
-                            <option value="Lead.SICCode__c" />
-                            <option value="Contact.Languages__c" />
-                            <option value="Contact.Data_Quality_Score__c" />
-                            <option value="Hospital__c.City__c" />
-                            <option value="Contract__c.Doctor_Id__c" />
-                            <option value="Account.Data_Quality_Description__c" />
-                            <option value="CaseComment.CommentBody" />
-                            <option value="Doctor__c.First_Name__c" />
-                            <option value="Opportunity.CurrentGenerators__c" />
-                            <option value="Contract__c.Start_Date__c" />
-                            <option value="Doctor__c.Phone__c" />
-                            <option value="Contract__c.Hospital_Id__c" />
-                            <option value="Lead.ProductInterest__c" />
-                            <option value="Lead.NumberofLocations__c" />
-                            <option value="Case.Product__c" />
-                          </set>
-                        </option>
-                        <option name="name" value="CustomField" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Hospital_DoctorHireController" />
-                            <option value="Hospital_sobjectPartnerSoapSforceCom" />
-                            <option value="Hospital_HospitalQueryBuilder" />
-                            <option value="SiteRegisterControllerTest" />
-                            <option value="Hospital_partnerSoapSforceCom" />
-                            <option value="ForgotPasswordControllerTest" />
-                            <option value="Hospital_MaciejHospitalsController" />
-                            <option value="Hospital_DoctorsSOAP" />
-                            <option value="AsyncHospital_partnerSoapSforceCom" />
-                            <option value="MyProfilePageController" />
-                            <option value="Hospital_ContractSearchController" />
-                            <option value="Hospital_HospitalTriggerHandler" />
-                            <option value="ChangePasswordControllerTest" />
-                            <option value="Hospital_MaciejHospitalSingleRequestMock" />
-                            <option value="ForgotPasswordController" />
-                            <option value="Hospital_DoctorProfileImageController" />
-                            <option value="Hospital_MaciejDoctorsMock" />
-                            <option value="Hospital_DoctorQueryBuilder" />
-                            <option value="Hospital_DoctorHireControll" />
-                            <option value="Hospital_DoctorWrapperForSOAP" />
-                            <option value="Hospital_DoctorImportController" />
-                            <option value="SiteRegisterController" />
-                            <option value="Hospital_MaciejDoctorsController" />
-                            <option value="Hospital_DoctorsSOAPTest" />
-                            <option value="Hospital_MaciejHospitalsMultiMock" />
-                            <option value="Hospital_DoctorSearchController" />
-                            <option value="AutocreatedRegHandler1547020938038" />
-                            <option value="Hospital_MaciejHospitalsControllerTest" />
-                            <option value="Hospital_DoctorHandler" />
-                            <option value="Hospital_DoctorViewPageController" />
-                            <option value="Hospital_HospitalHierarchyController" />
-                            <option value="SiteLoginControllerTest" />
-                            <option value="Hospital_Utils" />
-                            <option value="Hospital_MaciejDoctorsCalloutTest" />
-                            <option value="Hospital_MaciejDoctorsControllerTest" />
-                            <option value="Hosp_MaciejSoapForDoctorsWebService" />
-                            <option value="AsyncHosp_MaciejSoapForDoctorsWebService" />
-                            <option value="Hospital_HospitalWrapperForREST" />
-                            <option value="Hospital_DoctorPublicSiteController" />
-                            <option value="Hospital_DoctorUtils" />
-                            <option value="MyProfilePageControllerTest" />
-                            <option value="Hospital_MaciejHospitalsMock" />
-                            <option value="FirstClass" />
-                            <option value="Hosp_MaciejDoctorWrapperForSoap" />
-                            <option value="ControllerDoctorSearch" />
-                            <option value="SiteLoginController" />
-                            <option value="Hospital_ViewController" />
-                            <option value="Hospital_HospitalREST" />
-                            <option value="Second" />
-                            <option value="Hospital_GuidUtil" />
-                            <option value="ChangePasswordController" />
-                            <option value="Hospital_ContractHandler" />
-                            <option value="Hospital_faultPartnerSoapSforceCom" />
-                          </set>
-                        </option>
-                        <option name="name" value="ApexClass" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Account" />
-                            <option value="Task" />
-                            <option value="CollaborationGroup" />
-                            <option value="ForecastingCategoryMapping" />
-                            <option value="OpportunityLineItem" />
-                            <option value="CaseContactRole" />
-                            <option value="Activity" />
-                            <option value="Document" />
-                            <option value="ContactCleanInfo" />
-                            <option value="ScorecardMetric" />
-                            <option value="PushTopic" />
-                            <option value="ContractContactRole" />
-                            <option value="FeedItem" />
-                            <option value="ExchangeUserMapping" />
-                            <option value="SocialPersona" />
-                            <option value="Asset" />
-                            <option value="CampaignMember" />
-                            <option value="Order" />
-                            <option value="CollaborationGroupMember" />
-                            <option value="AccountContactRole" />
-                            <option value="StreamingChannel" />
-                            <option value="EmailMessage" />
-                            <option value="Pricebook2" />
-                            <option value="AccountCleanInfo" />
-                            <option value="UserProvisioningRequest" />
-                            <option value="OrgDeleteRequest" />
-                            <option value="PricebookEntry" />
-                            <option value="LeadCleanInfo" />
-                            <option value="Campaign" />
-                            <option value="Idea" />
-                            <option value="Hospital__c" />
-                            <option value="ChatterActivity" />
-                            <option value="ScorecardAssociation" />
-                            <option value="Contract" />
-                            <option value="PartnerRole" />
-                            <option value="OpportunityCompetitor" />
-                            <option value="Site" />
-                            <option value="MacroAction" />
-                            <option value="User" />
-                            <option value="Product2" />
-                            <option value="Macro" />
-                            <option value="MacroInstruction" />
-                            <option value="DuplicateRecordItem" />
-                            <option value="Contract__c" />
-                            <option value="CaseComment" />
-                            <option value="Case" />
-                            <option value="ContentVersion" />
-                            <option value="Opportunity" />
-                            <option value="Lead" />
-                            <option value="DuplicateRecordSet" />
-                            <option value="Scorecard" />
-                            <option value="Topic" />
-                            <option value="Solution" />
-                            <option value="AssetRelationship" />
-                            <option value="StreamActivityAccess" />
-                            <option value="QuickText" />
-                            <option value="DandBCompany" />
-                            <option value="OpportunityContactRole" />
-                            <option value="Contact" />
-                            <option value="RequestsForAccessSIQ" />
-                            <option value="Hospitalsconnection__c" />
-                            <option value="OrderItem" />
-                            <option value="AssistantProgress" />
-                            <option value="Doctor__c" />
-                            <option value="Event" />
-                            <option value="RecordAction" />
-                            <option value="TopicAssignment" />
-                          </set>
-                        </option>
-                        <option name="name" value="CustomObject" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Order.AllActivatedOrders" />
-                            <option value="Opportunity.NewThisWeek" />
-                            <option value="Case.AllOpenCases" />
-                            <option value="Contract__c.All" />
-                            <option value="Case.MyCases" />
-                            <option value="Order.AllDraftOrders" />
-                            <option value="User.ActiveUsers" />
-                            <option value="Order.AllOrders" />
-                            <option value="Scorecard.MyScorecards" />
-                            <option value="Opportunity.ClosingNextMonth" />
-                            <option value="Contact.AllContacts" />
-                            <option value="Case.MyOpenCases" />
-                            <option value="Opportunity.Default_Opportunity_Pipeline" />
-                            <option value="Opportunity.Private" />
-                            <option value="Contract.AllContracts" />
-                            <option value="Contract.MyActivatedContracts" />
-                            <option value="Contract.AllDraftContracts" />
-                            <option value="WorkFeedbackRequest.AboutTopics" />
-                            <option value="Contact.NewLastWeek" />
-                            <option value="Task.DelegatedTasks" />
-                            <option value="SocialPersona.AllSocialPersonas" />
-                            <option value="User.AllUsers" />
-                            <option value="Task.UnscheduledTasks" />
-                            <option value="Contract.MyDraftContracts" />
-                            <option value="Lead.TodaysLeads" />
-                            <option value="Task.CompletedTasks" />
-                            <option value="Solution.AllUnreviewedSolutions" />
-                            <option value="Activity.UpcomingEvents" />
-                            <option value="Account.NewLastWeek" />
-                            <option value="Account.MyAccounts" />
-                            <option value="Opportunity.AllOpportunities" />
-                            <option value="Task.OpenTasks" />
-                            <option value="Task.OverdueTasks" />
-                            <option value="Contact.BirthdaysThisMonth" />
-                            <option value="Opportunity.ClosingThisMonth" />
-                            <option value="Account.AllAccounts" />
-                            <option value="Contact.NewThisWeek" />
-                            <option value="CollaborationGroup.All_ChatterGroups" />
-                            <option value="Activity.AllActivities" />
-                            <option value="Opportunity.NewLastWeek" />
-                            <option value="Asset.AllAssets" />
-                            <option value="Contract__c.All_Information" />
-                            <option value="User.AdminUsers" />
-                            <option value="Scorecard.AllScorecards" />
-                            <option value="Campaign.MyActiveCampaigns" />
-                            <option value="Opportunity.MyOpportunities" />
-                            <option value="Hospital__c.All_Information" />
-                            <option value="Lead.MyUnreadLeads" />
-                            <option value="Campaign.AllActiveCampaigns" />
-                            <option value="Product2.AllProducts" />
-                            <option value="Contact.MyContacts" />
-                            <option value="Activity.TodaysTasks" />
-                            <option value="Doctor__c.All" />
-                            <option value="Task.RecurringTasks" />
-                            <option value="Case.AllClosedCases" />
-                            <option value="Opportunity.Won" />
-                            <option value="Solution.AllReviewedSolutions" />
-                            <option value="Account.PlatinumandGoldSLACustomers" />
-                            <option value="Contract.MyInApprovalContracts" />
-                            <option value="Doctor__c.All_Information" />
-                            <option value="Activity.MyActivities" />
-                            <option value="Task.TodaysTasks" />
-                            <option value="Contract.AllInApprovalContracts" />
-                            <option value="WorkFeedbackTemplate.All" />
-                            <option value="Lead.AllOpenLeads" />
-                            <option value="Hospital__c.All" />
-                            <option value="Account.NewThisWeek" />
-                            <option value="WorkFeedbackRequest.All" />
-                            <option value="Lead.ViewCustom1" />
-                            <option value="Idea.Ideas_Last_7_Days" />
-                            <option value="Lead.ViewCustom2" />
-                            <option value="Contract.AllActivatedContracts" />
-                          </set>
-                        </option>
-                        <option name="name" value="ListView" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Account" />
-                            <option value="Doctor__c" />
-                            <option value="Lead" />
-                            <option value="Contact" />
-                          </set>
-                        </option>
-                        <option name="name" value="MatchingRules" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Case.Standard" />
-                            <option value="Lead.Standard" />
-                          </set>
-                        </option>
-                        <option name="name" value="AssignmentRule" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="standard__Sales" />
-                            <option value="standard__LightningService" />
-                            <option value="standard__ServiceConsole" />
-                            <option value="standard__Community" />
-                            <option value="standard__AppLauncher" />
-                            <option value="standard__Chatter" />
-                            <option value="standard__LightningInstrumentation" />
-                            <option value="standard__Platform" />
-                            <option value="standard__LightningSales" />
-                            <option value="standard__Service" />
-                            <option value="Morwowa_Hospital" />
-                            <option value="standard__Marketing" />
-                            <option value="standard__Content" />
-                            <option value="standard__Sites" />
-                            <option value="standard__LightningBolt" />
-                            <option value="standard__Insights" />
-                            <option value="standard__LightningSalesConsole" />
-                          </set>
-                        </option>
-                        <option name="name" value="CustomApplication" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Lead" />
-                            <option value="Case" />
-                          </set>
-                        </option>
-                        <option name="name" value="AutoResponseRules" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Create_Doctor" />
-                            <option value="Create_Hospital" />
-                          </set>
-                        </option>
-                        <option name="name" value="CustomPageWebLink" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Login_From_Source_Salesforce" />
-                          </set>
-                        </option>
-                        <option name="name" value="ConnectedApp" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="LightningSalesConsole_UtilityBar" />
-                            <option value="LightningService_UtilityBar" />
-                          </set>
-                        </option>
-                        <option name="name" value="FlexiPage" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Hospital_in_Country" />
-                            <option value="Hospital" />
-                            <option value="Contracts" />
-                            <option value="Doctors" />
-                          </set>
-                        </option>
-                        <option name="name" value="ReportType" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Task.EditDescription" />
-                            <option value="NewGroup" />
-                            <option value="FeedItem.NewTaskFromFeedItem" />
-                            <option value="NewNote" />
-                            <option value="Task.EditDescription_0" />
-                            <option value="CollaborationGroup.NewGroupMember" />
-                            <option value="CollaborationGroup.NewGroupRecord" />
-                            <option value="NewLead" />
-                            <option value="SendEmail" />
-                            <option value="Task.UpdateStatus" />
-                            <option value="NewOpportunity" />
-                            <option value="NewTask" />
-                            <option value="Task.Defer_0" />
-                            <option value="Task.UpdateStatus_0" />
-                            <option value="NewAccount" />
-                            <option value="Case.LogACall" />
-                            <option value="Task.UpdatePriority" />
-                            <option value="Case.NewChildCase" />
-                            <option value="Task.UpdatePriority_0" />
-                            <option value="NewContact" />
-                            <option value="NewCase" />
-                            <option value="Task.Defer" />
-                            <option value="NewEvent" />
-                            <option value="LogACall" />
-                          </set>
-                        </option>
-                        <option name="name" value="QuickAction" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="My_Public_Doctors_Profile_profileSessionSetting1545293417835" />
-                          </set>
-                        </option>
-                        <option name="name" value="ProfileSessionSetting" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="My_Public_Doctors_Profile_profilePasswordPolicy1545293417797" />
-                          </set>
-                        </option>
-                        <option name="name" value="ProfilePasswordPolicy" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
                             <option value="SaveLabel" />
                             <option value="Delete" />
                             <option value="Import" />
@@ -2694,8 +2002,8 @@
                             <option value="Remove" />
                             <option value="Doctor_successfully_updated" />
                             <option value="Delete_Picture" />
-                            <option value="Success" />
                             <option value="New_Doctor" />
+                            <option value="Success" />
                             <option value="SelectedDoctors" />
                             <option value="Doctor_successfully_deleted" />
                             <option value="YoucannotcreatethisNewContract" />
@@ -2739,15 +2047,15 @@
                             <option value="Unable_to_add_hospital" />
                             <option value="Upload_picture_title" />
                             <option value="Process" />
-                            <option value="Template" />
                             <option value="Name" />
+                            <option value="Template" />
+                            <option value="StartDate" />
                             <option value="HospitalEditPage" />
                             <option value="Crop" />
-                            <option value="StartDate" />
                             <option value="Last" />
                             <option value="Search" />
-                            <option value="First" />
                             <option value="Hospital" />
+                            <option value="First" />
                             <option value="New_Hospital" />
                             <option value="Basic_Info" />
                             <option value="Hire_Label" />
@@ -2781,6 +2089,7 @@
                             <option value="Last_Name" />
                             <option value="Unable_to_upload" />
                             <option value="Hospital_successfully_deleted" />
+                            <option value="Do_You_really_want_to_delete_this_data" />
                             <option value="ExportToCSV" />
                             <option value="Previous" />
                           </set>
@@ -2790,10 +2099,11 @@
                       <MetadataType>
                         <option name="members">
                           <set>
+                            <option value="Hospital_Custom_Settings__c-en_US" />
                             <option value="Hospital__c-en_US" />
-                            <option value="Hospitalsconnection__c-en_US" />
-                            <option value="Doctor__c-en_US" />
+                            <option value="LogsFromWebService__c-en_US" />
                             <option value="Contract__c-en_US" />
+                            <option value="Doctor__c-en_US" />
                           </set>
                         </option>
                         <option name="name" value="CustomObjectTranslation" />
@@ -2809,19 +2119,691 @@
                       <MetadataType>
                         <option name="members">
                           <set>
+                            <option value="ChangePassword" />
+                            <option value="SiteTemplate" />
+                            <option value="InMaintenance" />
+                            <option value="Hospital_DoctorProfileImage" />
+                            <option value="StdExceptionTemplate" />
+                            <option value="Hospital_DoctorEdit" />
+                            <option value="SiteRegister" />
+                            <option value="AnswersHome" />
+                            <option value="Hospital_DoctorPublicSite" />
+                            <option value="Hospital_MaciejDoctors" />
+                            <option value="SiteLogin" />
+                            <option value="Hospital_DoctorSearchExportToCsv" />
+                            <option value="Unauthorized" />
+                            <option value="Hospital_DoctorSearchExportToJson" />
+                            <option value="SiteRegisterConfirm" />
+                            <option value="Hospital_DoctorImport" />
+                            <option value="UnderConstruction" />
+                            <option value="Hospital_MaciejHospitals" />
+                            <option value="Hospital_ContractView" />
+                            <option value="Hospital_DoctorViewExportToPDFHandler" />
+                            <option value="Hospital_DoctorView" />
+                            <option value="Hospital_HospitalView" />
+                            <option value="FileNotFound" />
+                            <option value="ForgotPassword" />
+                            <option value="Exception" />
+                            <option value="Doctors" />
+                            <option value="IdeasHome" />
+                            <option value="BandwidthExceeded" />
+                            <option value="ForgotPasswordConfirm" />
+                            <option value="Hospital_DoctorSearchExportToXlsX" />
+                            <option value="Hospital_HospitalEdit" />
+                            <option value="MyProfilePage" />
+                            <option value="Hospital_DoctorInfo" />
+                            <option value="Hospital_DoctorSearchExportToExcel" />
+                            <option value="Hospital_DoctorSearch" />
+                          </set>
+                        </option>
+                        <option name="name" value="ApexPage" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Account-Account %28Sales%29 Layout" />
+                            <option value="Contact-Contact %28Support%29 Layout" />
+                            <option value="Product2-Product Layout" />
+                            <option value="Lead-Lead Layout" />
+                            <option value="Case-Case %28Sales%29 Layout" />
+                            <option value="Contact-Contact Layout" />
+                            <option value="Lead-Lead %28Support%29 Layout" />
+                            <option value="DandBCompany-D%26B Company Layout" />
+                            <option value="Case-Case %28Support%29 Layout" />
+                            <option value="AssetRelationship-Asset Relationship Layout" />
+                            <option value="Macro-Macro Layout" />
+                            <option value="Order-Order Layout" />
+                            <option value="ScorecardMetric-Scorecard Metric Layout" />
+                            <option value="UserProvisioningRequest-User Provisioning Request Layout" />
+                            <option value="Solution-Solution Layout" />
+                            <option value="Pricebook2-Price Book Layout" />
+                            <option value="Event-Event Layout" />
+                            <option value="UserProvisioningLog-User Provisioning Log Layout" />
+                            <option value="UserProvAccount-User Provisioning Account Layout" />
+                            <option value="Contact-Contact %28Marketing%29 Layout" />
+                            <option value="Task-Task Layout" />
+                            <option value="Doctor__c-Doctor Layout" />
+                            <option value="Hospital__c-Hospital Layout" />
+                            <option value="Asset-Asset Layout" />
+                            <option value="Opportunity-Opportunity Layout" />
+                            <option value="OrderItem-Order Product Layout" />
+                            <option value="DuplicateRecordSet-Duplicate Record Set Layout" />
+                            <option value="OpportunityLineItem-Opportunity Product Layout" />
+                            <option value="Case-Case Layout" />
+                            <option value="Contract-Contract Layout" />
+                            <option value="Account-Account Layout" />
+                            <option value="Campaign-Campaign Layout" />
+                            <option value="CommunityMemberLayout-Community Member Layout" />
+                            <option value="ScorecardAssociation-Scorecard Association Layout" />
+                            <option value="Opportunity-Opportunity %28Sales%29 Layout" />
+                            <option value="SocialPersona-Social Persona Layout" />
+                            <option value="Scorecard-Scorecard Layout" />
+                            <option value="Case-Case %28Marketing%29 Layout" />
+                            <option value="LogsFromWebService__c-LogsFromWebService Layout" />
+                            <option value="PricebookEntry-Price Book Entry Layout" />
+                            <option value="Contract__c-Contract Layout" />
+                            <option value="CaseClose-Close Case Layout" />
+                            <option value="Idea-Idea Layout" />
+                            <option value="FeedItem-Feed Item Layout" />
+                            <option value="ContentVersion-Content Version Layout" />
+                            <option value="Opportunity-Opportunity %28Support%29 Layout" />
+                            <option value="Global-Global Layout" />
+                            <option value="Account-Account %28Marketing%29 Layout" />
+                            <option value="Lead-Lead %28Sales%29 Layout" />
+                            <option value="EmailMessage-Email Message Layout" />
+                            <option value="SocialPost-Social Post Layout" />
+                            <option value="Account-Account %28Support%29 Layout" />
+                            <option value="CampaignMember-Campaign Member Page Layout" />
+                            <option value="QuickText-Quick Text Layout" />
+                            <option value="Contact-Contact %28Sales%29 Layout" />
+                            <option value="User-User Layout" />
+                            <option value="Lead-Lead %28Marketing%29 Layout" />
+                            <option value="Opportunity-Opportunity %28Marketing%29 Layout" />
+                          </set>
+                        </option>
+                        <option name="name" value="Layout" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="SiteFooter" />
+                            <option value="Hospital_StatusComponent" />
+                            <option value="Hospital_StatusSlds" />
+                            <option value="SitePoweredBy" />
+                            <option value="Hospital_DoctorHireComponent" />
+                            <option value="SiteLogin" />
+                            <option value="SiteHeader" />
+                            <option value="Hospital_HospitalHierarchy" />
+                          </set>
+                        </option>
+                        <option name="name" value="ApexComponent" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Metric.Progress" />
+                            <option value="Metric.Completion" />
+                          </set>
+                        </option>
+                        <option name="name" value="RecordType" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Campaign.ViewCampaignInfluenceReport" />
+                            <option value="Opportunity.DeliveryStatus" />
+                            <option value="Case.UpsellCrosssellOpportunity" />
+                            <option value="Account.Billing" />
+                          </set>
+                        </option>
+                        <option name="name" value="WebLink" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Doctor__c.Check_correct_email" />
+                            <option value="Contract__c.Check_contract_period" />
+                            <option value="Doctor__c.Check_Corret_Phone" />
+                            <option value="Contract__c.Contract_in_past" />
+                          </set>
+                        </option>
+                        <option name="name" value="ValidationRule" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Order.AllActivatedOrders" />
+                            <option value="Opportunity.NewThisWeek" />
+                            <option value="Case.AllOpenCases" />
+                            <option value="Contract__c.All" />
+                            <option value="Case.MyCases" />
+                            <option value="Order.AllDraftOrders" />
+                            <option value="User.ActiveUsers" />
+                            <option value="Order.AllOrders" />
+                            <option value="Scorecard.MyScorecards" />
+                            <option value="Opportunity.ClosingNextMonth" />
+                            <option value="Contact.AllContacts" />
+                            <option value="Case.MyOpenCases" />
+                            <option value="Opportunity.Default_Opportunity_Pipeline" />
+                            <option value="Opportunity.Private" />
+                            <option value="Contract.AllContracts" />
+                            <option value="Contract.MyActivatedContracts" />
+                            <option value="Contract.AllDraftContracts" />
+                            <option value="WorkFeedbackRequest.AboutTopics" />
+                            <option value="Contact.NewLastWeek" />
+                            <option value="Task.DelegatedTasks" />
+                            <option value="SocialPersona.AllSocialPersonas" />
+                            <option value="User.AllUsers" />
+                            <option value="Task.UnscheduledTasks" />
+                            <option value="Contract.MyDraftContracts" />
+                            <option value="Lead.TodaysLeads" />
+                            <option value="Task.CompletedTasks" />
+                            <option value="Solution.AllUnreviewedSolutions" />
+                            <option value="Activity.UpcomingEvents" />
+                            <option value="Account.NewLastWeek" />
+                            <option value="Account.MyAccounts" />
+                            <option value="Opportunity.AllOpportunities" />
+                            <option value="Task.OpenTasks" />
+                            <option value="Task.OverdueTasks" />
+                            <option value="Contact.BirthdaysThisMonth" />
+                            <option value="Account.AllAccounts" />
+                            <option value="Opportunity.ClosingThisMonth" />
+                            <option value="Contact.NewThisWeek" />
+                            <option value="CollaborationGroup.All_ChatterGroups" />
+                            <option value="Activity.AllActivities" />
+                            <option value="Opportunity.NewLastWeek" />
+                            <option value="Asset.AllAssets" />
+                            <option value="Contract__c.All_Information" />
+                            <option value="User.AdminUsers" />
+                            <option value="Scorecard.AllScorecards" />
+                            <option value="Campaign.MyActiveCampaigns" />
+                            <option value="Opportunity.MyOpportunities" />
+                            <option value="Hospital__c.All_Information" />
+                            <option value="Lead.MyUnreadLeads" />
+                            <option value="Product2.AllProducts" />
+                            <option value="Campaign.AllActiveCampaigns" />
+                            <option value="Activity.TodaysTasks" />
+                            <option value="Contact.MyContacts" />
+                            <option value="Doctor__c.All" />
+                            <option value="Task.RecurringTasks" />
+                            <option value="Opportunity.Won" />
+                            <option value="Case.AllClosedCases" />
+                            <option value="Solution.AllReviewedSolutions" />
+                            <option value="Account.PlatinumandGoldSLACustomers" />
+                            <option value="Task.TodaysTasks" />
+                            <option value="Activity.MyActivities" />
+                            <option value="Doctor__c.All_Information" />
+                            <option value="Contract.MyInApprovalContracts" />
+                            <option value="Contract.AllInApprovalContracts" />
+                            <option value="WorkFeedbackTemplate.All" />
+                            <option value="Lead.AllOpenLeads" />
+                            <option value="Account.NewThisWeek" />
+                            <option value="WorkFeedbackRequest.All" />
+                            <option value="Lead.ViewCustom1" />
+                            <option value="Idea.Ideas_Last_7_Days" />
+                            <option value="Contract.AllActivatedContracts" />
+                            <option value="Lead.ViewCustom2" />
+                          </set>
+                        </option>
+                        <option name="name" value="ListView" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Order" />
+                            <option value="Account" />
+                            <option value="User" />
+                            <option value="Case" />
+                            <option value="Contact" />
+                            <option value="FlowInterview" />
+                            <option value="Campaign" />
+                            <option value="ListEmail" />
+                            <option value="Hospital_Custom_Settings__c" />
+                            <option value="Opportunity" />
+                            <option value="Lead" />
+                            <option value="Doctor__c" />
+                            <option value="Asset" />
+                            <option value="LogsFromWebService__c" />
+                            <option value="Hospital__c" />
+                          </set>
+                        </option>
+                        <option name="name" value="SharingRules" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Internal Zone" />
+                          </set>
+                        </option>
+                        <option name="name" value="Community" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Hospital Home Page" />
+                          </set>
+                        </option>
+                        <option name="name" value="HomePageLayout" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="DirectorDirectSales" />
+                            <option value="SVPSalesMarketing" />
+                            <option value="COO" />
+                            <option value="MarketingTeam" />
+                            <option value="DirectorChannelSales" />
+                            <option value="InstallationRepairServices" />
+                            <option value="SVPHumanResources" />
+                            <option value="SVPCustomerServiceSupport" />
+                            <option value="VPInternationalSales" />
+                            <option value="CEO" />
+                            <option value="ChannelSalesTeam" />
+                            <option value="EasternSalesTeam" />
+                            <option value="CustomerSupportInternational" />
+                            <option value="CFO" />
+                            <option value="CustomerSupportNorthAmerica" />
+                            <option value="WesternSalesTeam" />
+                            <option value="VPMarketing" />
+                            <option value="VPNorthAmericanSales" />
+                          </set>
+                        </option>
+                        <option name="name" value="Role" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Create New" />
+                          </set>
+                        </option>
+                        <option name="name" value="HomePageComponent" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Salesforce_Org_Piotr" />
+                          </set>
+                        </option>
+                        <option name="name" value="AuthProvider" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="MaciejAccount" />
+                          </set>
+                        </option>
+                        <option name="name" value="NamedCredential" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Account" />
+                            <option value="Lead" />
+                            <option value="Doctor__c" />
+                            <option value="Contact" />
+                          </set>
+                        </option>
+                        <option name="name" value="MatchingRules" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Contact.Standard_Contact_Match_Rule_v1_1" />
+                            <option value="Lead.Standard_Lead_Match_Rule_v1_0" />
+                            <option value="Account.Standard_Account_Match_Rule_v1_0" />
+                            <option value="Doctor__c.Doctor_Matching_Rule" />
+                          </set>
+                        </option>
+                        <option name="name" value="MatchingRule" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Lead" />
+                            <option value="Case" />
+                          </set>
+                        </option>
+                        <option name="name" value="AssignmentRules" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Lead.Standard" />
+                            <option value="Case.Standard" />
+                          </set>
+                        </option>
+                        <option name="name" value="AssignmentRule" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Lead" />
+                            <option value="Case" />
+                          </set>
+                        </option>
+                        <option name="name" value="AutoResponseRules" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="LightningSalesConsole_UtilityBar" />
+                            <option value="LightningService_UtilityBar" />
+                          </set>
+                        </option>
+                        <option name="name" value="FlexiPage" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="AppToSecondOrg" />
+                            <option value="AppFromSecondOrg" />
+                            <option value="PiotrHospitals" />
+                            <option value="Login_From_Source_Salesforce" />
+                          </set>
+                        </option>
+                        <option name="name" value="ConnectedApp" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Salesforce1" />
+                            <option value="AppSwitcher" />
+                          </set>
+                        </option>
+                        <option name="name" value="AppMenu" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="SFTOSF" />
+                          </set>
+                        </option>
+                        <option name="name" value="PermissionSet" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="My_Public_Doctors_Profile_profileSessionSetting1545293417835" />
+                            <option value="X8_profileSessionSetting1547575316586" />
+                          </set>
+                        </option>
+                        <option name="name" value="ProfileSessionSetting" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="My_Public_Doctors_Profile_profilePasswordPolicy1545293417797" />
+                            <option value="X8_profilePasswordPolicy1547575316542" />
+                          </set>
+                        </option>
+                        <option name="name" value="ProfilePasswordPolicy" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Account" />
+                            <option value="Task" />
+                            <option value="CollaborationGroup" />
+                            <option value="OpportunityLineItem" />
+                            <option value="ForecastingCategoryMapping" />
+                            <option value="CaseContactRole" />
+                            <option value="Activity" />
+                            <option value="Document" />
+                            <option value="ContactCleanInfo" />
+                            <option value="ScorecardMetric" />
+                            <option value="PushTopic" />
+                            <option value="FeedItem" />
+                            <option value="ContractContactRole" />
+                            <option value="Hospital_Custom_Settings__c" />
+                            <option value="ExchangeUserMapping" />
+                            <option value="SocialPersona" />
+                            <option value="Asset" />
+                            <option value="CampaignMember" />
+                            <option value="Order" />
+                            <option value="CollaborationGroupMember" />
+                            <option value="AccountContactRole" />
+                            <option value="StreamingChannel" />
+                            <option value="EmailMessage" />
+                            <option value="AccountCleanInfo" />
+                            <option value="Pricebook2" />
+                            <option value="UserProvisioningRequest" />
+                            <option value="OrgDeleteRequest" />
+                            <option value="PricebookEntry" />
+                            <option value="LeadCleanInfo" />
+                            <option value="Campaign" />
+                            <option value="Idea" />
+                            <option value="Hospital__c" />
+                            <option value="ChatterActivity" />
+                            <option value="Contract" />
+                            <option value="ScorecardAssociation" />
+                            <option value="PartnerRole" />
+                            <option value="OpportunityCompetitor" />
+                            <option value="MacroAction" />
+                            <option value="Site" />
+                            <option value="User" />
+                            <option value="Product2" />
+                            <option value="Macro" />
+                            <option value="MacroInstruction" />
+                            <option value="DuplicateRecordItem" />
+                            <option value="Contract__c" />
+                            <option value="CaseComment" />
+                            <option value="Case" />
+                            <option value="ContentVersion" />
+                            <option value="Opportunity" />
+                            <option value="Lead" />
+                            <option value="DuplicateRecordSet" />
+                            <option value="LogsFromWebService__c" />
+                            <option value="Topic" />
+                            <option value="Scorecard" />
+                            <option value="Solution" />
+                            <option value="AssetRelationship" />
+                            <option value="StreamActivityAccess" />
+                            <option value="QuickText" />
+                            <option value="DandBCompany" />
+                            <option value="OpportunityContactRole" />
+                            <option value="Contact" />
+                            <option value="RequestsForAccessSIQ" />
+                            <option value="OrderItem" />
+                            <option value="Doctor__c" />
+                            <option value="AssistantProgress" />
+                            <option value="Event" />
+                            <option value="RecordAction" />
+                            <option value="TopicAssignment" />
+                          </set>
+                        </option>
+                        <option name="name" value="CustomObject" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Hospital_DoctorHireController" />
+                            <option value="Hospital_sobjectPartnerSoapSforceCom" />
+                            <option value="Hospital_HospitalQueryBuilder" />
+                            <option value="Hospital_partnerSoapSforceCom" />
+                            <option value="ForgotPasswordControllerTest" />
+                            <option value="SiteRegisterControllerTest" />
+                            <option value="Hospital_MaciejHospitalsController" />
+                            <option value="Hospital_DoctorsSOAP" />
+                            <option value="AsyncHospital_partnerSoapSforceCom" />
+                            <option value="MyProfilePageController" />
+                            <option value="Hospital_HospitalTriggerHandler" />
+                            <option value="Hospital_ContractSearchController" />
+                            <option value="Hospital_HospitalEditController" />
+                            <option value="ChangePasswordControllerTest" />
+                            <option value="Hospital_MaciejHospitalSingleRequestMock" />
+                            <option value="Hospital_DoctorComparator" />
+                            <option value="ForgotPasswordController" />
+                            <option value="Hospital_DoctorProfileImageController" />
+                            <option value="Hospital_MaciejDoctorsMock" />
+                            <option value="Hospital_DoctorQueryBuilder" />
+                            <option value="Hospital_DoctorWrapperForSOAP" />
+                            <option value="Hospital_DoctorHireControll" />
+                            <option value="Hospital_DoctorImportController" />
+                            <option value="SiteRegisterController" />
+                            <option value="Hospital_MaciejDoctorsController" />
+                            <option value="Hospital_DoctorsSOAPTest" />
+                            <option value="Hospital_MaciejHospitalsMultiMock" />
+                            <option value="Hospital_DoctorSearchController" />
+                            <option value="AutocreatedRegHandler1547020938038" />
+                            <option value="Hospital_MaciejHospitalsControllerTest" />
+                            <option value="Hospital_DoctorViewPageController" />
+                            <option value="Hospital_DoctorHandler" />
+                            <option value="Hospital_HospitalComparator" />
+                            <option value="Hospital_HospitalHierarchyController" />
+                            <option value="SiteLoginControllerTest" />
+                            <option value="Hospital_MaciejDoctorsCalloutTest" />
+                            <option value="Hospital_Utils" />
+                            <option value="Hospital_MaciejDoctorsControllerTest" />
+                            <option value="Hosp_MaciejSoapForDoctorsWebService" />
+                            <option value="AsyncHosp_MaciejSoapForDoctorsWebService" />
+                            <option value="Hospital_HospitalWrapperForREST" />
+                            <option value="Hospital_DoctorPublicSiteController" />
+                            <option value="Hospital_DoctorUtils" />
+                            <option value="MyProfilePageControllerTest" />
+                            <option value="Hospital_MaciejHospitalsMock" />
+                            <option value="FirstClass" />
+                            <option value="Hosp_MaciejDoctorWrapperForSoap" />
+                            <option value="SiteLoginController" />
+                            <option value="ControllerDoctorSearch" />
+                            <option value="Hospital_ViewController" />
+                            <option value="Hospital_HospitalREST" />
+                            <option value="Second" />
+                            <option value="Hospital_GuidUtil" />
+                            <option value="ChangePasswordController" />
+                            <option value="Hospital_ContractHandler" />
+                            <option value="Hospital_faultPartnerSoapSforceCom" />
+                          </set>
+                        </option>
+                        <option name="name" value="ApexClass" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Hospital__c.Parent_Hospital__c" />
+                            <option value="Campaign.Data_Quality_Score__c" />
+                            <option value="Contract.Data_Quality_Score__c" />
+                            <option value="LogsFromWebService__c.Respond__c" />
+                            <option value="Hospital__c.Phone__c" />
+                            <option value="Lead.Data_Quality_Description__c" />
+                            <option value="User.DB_Region__c" />
+                            <option value="Activity.Data_Quality_Description__c" />
+                            <option value="Case.SLAViolation__c" />
+                            <option value="Lead.Primary__c" />
+                            <option value="Lead.CurrentGenerators__c" />
+                            <option value="Doctor__c.Country__c" />
+                            <option value="Doctor__c.Last_Name__c" />
+                            <option value="Contract__c.End_Date__c" />
+                            <option value="Account.NumberofLocations__c" />
+                            <option value="Hospital__c.Website__c" />
+                            <option value="Contract__c.Email__c" />
+                            <option value="Opportunity.MainCompetitors__c" />
+                            <option value="Account.UpsellOpportunity__c" />
+                            <option value="Account.SLASerialNumber__c" />
+                            <option value="Contract.Data_Quality_Description__c" />
+                            <option value="Account.CustomerPriority__c" />
+                            <option value="Hospital__c.External_Id__c" />
+                            <option value="Hospital__c.PostalCode__c" />
+                            <option value="Activity.Data_Quality_Score__c" />
+                            <option value="Hospital_Custom_Settings__c.Value__c" />
+                            <option value="Doctor__c.Email__c" />
+                            <option value="Lead.DB_Lead_Age__c" />
+                            <option value="Opportunity.OrderNumber__c" />
+                            <option value="Hospital__c.Street__c" />
+                            <option value="Metric.OrigMetricId__c" />
+                            <option value="Case.EngineeringReqNumber__c" />
+                            <option value="Contract__c.Closed_contract__c" />
+                            <option value="Account.SLAExpirationDate__c" />
+                            <option value="Doctor__c.FirstNameLastName__c" />
+                            <option value="LogsFromWebService__c.OperationType__c" />
+                            <option value="User.Other_Salesforce_Org_Username__c" />
+                            <option value="Contract__c.IsFinished__c" />
+                            <option value="Contact.Data_Quality_Description__c" />
+                            <option value="Lead.DB_Created_Date_without_Time__c" />
+                            <option value="Doctor__c.Street__c" />
+                            <option value="Doctor__c.City__c" />
+                            <option value="Case.Data_Quality_Description__c" />
+                            <option value="Case.PotentialLiability__c" />
+                            <option value="Campaign.DB_Campaign_Tactic__c" />
+                            <option value="Opportunity.Data_Quality_Description__c" />
+                            <option value="Activity.DB_Activity_Type__c" />
+                            <option value="Opportunity.TrackingNumber__c" />
+                            <option value="Hospital__c.Country__c" />
+                            <option value="Account.Active__c" />
+                            <option value="Account.Data_Quality_Score__c" />
+                            <option value="Opportunity.DB_Competitor__c" />
+                            <option value="CaseComment.ParentOrigin" />
+                            <option value="Opportunity.DeliveryInstallationStatus__c" />
+                            <option value="LogsFromWebService__c.ParentId__c" />
+                            <option value="Doctor__c.License_Number__c" />
+                            <option value="Contact.Level__c" />
+                            <option value="LogsFromWebService__c.Request__c" />
+                            <option value="Goal.OrigGoalId__c" />
+                            <option value="LogsFromWebService__c.DateTime__c" />
+                            <option value="Account.SLA__c" />
+                            <option value="Case.Data_Quality_Score__c" />
+                            <option value="Opportunity.Data_Quality_Score__c" />
+                            <option value="Campaign.Data_Quality_Description__c" />
+                            <option value="Lead.SICCode__c" />
+                            <option value="Lead.Data_Quality_Score__c" />
+                            <option value="Contact.Languages__c" />
+                            <option value="Contact.Data_Quality_Score__c" />
+                            <option value="Hospital__c.City__c" />
+                            <option value="Contract__c.Doctor_Id__c" />
+                            <option value="Account.Data_Quality_Description__c" />
+                            <option value="CaseComment.CommentBody" />
+                            <option value="Doctor__c.First_Name__c" />
+                            <option value="Opportunity.CurrentGenerators__c" />
+                            <option value="Contract__c.Start_Date__c" />
+                            <option value="Doctor__c.Phone__c" />
+                            <option value="Contract__c.Hospital_Id__c" />
+                            <option value="Lead.ProductInterest__c" />
+                            <option value="Lead.NumberofLocations__c" />
+                            <option value="Case.Product__c" />
+                          </set>
+                        </option>
+                        <option name="name" value="CustomField" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="standard__Sales" />
+                            <option value="standard__LightningService" />
+                            <option value="standard__ServiceConsole" />
+                            <option value="standard__Community" />
+                            <option value="standard__AppLauncher" />
+                            <option value="standard__Chatter" />
+                            <option value="standard__LightningInstrumentation" />
+                            <option value="standard__Platform" />
+                            <option value="standard__Service" />
+                            <option value="standard__LightningSales" />
+                            <option value="Morwowa_Hospital" />
+                            <option value="standard__Sites" />
+                            <option value="standard__Marketing" />
+                            <option value="standard__Content" />
+                            <option value="standard__Insights" />
+                            <option value="standard__LightningSalesConsole" />
+                            <option value="standard__LightningBolt" />
+                          </set>
+                        </option>
+                        <option name="name" value="CustomApplication" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
                             <option value="Order" />
                             <option value="Account" />
                             <option value="Task" />
                             <option value="Contract__c" />
-                            <option value="Case" />
                             <option value="Contact" />
+                            <option value="Case" />
                             <option value="ContentDocument" />
                             <option value="Campaign" />
                             <option value="Opportunity" />
-                            <option value="Doctor__c" />
                             <option value="Lead" />
+                            <option value="Doctor__c" />
                             <option value="Asset" />
                             <option value="Event" />
+                            <option value="LogsFromWebService__c" />
                             <option value="Hospital__c" />
                             <option value="Contract" />
                             <option value="Solution" />
@@ -2894,19 +2876,53 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Salesforce1" />
-                            <option value="AppSwitcher" />
+                            <option value="Create_Doctor" />
+                            <option value="Create_Hospital" />
                           </set>
                         </option>
-                        <option name="name" value="AppMenu" />
+                        <option name="name" value="CustomPageWebLink" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="SFTOSF" />
+                            <option value="Task.EditDescription" />
+                            <option value="NewGroup" />
+                            <option value="FeedItem.NewTaskFromFeedItem" />
+                            <option value="NewNote" />
+                            <option value="Task.EditDescription_0" />
+                            <option value="CollaborationGroup.NewGroupMember" />
+                            <option value="CollaborationGroup.NewGroupRecord" />
+                            <option value="SendEmail" />
+                            <option value="NewLead" />
+                            <option value="Task.UpdateStatus" />
+                            <option value="NewOpportunity" />
+                            <option value="NewTask" />
+                            <option value="Task.Defer_0" />
+                            <option value="Task.UpdateStatus_0" />
+                            <option value="NewAccount" />
+                            <option value="Case.NewChildCase" />
+                            <option value="Case.LogACall" />
+                            <option value="Task.UpdatePriority" />
+                            <option value="Task.UpdatePriority_0" />
+                            <option value="NewContact" />
+                            <option value="NewCase" />
+                            <option value="Task.Defer" />
+                            <option value="NewEvent" />
+                            <option value="LogACall" />
                           </set>
                         </option>
-                        <option name="name" value="PermissionSet" />
+                        <option name="name" value="QuickAction" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Hospital_in_Country" />
+                            <option value="Hospital" />
+                            <option value="Contracts" />
+                            <option value="Doctors" />
+                          </set>
+                        </option>
+                        <option name="name" value="ReportType" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -3010,16 +3026,72 @@
                         <option name="members">
                           <set>
                             <option value="x7WhatsInside" />
-                            <option value="x4SupportDashboards" />
+                            <option value="x5DocumentsTabManagement" />
                             <option value="x2SalesDashboards" />
                             <option value="x6DataQualityAnalysis" />
-                            <option value="x5DocumentsTabManagement" />
+                            <option value="x4SupportDashboards" />
                             <option value="x1AdoptionDashboards" />
-                            <option value="Salesforce_Adoption_Dashboards" />
                             <option value="x3MarketingDashboard" />
+                            <option value="Salesforce_Adoption_Dashboards" />
                           </set>
                         </option>
                         <option name="name" value="DashboardFolder" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="x2SalesDashboards/x2LeadFlowDashboard" />
+                            <option value="x4SupportDashboards/x2ExecutiveOverview" />
+                            <option value="x1AdoptionDashboards/x3AdoptionBusinessPerformance" />
+                            <option value="x3MarketingDashboard/x1CampaignMetricsDashboard" />
+                            <option value="x2SalesDashboards/x1SalesActivity" />
+                            <option value="x5DocumentsTabManagement/x1DocumentsTabManagement" />
+                            <option value="Salesforce_Adoption_Dashboards/X3_Sales_Marketing_Adoption" />
+                            <option value="Salesforce_Adoption_Dashboards/X1_User_Adoption_Logins" />
+                            <option value="x4SupportDashboards/x4RepAgentPerformance" />
+                            <option value="x6DataQualityAnalysis/x1AccountContactOpportunityDataQuality2" />
+                            <option value="x7WhatsInside/x1WhatsInsideSalesforce" />
+                            <option value="x4SupportDashboards/x1CustomerInformation" />
+                            <option value="Salesforce_Adoption_Dashboards/X2_Key_Feature_Adoption" />
+                            <option value="x6DataQualityAnalysis/x4HighLevelDataQualityAnalysis" />
+                            <option value="x4SupportDashboards/x3SupportKPIs" />
+                            <option value="x1AdoptionDashboards/x1AdoptionUsage" />
+                            <option value="x2SalesDashboards/x4SalesKPI" />
+                            <option value="x6DataQualityAnalysis/x2CampaignLeadActivityDataQuality" />
+                            <option value="x6DataQualityAnalysis/x1AccountContactOpportunityDataQuality" />
+                            <option value="x1AdoptionDashboards/x2AdoptionDataQuality" />
+                            <option value="x2SalesDashboards/x3SalesExecutiveDashboard" />
+                            <option value="x6DataQualityAnalysis/x3CaseContractDataQuality" />
+                            <option value="x1AdoptionDashboards/x4UserAdoptionbyArrowpoint" />
+                          </set>
+                        </option>
+                        <option name="name" value="Dashboard" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="unfiled$public/RejectionEmail" />
+                            <option value="unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE" />
+                            <option value="unfiled$public/SupportSelfServiceResetPassword" />
+                            <option value="unfiled$public/Information_Email" />
+                            <option value="unfiled$public/DeactivationEmail" />
+                            <option value="unfiled$public/SupportSelfServiceNewLoginandPassword" />
+                            <option value="unfiled$public/UpdateConnEmail" />
+                            <option value="unfiled$public/SupportCaseCreatedPhoneInquiries" />
+                            <option value="unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE" />
+                            <option value="unfiled$public/SupportCaseAssignmentNotification" />
+                            <option value="unfiled$public/SupportCaseResponse" />
+                            <option value="unfiled$public/InvitationEmail" />
+                            <option value="unfiled$public/SalesNewCustomerEmail" />
+                            <option value="unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE" />
+                            <option value="unfiled$public/SupportCaseCreatedWebInquiries" />
+                            <option value="unfiled$public/SupportEscalatedCaseNotification" />
+                            <option value="unfiled$public/MarketingProductInquiryResponse" />
+                            <option value="unfiled$public/SupportEscalatedCaseReassignment" />
+                            <option value="unfiled$public/AcceptanceEmail" />
+                          </set>
+                        </option>
+                        <option name="name" value="EmailTemplate" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -3062,8 +3134,8 @@
                             <option value="DB_Adoption/DB_Adoption_Neglected_OPPTYS" />
                             <option value="SalesforceINSIDE/INSIDEofAccounts" />
                             <option value="DB_Adoption/DB_Adoption_Mass_Emails_Created" />
-                            <option value="DocsTabManagementDashboard/DocumentsFilesize5MB" />
                             <option value="SalesVisibilityDashboard/SALESOpenDealsbyIndustryType" />
+                            <option value="DocsTabManagementDashboard/DocumentsFilesize5MB" />
                             <option value="DataQualityReports/CaseDataQualityDescription" />
                             <option value="AppExchangeServiceSupportDB/APXSSSKPIOpenCasesbyPriority" />
                             <option value="DataQualityReports/CampaignDataQualityScore" />
@@ -3075,8 +3147,8 @@
                             <option value="DashboardReportsAdoption/UsageAccountsLastModified" />
                             <option value="DB_Adoption/DB_Adoption_ACTIVITIES_Wall_of_Fame" />
                             <option value="AppExchangeServiceSupportDB/APXSSSCustNewcasesAccountChannelYTD" />
-                            <option value="SalesKPIDashboard/ClosedSalesbyCountry" />
                             <option value="AppExchangeServiceSupportDB/APXSSSKPICasescreatedbyTypeYTD" />
+                            <option value="SalesKPIDashboard/ClosedSalesbyCountry" />
                             <option value="AppExchangeServiceSupportDB/APXSSSRepOpenCasesRepChannelYTD" />
                             <option value="UserAdoptionDashboardfromAppExchange/AllLeadsConvertedLast60Days" />
                             <option value="AppExchangeServiceSupportDB/APXSSSRepAgentCaseLoadbyCaseType" />
@@ -3094,8 +3166,8 @@
                             <option value="AppExchangeServiceSupportDB/APXSSSKPIOpenedCasesbyChannelMTD" />
                             <option value="DashboardReportsAdoption/PerformanceOpenLeads" />
                             <option value="Dashboard/ImportantNeglectedAccounts" />
-                            <option value="DB_Adoption/DB_Adoption_CONTACTS_wO_Fields_Populated" />
                             <option value="DB_Adoption/Active_Users" />
+                            <option value="DB_Adoption/DB_Adoption_CONTACTS_wO_Fields_Populated" />
                             <option value="DashboardReportsAdoption/PerformanceOpenLeadsNotContacted" />
                             <option value="SalesKPIDashboard/ClosedSalesQTD" />
                             <option value="DashboardReportsAdoption/DataQualityLeadConversion" />
@@ -3105,27 +3177,27 @@
                             <option value="DashboardReportsAdoption/UsageUsersLoggedIn" />
                             <option value="DB_Adoption/DB_Adoption_Campaigns_by_Status" />
                             <option value="DocsTabManagementDashboard/DocumentsMonthbyFilesize" />
-                            <option value="AppExchangeServiceSupportDB/APXSSSRepOpenCasesbyAgentbyStatus" />
                             <option value="AppExchangeServiceSupportDB/APXSSSCustNewcasesAccountWeekYTD" />
+                            <option value="AppExchangeServiceSupportDB/APXSSSRepOpenCasesbyAgentbyStatus" />
                             <option value="DB_Adoption/DB_Adoption_OPPTYS_by_STAGE_entered" />
                             <option value="DB_Adoption/DB_Adoption_OPPORTUNITY_Trend_Owner" />
                             <option value="DB_Adoption/DB_Adoption_New_Accounts_Trend" />
-                            <option value="DataQualityReports/CampaignOwnerDataQuality" />
                             <option value="SalesVisibilityDashboard/SALESDealsGreaterthan50Prob" />
+                            <option value="DataQualityReports/CampaignOwnerDataQuality" />
                             <option value="DataQualityReports/AccountOwnerDataQuality" />
                             <option value="SalesforceINSIDE/INSIDEofActiveUsers" />
-                            <option value="CampaignDashboards/leadconversionratiobyuser" />
                             <option value="AppExchangeServiceSupportDB/APXSSSCustEscalatedcasesYTD" />
                             <option value="AppExchangeServiceSupportDB/APXSSSKPISolutionStatus" />
+                            <option value="CampaignDashboards/leadconversionratiobyuser" />
                             <option value="AppExchangeServiceSupportDB/APXSSSCustOpenHIGHprioritycases" />
                             <option value="AppExchangeServiceSupportDB/APXSSSRepClosedCaseRepStatusYTD" />
                             <option value="SalesVisibilityDashboard/SALESMonthOverMonthCloseTrend" />
                             <option value="SalesVisibilityDashboard/SALESQuarterlyPipelinebyCloseMonth" />
-                            <option value="DB_Adoption/DB_Adoption" />
                             <option value="AppExchangeServiceSupportDB/APXSSSRepAverageDurationperRep" />
+                            <option value="DB_Adoption/DB_Adoption" />
                             <option value="CampaignDashboards/Winbycampaign" />
-                            <option value="DashboardReportsAdoption/DataQualityAccountsmissingRating" />
                             <option value="SalesVisibilityDashboard/SALESLastMonthvsThisMonthClsd" />
+                            <option value="DashboardReportsAdoption/DataQualityAccountsmissingRating" />
                             <option value="AppExchangeServiceSupportDB/APXSSSKPIOpenCasesbyReason" />
                             <option value="LeadDashboardFolder/TotalLeadOwnership" />
                             <option value="DashboardReportsAdoption/DataQualityStagesOpptyEntered" />
@@ -3133,15 +3205,15 @@
                             <option value="SalesKPIDashboard/WinLossRatioonelinereport" />
                             <option value="DB_Adoption/DB_Adoption_Login_by_Role" />
                             <option value="DB_Adoption/DB_Adoption_Neglected_Prospects" />
-                            <option value="CampaignDashboards/Allcampaignleadsthismonth" />
                             <option value="DashboardReportsAdoption/UsageContactsCreated" />
+                            <option value="CampaignDashboards/Allcampaignleadsthismonth" />
                             <option value="DataQualityReports/ContractOwnerDataQuality" />
                             <option value="DataQualityReports/ActivityDataQualityScore" />
                             <option value="DocsTabManagementDashboard/DocsCreateDate120Days" />
                             <option value="LeadDashboardFolder/ConvertedwithOpptys" />
                             <option value="DB_Adoption/DB_Adoption_Leads_Converted_Last_365" />
-                            <option value="DataQualityReports/ActivityDataQualityDescription" />
                             <option value="DB_Adoption/DB_Adoption_Count_of_OPPTYS_last_365" />
+                            <option value="DataQualityReports/ActivityDataQualityDescription" />
                             <option value="DB_Adoption/DB_Adoption_Login_by_Department" />
                             <option value="DashboardReportsAdoption/UsageOpptyCreated" />
                             <option value="DataQualityReports/CampaignDataQualityDescription" />
@@ -3166,28 +3238,28 @@
                             <option value="Dashboard/ActivitiesCompleted" />
                             <option value="AppExchangeServiceSupportDB/APXSSSRepOpenCasesRepList" />
                             <option value="CampaignDashboards/Top5campaignsbyrevenue" />
-                            <option value="DB_Adoption/DB_Adoption_Funnel_Load_Rate" />
                             <option value="DB_Adoption/DB_Adoption_Last_Run_Reports" />
-                            <option value="DashboardReportsAdoption/UsageAccountsCreated" />
+                            <option value="DB_Adoption/DB_Adoption_Funnel_Load_Rate" />
                             <option value="AppExchangeServiceSupportDB/APXSSSKPICasesclosedin24hrs" />
+                            <option value="DashboardReportsAdoption/UsageAccountsCreated" />
                             <option value="SalesKPIDashboard/NeglectedOpportunities" />
                             <option value="DashboardReportsAdoption/PerformanceOpportunityTypeLost" />
                             <option value="Dashboard/ActivityCloseRate" />
                             <option value="AppExchangeServiceSupportDB/APXSSSCustSumofopencases" />
-                            <option value="DataQualityReports/OpportunityDataQualityScore" />
                             <option value="SalesKPIDashboard/WinLossRatio" />
+                            <option value="DataQualityReports/OpportunityDataQualityScore" />
                             <option value="CampaignDashboards/Toptencaompaignopportunities" />
                             <option value="SalesKPIDashboard/Topopenopportunities" />
                             <option value="DB_Adoption/DB_Adoption_Campaigns_Last_30_Days" />
-                            <option value="DataQualityReports/CaseOwnerDataQuality" />
                             <option value="SalesVisibilityDashboard/SALESTotalDealsOpenThisMonth" />
+                            <option value="DataQualityReports/CaseOwnerDataQuality" />
                             <option value="UserAdoptionDashboardfromAppExchange/AllContactsLast60Days" />
                             <option value="SalesKPIDashboard/OppsbyReps" />
                             <option value="DashboardReportsAdoption/PerformanceWinRate" />
                             <option value="AppExchangeServiceSupportDB/APXSSSKPIOpenedCasesbyChannelYTD" />
                             <option value="SalesVisibilityDashboard/SALESTotalDealsClosedThisMonth" />
-                            <option value="DataQualityReports/ContactDataQualityDescriptions" />
                             <option value="AppExchangeServiceSupportDB/APXSSSKPIMonthlyTrendCasesbyReason" />
+                            <option value="DataQualityReports/ContactDataQualityDescriptions" />
                             <option value="AppExchangeServiceSupportDB/APXSSSCustHIGHprioritycasesMTD" />
                             <option value="AppExchangeServiceSupportDB/APXSSSKPICasesclosedbySSP" />
                             <option value="DB_Adoption/DB_Adoption_Lead_Abandonment" />
@@ -3202,32 +3274,32 @@
                             <option value="DocsTabManagementDashboard/DocCapacityCreateDate120Days" />
                             <option value="DashboardReportsAdoption/TotalAccounts" />
                             <option value="CampaignDashboards/Campaignleadsgeneratedpermonth" />
-                            <option value="LeadDashboardFolder/LeadsbySource" />
                             <option value="SalesVisibilityDashboard/SALESWinLossRatio" />
+                            <option value="LeadDashboardFolder/LeadsbySource" />
                             <option value="SalesforceINSIDE/INSIDEofContactsbyIndustry" />
                             <option value="Dashboard/ActivitesbyType" />
                             <option value="DocsTabManagementDashboard/MostActiveUsersLastModifiedDate" />
                             <option value="UserAdoptionDashboardfromAppExchange/UsersLoggedinLast7Days" />
-                            <option value="DB_Adoption/DB_Adoption_Neglected_Customers" />
                             <option value="SalesVisibilityDashboard/SALESTotalClosedQTR" />
+                            <option value="DB_Adoption/DB_Adoption_Neglected_Customers" />
                             <option value="AppExchangeServiceSupportDB/APXSSSCustTotTimebyAccountYTD" />
                             <option value="DB_Adoption/DB_Adoption_OPPORTUNITIES_Trend" />
                             <option value="SalesKPIDashboard/Splitexistingvsnewcustomer" />
                             <option value="AppExchangeServiceSupportDB/APXSSSRepClosedCaseRepStatusMTD" />
                             <option value="SalesKPIDashboard/NewBusinessPipeline" />
                             <option value="DB_Adoption/DB_Adoption_Login_Wall_of_Fame" />
-                            <option value="DB_Adoption/DB_Adoption_New_Contacts_Trend" />
                             <option value="DashboardReportsAdoption/DataQualityOpportunitiesNoAccount" />
+                            <option value="DB_Adoption/DB_Adoption_New_Contacts_Trend" />
                             <option value="AppExchangeServiceSupportDB/APXSSSKPIWeeklyTrendingCasesFQ" />
                             <option value="Dashboard/AdoptionActivityLogging" />
                             <option value="UserAdoptionDashboardfromAppExchange/UsersNotLoggedinLast7Days" />
                             <option value="DataQualityReports/LeadOwnerDataQuality" />
-                            <option value="DocsTabManagementDashboard/CurrentCapacityUsedFilesize5MB" />
                             <option value="DocsTabManagementDashboard/DocsLastMod120Days" />
+                            <option value="DocsTabManagementDashboard/CurrentCapacityUsedFilesize5MB" />
                             <option value="SalesKPIDashboard/Openvsworkingleads" />
                             <option value="LeadDashboardFolder/LeadsbyWeb" />
-                            <option value="DB_Adoption/Active_User_Logins" />
                             <option value="AppExchangeServiceSupportDB/APXSSSCustNewcasesbyAccountMTD" />
+                            <option value="DB_Adoption/Active_User_Logins" />
                             <option value="DB_Adoption/DB_Adoption_OPPTYS_wo_Fields_Populated" />
                             <option value="DashboardReportsAdoption/PerformancePipelinebyRep" />
                             <option value="DashboardReportsAdoption/UsageActivitiesCompleted" />
@@ -3237,17 +3309,17 @@
                             <option value="CampaignDashboards/Convertedleadsvaluethisyear" />
                             <option value="DocsTabManagementDashboard/CapacityUsedbyFiletype" />
                             <option value="AppExchangeServiceSupportDB/APXSSSKPIOpenCasesbyStage" />
+                            <option value="AppExchangeServiceSupportDB/APXSSSRepTimeforclosedperRepMTD" />
                             <option value="DB_Adoption/DB_Adoption_Login_by_Region" />
                             <option value="DocsTabManagementDashboard/DocumentsbyAuthor" />
-                            <option value="AppExchangeServiceSupportDB/APXSSSRepTimeforclosedperRepMTD" />
                             <option value="CampaignDashboards/leadsconvertedintoopportspermonth" />
                             <option value="SalesKPIDashboard/Thisvslastyearclosedbusiness" />
                             <option value="DashboardReportsAdoption/UsageTotalActiveUsers" />
                             <option value="DB_Adoption/DB_Adoption_New_Leads_Trend" />
                             <option value="DocsTabManagementDashboard/AverageFilesize" />
-                            <option value="DashboardReportsAdoption/UsageWallofShame" />
                             <option value="AppExchangeServiceSupportDB/APXSSSKPIOpenCasesbyQueue" />
                             <option value="SalesVisibilityDashboard/SALESTotalClosedYEAR" />
+                            <option value="DashboardReportsAdoption/UsageWallofShame" />
                             <option value="AppExchangeServiceSupportDB/APXSSSRepOpenCasesRepbyPriority" />
                             <option value="DocsTabManagementDashboard/TopAuthorsByFilesize" />
                             <option value="DB_Adoption/DB_Adoption_ACCOUNTS_w_o_Fields_Pop" />
@@ -3258,67 +3330,11 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="unfiled$public/RejectionEmail" />
-                            <option value="unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE" />
-                            <option value="unfiled$public/Information_Email" />
-                            <option value="unfiled$public/SupportSelfServiceResetPassword" />
-                            <option value="unfiled$public/DeactivationEmail" />
-                            <option value="unfiled$public/SupportCaseCreatedPhoneInquiries" />
-                            <option value="unfiled$public/SupportSelfServiceNewLoginandPassword" />
-                            <option value="unfiled$public/UpdateConnEmail" />
-                            <option value="unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE" />
-                            <option value="unfiled$public/SupportCaseAssignmentNotification" />
-                            <option value="unfiled$public/SupportCaseResponse" />
-                            <option value="unfiled$public/InvitationEmail" />
-                            <option value="unfiled$public/SalesNewCustomerEmail" />
-                            <option value="unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE" />
-                            <option value="unfiled$public/SupportCaseCreatedWebInquiries" />
-                            <option value="unfiled$public/SupportEscalatedCaseNotification" />
-                            <option value="unfiled$public/SupportEscalatedCaseReassignment" />
-                            <option value="unfiled$public/MarketingProductInquiryResponse" />
-                            <option value="unfiled$public/AcceptanceEmail" />
-                          </set>
-                        </option>
-                        <option name="name" value="EmailTemplate" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
                             <option value="Hospital/Hospital_Logo.png" />
                             <option value="Hospital/Hospital_DefaultPicture.png" />
                           </set>
                         </option>
                         <option name="name" value="Document" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="x2SalesDashboards/x2LeadFlowDashboard" />
-                            <option value="x4SupportDashboards/x2ExecutiveOverview" />
-                            <option value="x1AdoptionDashboards/x3AdoptionBusinessPerformance" />
-                            <option value="x3MarketingDashboard/x1CampaignMetricsDashboard" />
-                            <option value="x2SalesDashboards/x1SalesActivity" />
-                            <option value="x5DocumentsTabManagement/x1DocumentsTabManagement" />
-                            <option value="Salesforce_Adoption_Dashboards/X3_Sales_Marketing_Adoption" />
-                            <option value="Salesforce_Adoption_Dashboards/X1_User_Adoption_Logins" />
-                            <option value="x4SupportDashboards/x4RepAgentPerformance" />
-                            <option value="x6DataQualityAnalysis/x1AccountContactOpportunityDataQuality2" />
-                            <option value="x4SupportDashboards/x1CustomerInformation" />
-                            <option value="x7WhatsInside/x1WhatsInsideSalesforce" />
-                            <option value="x4SupportDashboards/x3SupportKPIs" />
-                            <option value="Salesforce_Adoption_Dashboards/X2_Key_Feature_Adoption" />
-                            <option value="x6DataQualityAnalysis/x4HighLevelDataQualityAnalysis" />
-                            <option value="x1AdoptionDashboards/x1AdoptionUsage" />
-                            <option value="x2SalesDashboards/x4SalesKPI" />
-                            <option value="x6DataQualityAnalysis/x2CampaignLeadActivityDataQuality" />
-                            <option value="x1AdoptionDashboards/x2AdoptionDataQuality" />
-                            <option value="x6DataQualityAnalysis/x1AccountContactOpportunityDataQuality" />
-                            <option value="x2SalesDashboards/x3SalesExecutiveDashboard" />
-                            <option value="x1AdoptionDashboards/x4UserAdoptionbyArrowpoint" />
-                            <option value="x6DataQualityAnalysis/x3CaseContractDataQuality" />
-                          </set>
-                        </option>
-                        <option name="name" value="Dashboard" />
                       </MetadataType>
                     </set>
                   </option>
@@ -3327,6 +3343,7 @@
             </entry>
           </map>
         </option>
+        <option name="retrieveAndMergeDefault" value="false" />
       </ProjectWorkspaceSettings>
     </option>
   </component>
@@ -3337,10 +3354,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2576" />
-    <option name="y" value="46" />
-    <option name="width" value="993" />
-    <option name="height" value="562" />
+    <option name="x" value="2851" />
+    <option name="y" value="212" />
+    <option name="width" value="795" />
+    <option name="height" value="450" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -3361,36 +3378,36 @@
             <path>
               <item name="New Connection1" type="b2602c69:ProjectViewProjectNode" />
               <item name="New Connection1" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="IlluminatedCloud" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="New Connection1" type="b2602c69:ProjectViewProjectNode" />
               <item name="New Connection1" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="IlluminatedCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="New_Connection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="New Connection1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="New Connection1" type="462c0819:PsiDirectoryNode" />
+              <item name="IlluminatedCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="New_Connection1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="New Connection1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="New Connection1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="New Connection1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="New Connection1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="New Connection1" type="b2602c69:ProjectViewProjectNode" />
               <item name="New Connection1" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="triggers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="New Connection1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="New Connection1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="New Connection1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="New Connection1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="New Connection1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="New Connection1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="triggers" type="462c0819:PsiDirectoryNode" />
+              <item name="objects" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -3403,7 +3420,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547554221506" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547638706194" />
     <property name="last_opened_file_path" value="C:/#PROGRAMOWANIE/cdlibrary8" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -3413,19 +3430,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\BRITENET\IdeaProjects\New Connection1\build\classes" />
-      <recent name="C:\Users\BRITENET\IdeaProjects\New Connection1\build\pages" />
-      <recent name="C:\Users\BRITENET\IdeaProjects\New Connection1\build\triggers" />
-      <recent name="C:\Users\BRITENET\IdeaProjects\New Connection1\build\tests" />
-      <recent name="C:\Users\BRITENET\IdeaProjects\New Connection1\build" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\BRITENET\IdeaProjects\New Connection1\build" />
       <recent name="C:\Users\BRITENET\IdeaProjects\New Connection1\build\Tests" />
       <recent name="C:\Users\BRITENET\IdeaProjects\New Connection1\build\ant" />
       <recent name="C:\Users\BRITENET\IdeaProjects\New Connection1\src" />
       <recent name="C:\Users\BRITENET\IdeaProjects\New Connection1\src\staticresources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\BRITENET\IdeaProjects\New Connection1\build\classes" />
+      <recent name="C:\Users\BRITENET\IdeaProjects\New Connection1\build\pages" />
+      <recent name="C:\Users\BRITENET\IdeaProjects\New Connection1\build\triggers" />
+      <recent name="C:\Users\BRITENET\IdeaProjects\New Connection1\build\tests" />
+      <recent name="C:\Users\BRITENET\IdeaProjects\New Connection1\build" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -3720,7 +3737,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547473069616</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="work: connections between two orgs and talend">
+      <created>1547557131503</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1547557131503</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -3769,9 +3793,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.20309168" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.19669509" />
       <window_info id="Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -3787,7 +3810,7 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946582" weight="0.32964602" />
       <window_info anchor="bottom" id="Log Viewer" order="7" sideWeight="0.588141" weight="0.32827735" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.23943663" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.11050921" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="Anonymous Apex" order="11" sideWeight="0.62168264" weight="0.63921994" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -3853,7 +3876,8 @@
     <MESSAGE value="rest from one to second" />
     <MESSAGE value="after new method in trigger" />
     <MESSAGE value="add external Id" />
-    <option name="LAST_COMMIT_MESSAGE" value="add external Id" />
+    <MESSAGE value="work: connections between two orgs and talend" />
+    <option name="LAST_COMMIT_MESSAGE" value="work: connections between two orgs and talend" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -3867,61 +3891,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build/ant/Hospital_HospitalREST.cls" />
-    <entry file="file://$PROJECT_DIR$/build/globalValueSets/Country_Picklist.globalValueSet">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_MaciejHospitalSingleRequestMock.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorSearchController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="137" column="3" selection-start-line="137" selection-start-column="3" selection-end-line="143" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Hospital_DoctorSearch.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="41" column="31" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_GuidUtil.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_MaciejHospitalsMultiMock.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" lean-forward="true" selection-start-column="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/classes/Hospital_HospitalWrapperForREST.cls-meta.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/objects/Hospital__c.object">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-792">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/triggers/Hospital_Hospital.trigger-meta.xml" />
     <entry file="file://$PROJECT_DIR$/build/classes/Hospital_Utils.cls-meta.xml" />
     <entry file="file://$PROJECT_DIR$/build/classes/Hospital_HospitalTriggerHandler.cls-meta.xml" />
     <entry file="jar://$PROJECT_DIR$/IlluminatedCloud/New_Connection1/OfflineSymbolTable.zip!/System/Trigger.cls">
@@ -3963,23 +3932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hosp_MaciejDoctorWrapperForSoap.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_Utils.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/classes/Hospital_Utils.cls">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-726" />
@@ -3989,17 +3941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1144">
           <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_MaciejDoctorsController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="44" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#2245#2304#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4052,22 +3993,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Hospital_HospitalView.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/pages/Hospital_HospitalEdit.page-meta.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/package.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242">
-          <caret line="4" column="5" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="13" selection-end-column="12" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/tests/package.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -4117,16 +4044,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_ViewController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1429">
-          <caret line="272" column="30" selection-start-line="272" selection-end-line="273" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Hospital_HospitalEdit.page">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -4165,30 +4082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/build.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="24" lean-forward="true" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="30" column="3" lean-forward="true" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/triggers/Hospital_Hospital.trigger">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -4213,10 +4106,142 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorWrapperForSOAP.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorsSOAP.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-951">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/AsyncHospital_partnerSoapSforceCom.cls">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/AsyncHosp_MaciejSoapForDoctorsWebService.cls">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_MaciejDoctorsController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="136" column="39" lean-forward="true" selection-start-line="136" selection-start-column="39" selection-end-line="136" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorUtils.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Hospital_DoctorView.page">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="46" column="95" lean-forward="true" selection-start-line="46" selection-start-column="95" selection-end-line="46" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorViewPageController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_Utils.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Hospital_HospitalView.page">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="29" column="101" selection-start-line="29" selection-start-column="101" selection-end-line="29" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_ViewController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/package.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/package.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hosp_MaciejSoapForDoctorsWebService.cls">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hosp_MaciejDoctorWrapperForSoap.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/build.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="44" lean-forward="true" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalREST.cls">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="154">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
             <element signature="e#408#441#0" expanded="true" />
             <element signature="e#585#618#0" expanded="true" />
@@ -4224,6 +4249,9 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalBatch.cls">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
