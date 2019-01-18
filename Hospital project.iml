@@ -124,9 +124,6 @@
                             <option name="name" value="Hospital_HospitalHierarchyController" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="Hospital_HospitalQueryBuilder" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="Hospital_HospitalREST" />
                             <option name="selected" value="true" />
                           </MetadataEntry>

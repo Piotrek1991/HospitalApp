@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="baa6cb16-da58-4406-adfa-303923bf028f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/triggers/Hospital_Hospital.trigger" beforeDir="false" afterPath="$PROJECT_DIR$/build/triggers/Hospital_Hospital.trigger" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_Utils.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_Utils.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger" beforeDir="false" afterPath="$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hospital project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Hospital project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_DoctorComparator.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_DoctorComparator.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalQueryBuilder.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalQueryBuilder.cls-meta.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/ITrigger.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/ITrigger.cls" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,38 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1672">
-              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/classes/Hospital_TriggerFactory.cls">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/classes/Hospital_Utils.cls">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+            <state relative-caret-position="968">
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -135,7 +108,6 @@
         <option value="$PROJECT_DIR$/build/objects/Hospital__c.object" />
         <option value="$PROJECT_DIR$/build/tests/package.xml" />
         <option value="$PROJECT_DIR$/build/classes/Hospital_Utils.cls" />
-        <option value="$PROJECT_DIR$/src/classes/Hospital_DoctorComparator.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_MaciejHospitalsControllerTest.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_MaciejDoctorsController.cls" />
         <option value="$PROJECT_DIR$/src/pages/Hospital_MaciejDoctors.page" />
@@ -164,12 +136,13 @@
         <option value="$PROJECT_DIR$/src/classes/Hospital_LogsBatchDeleteSchedule.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_DoctorUtils.cls" />
         <option value="$PROJECT_DIR$/src/classes/TriggerFactory.cls" />
-        <option value="$PROJECT_DIR$/src/classes/ITrigger.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_TriggerFactory.cls" />
-        <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls" />
         <option value="$PROJECT_DIR$/build/triggers/Hospital_Hospital.trigger" />
         <option value="$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_Utils.cls" />
+        <option value="$PROJECT_DIR$/src/classes/Hospital_DoctorComparator.cls" />
+        <option value="$PROJECT_DIR$/src/classes/ITrigger.cls" />
+        <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls" />
       </list>
     </option>
   </component>
@@ -179,7 +152,7 @@
         <entry key="Hospital project">
           <value>
             <ModuleWorkspaceSettings>
-              <option name="moduleContentsLastModified" value="1547795185151" />
+              <option name="moduleContentsLastModified" value="1547804637313" />
               <option name="serverMetadataLastPopulated" value="1547642277079" />
             </ModuleWorkspaceSettings>
           </value>
@@ -298,7 +271,7 @@
                       <entry key="CLASSES/ASYNCHOSP_MACIEJSOAPFORDOCTORSWEBSERVICE.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_CONTRACTHANDLER.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_CONTRACTSEARCHCONTROLLER.CLS" value="1546591318935" />
-                      <entry key="CLASSES/HOSPITAL_DOCTORCOMPARATOR.CLS" value="1547642317730" />
+                      <entry key="CLASSES/HOSPITAL_DOCTORCOMPARATOR.CLS" value="1547804698155" />
                       <entry key="CLASSES/HOSPITAL_DOCTORHANDLER.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_DOCTORHIRECONTROLL.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_DOCTORIMPORTCONTROLLER.CLS" value="1546591318935" />
@@ -318,10 +291,9 @@
                       <entry key="CLASSES/HOSPITAL_HOSPITALCOMPARATOR.CLS" value="1547715486087" />
                       <entry key="CLASSES/HOSPITAL_HOSPITALEDITCONTROLLER.CLS" value="1547642317730" />
                       <entry key="CLASSES/HOSPITAL_HOSPITALHIERARCHYCONTROLLER.CLS" value="1546591318935" />
-                      <entry key="CLASSES/HOSPITAL_HOSPITALQUERYBUILDER.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_HOSPITALREST.CLS" value="1547674854936" />
                       <entry key="CLASSES/HOSPITAL_HOSPITALSCHEDULE.CLS" value="1547763490504" />
-                      <entry key="CLASSES/HOSPITAL_HOSPITALTRIGGERHANDLER.CLS" value="1547800361999" />
+                      <entry key="CLASSES/HOSPITAL_HOSPITALTRIGGERHANDLER.CLS" value="1547808411530" />
                       <entry key="CLASSES/HOSPITAL_HOSPITALWRAPPERFORREST.CLS" value="1547645396158" />
                       <entry key="CLASSES/HOSPITAL_LOGSBATCHDELETE.CLS" value="1547763413195" />
                       <entry key="CLASSES/HOSPITAL_LOGSBATCHDELETESCHEDULE.CLS" value="1547763515598" />
@@ -340,7 +312,7 @@
                       <entry key="CLASSES/HOSPITAL_VIEWCONTROLLER.CLS" value="1547680022928" />
                       <entry key="CLASSES/HOSP_MACIEJDOCTORWRAPPERFORSOAP.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSP_MACIEJSOAPFORDOCTORSWEBSERVICE.CLS" value="1546857577506" />
-                      <entry key="CLASSES/ITRIGGER.CLS" value="1547799490843" />
+                      <entry key="CLASSES/ITRIGGER.CLS" value="1547804901079" />
                       <entry key="COMPONENTS/HOSPITAL_DOCTORHIRECOMPONENT.COMPONENT" value="1546520878867" />
                       <entry key="COMPONENTS/HOSPITAL_HOSPITALHIERARCHY.COMPONENT" value="1546520878867" />
                       <entry key="COMPONENTS/HOSPITAL_STATUSCOMPONENT.COMPONENT" value="1546520878867" />
@@ -3421,7 +3393,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547799214165" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547808353869" />
     <property name="last_opened_file_path" value="C:/#PROGRAMOWANIE/cdlibrary8" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -3759,7 +3731,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547801125447</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="trigger factory and custom settings work good">
+      <created>1547804092461</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1547804092461</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -3895,7 +3874,8 @@
     <MESSAGE value="work: connections between two orgs and talend" />
     <MESSAGE value="before create batch" />
     <MESSAGE value="trigger factory work good without custom settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="trigger factory work good without custom settings" />
+    <MESSAGE value="trigger factory and custom settings work good" />
+    <option name="LAST_COMMIT_MESSAGE" value="trigger factory and custom settings work good" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -3909,98 +3889,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build/pages/Hospital_HospitalEdit.page-meta.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/tests/package.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="57" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/classes/Hospital_HospitalEditController.cls-meta.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/IlluminatedCloud/New_Connection1/OfflineSymbolTable.zip!/System/Database.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="224" column="32" selection-start-line="224" selection-start-column="32" selection-end-line="224" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/classes/Hospital_HospitalREST.cls-meta.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Hospital_MaciejHospitals.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4855">
-          <caret line="323" column="22" selection-start-line="323" selection-start-column="22" selection-end-line="323" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Hospital_HospitalEdit.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="29" selection-start-line="21" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/pages/Hospital_HospitalEdit.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="110" selection-start-line="22" selection-start-column="110" selection-end-line="22" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_MaciejHospitalsController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="94" column="75" lean-forward="true" selection-start-line="94" selection-start-column="75" selection-end-line="94" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/classes/Hospital_HospitalEditController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalEditController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" column="63" selection-start-line="14" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorWrapperForSOAP.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorsSOAP.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-951">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/AsyncHospital_partnerSoapSforceCom.cls">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/AsyncHosp_MaciejSoapForDoctorsWebService.cls">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/Hospital_MaciejDoctorsController.cls">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5">
@@ -4028,30 +3916,10 @@
     <entry file="file://$PROJECT_DIR$/src/package.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hosp_MaciejSoapForDoctorsWebService.cls">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hosp_MaciejDoctorWrapperForSoap.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/build.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="44" lean-forward="true" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorQueryBuilder.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="38" column="81" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="81" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4090,15 +3958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorSearchController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-837">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/IlluminatedCloud/New_Connection1/OfflineSymbolTable.zip!/Hospital__c.cls">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -4113,38 +3972,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalREST.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3388">
-          <caret line="183" column="5" selection-start-line="183" selection-start-column="5" selection-end-line="183" selection-end-column="5" />
-          <folding>
-            <element signature="e#408#441#0" expanded="true" />
-            <element signature="e#585#618#0" expanded="true" />
-            <element signature="e#990#1003#0" expanded="true" />
-            <element signature="e#1064#1077#0" expanded="true" />
-            <element signature="e#1286#1319#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/classes/Hospital_HospitalREST.cls">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1760">
           <caret line="100" column="9" lean-forward="true" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalComparator.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1980">
-          <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalWrapperForREST.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -4162,13 +3993,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalBatchDelete.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/Hospital_LogsBatchDelete.cls">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -4179,58 +4003,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalBatch.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/TriggerFactory.cls" />
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorUtils.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_ViewController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/IlluminatedCloud/New_Connection1/OfflineSymbolTable.zip!/System/UserInfo.cls">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorViewPageController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="937">
-          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/ITrigger.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4243,7 +4020,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/Hospital_Utils.cls">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state relative-caret-position="-220">
           <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -4251,24 +4028,265 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalQueryBuilder.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalBatchDelete.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalBatch.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_GuidUtil.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_faultPartnerSoapSforceCom.cls">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorViewPageController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1118">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorUtils.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorsSOAPTest.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorsSOAP.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorSearchController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorQueryBuilder.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="38" column="81" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="81" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorComparator.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1382">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorHireControll.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorHireController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-268">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorImportController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_ContractSearchController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_ContractHandler.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-70">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hosp_MaciejSoapForDoctorsWebService.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-528" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hosp_MaciejDoctorWrapperForSoap.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorProfileImageController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorPublicSiteController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/ITrigger.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalEditController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="63" selection-start-line="14" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_ViewController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalComparator.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="854">
+          <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalREST.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3850">
+          <caret line="183" column="5" selection-start-line="183" selection-start-column="5" selection-end-line="183" selection-end-column="5" />
+          <folding>
+            <element signature="e#408#441#0" expanded="true" />
+            <element signature="e#585#618#0" expanded="true" />
+            <element signature="e#990#1003#0" expanded="true" />
+            <element signature="e#1064#1077#0" expanded="true" />
+            <element signature="e#1286#1319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorWrapperForSOAP.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalWrapperForREST.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/Hospital_TriggerFactory.cls">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        <state relative-caret-position="678">
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1672">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+        <state relative-caret-position="968">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
