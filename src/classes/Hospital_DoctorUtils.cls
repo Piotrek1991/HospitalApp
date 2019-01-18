@@ -4,46 +4,64 @@
 
 public with sharing class Hospital_DoctorUtils {
 
-    public static Boolean isFunctionalityEnabled(String csName){
+    public static Boolean isFunctionalityEnabled(String csName) {
         return isFunctionalityEnabled(csName, getCurrentUser().Country);
     }
 
-    public static Boolean isFunctionalityEnabled(String csName, String country){
+    public static Boolean isFunctionalityEnabled(String csName, String country) {
         Hospital_Custom_Settings__c csItem = Hospital_Custom_Settings__c.getInstance(csName);
-        if(csItem == null){
+        if (csItem == null) {
             return false;
         }
-        return getContainsValue(csItem, country);
-    }
-    public static User getCurrentUser(){
-        return getUser(UserInfo.getUserId());
-    }
-
-    public static User getUser(String userId){
-        List<User> userItem = [SELECT Id, Country FROM User WHERE Id =:userId];
-        if(userItem.isEmpty()){
-            return null;
-        }
-        return userItem.get(0);
-    }
-
-    public static Boolean getContainsValue(Hospital_Custom_Settings__c csItem, String country){
         List<String> setValue = csItem.Value__c.split(',');
         return setValue.contains(country);
     }
 
-    public static String blobToString(Blob input, String inCharset){
+    public static User getCurrentUser() {
+        if (Cache.Session.get('HospitalCurrentUser') == null) {
+            return getUser(UserInfo.getUserId());
+        }
+        return (User) Cache.Session.get('HospitalCurrentUser');
+    }
+
+    public static User getUser(String userId) {
+        List<User> userItem = [SELECT Id, Country FROM User WHERE Id = :userId];
+        if (userItem.isEmpty()) {
+            return null;
+        }
+        Cache.Session.put('HospitalCurrentUser', userItem.get(0));
+        return userItem.get(0);
+    }
+
+    public static String getCsValue(String csName) {
+        Hospital_Custom_Settings__c csItem =  Hospital_Custom_Settings__c.getInstance(csName);
+        if (csItem == null) {
+            return null;
+        }
+        return csItem.Value__c;
+    }
+
+    public static Integer getCsValueFromInteger(String csName) {
+        return Integer.valueOf(getCsValue(csName));
+    }
+
+    public static Boolean getCsValueFromBoolean(String csName) {
+        getCsValue(csName);
+        return Boolean.valueOf(getCsValue(csName));
+    }
+
+    public static String blobToString(Blob input, String inCharset) {
         String hex = EncodingUtil.convertToHex(input);
         System.assertEquals(0, hex.length() & 1);
         final Integer bytesCount = hex.length() >> 1;
         String[] bytes = new String[bytesCount];
-        for(Integer i = 0; i < bytesCount; ++i)
-            bytes[i] =  hex.mid(i << 1, 2);
+        for (Integer i = 0; i < bytesCount; ++i)
+            bytes[i] = hex.mid(i << 1, 2);
         return EncodingUtil.urlDecode('%' + String.join(bytes, '%'), inCharset);
     }
 
     public static void removeObjectFromList(List<SObject> lst, SObject o) {
-        for (Integer i = lst.size() - 1; i >= 0 ; --i) {
+        for (Integer i = lst.size() - 1; i >= 0; --i) {
             if (lst.get(i) == o || lst.get(i).get('id') == o.get('id')) {
                 lst.remove(i);
             }

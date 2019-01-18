@@ -24,11 +24,13 @@ global with sharing class Hospital_HospitalREST {
     global static List<Hospital_HospitalWrapperForRest> upsertHospitals(List<Hospital_HospitalWrapperForRest> hospitals) {
         List<Hospital__c> hospitalListToInsert = new List<Hospital__c>();
         List<Hospital__c> hospitalListToUpdate = new List<Hospital__c>();
+        List<Hospital_HospitalWrapperForRest> hospitalListToInsertWrapper = new List<Hospital_HospitalWrapperForRest>();
+        List<Hospital_HospitalWrapperForRest> hospitalListToUpdateWrapper = new List<Hospital_HospitalWrapperForRest>();
 
         List<String> externalIds = new List<String>();
 
         for (Hospital_HospitalWrapperForRest hospital : hospitals) {
-            if(String.isBlank(hospital.externalId)) {
+            if (String.isBlank(hospital.externalId)) {
                 hospital.externalId = hospital.name + hospital.city + hospital.country + hospital.street;
             }
             externalIds.add(hospital.externalId);
@@ -52,9 +54,6 @@ global with sharing class Hospital_HospitalREST {
         }
         System.debug('hospitalListToUpdate >> ' + hospitalListToUpdate);
 
-        if (hospitalListToUpdate.size() > 0) {
-            update hospitalListToUpdate;
-        }
         System.debug('hospitals >>> ' + hospitals);
 
         if (listToCompare.size() == 0) {
@@ -73,7 +72,7 @@ global with sharing class Hospital_HospitalREST {
                 for (Hospital__c hospital : listToCompare) {
                     System.debug('String.valueOf(hospital.External_Id__c)' + String.valueOf(hospital.External_Id__c));
                     System.debug('hospitalFrom.externalId' + hospitalFrom.hospitalId);
-                    if ( String.isBlank(hospitalFrom.hospitalId) && !String.valueOf(hospital.External_Id__c).equals(hospitalFrom.externalId ) ) {
+                    if (String.isBlank(hospitalFrom.hospitalId) && !String.valueOf(hospital.External_Id__c).equals(hospitalFrom.externalId)) {
                         hospitalListToInsert.add(new Hospital__c(
                                 External_Id__c = hospitalFrom.externalId,
                                 Name = hospitalFrom.name,
@@ -86,26 +85,55 @@ global with sharing class Hospital_HospitalREST {
             }
         }
 
+
+        if (hospitalListToUpdate.size() > 0) {
+            List<Database.SaveResult> resultsFromUpdate = Database.update(hospitalListToUpdate, false);
+            hospitalListToUpdateWrapper = generateWrapperFromHospital(hospitalListToUpdate);
+            generateStatusToRecords(resultsFromUpdate, hospitalListToUpdateWrapper);
+        }
+
+
         System.debug('hospitalListToInsert' + hospitalListToInsert);
         if (hospitalListToInsert.size() > 0) {
-            insert hospitalListToInsert;
+            List<Database.SaveResult> resultsFromInsert = Database.insert(hospitalListToInsert, false);
+            hospitalListToInsertWrapper = generateWrapperFromHospital(hospitalListToInsert);
+            generateStatusToRecords(resultsFromInsert, hospitalListToInsertWrapper);
         }
 
         hospitalListToInsert.addAll(hospitalListToUpdate);
 
         List<Hospital_HospitalWrapperForRest> resultsHospitals = new List<Hospital_HospitalWrapperForRest>();
-        for (Hospital__c rawHospital : hospitalListToInsert) {
+        resultsHospitals.addAll(hospitalListToUpdateWrapper);
+        resultsHospitals.addAll(hospitalListToInsertWrapper);
+
+        return resultsHospitals;
+    }
+
+    private static void generateStatusToRecords(List<Database.SaveResult> results, List<Hospital_HospitalWrapperForRest> hospitalListToInsert) {
+        for (Integer i = 0; i < results.size(); i++) {
+            if (results.get(i).isSuccess()) {
+                hospitalListToInsert.get(i).status = true;
+            } else {
+                hospitalListToInsert.get(i).status = false;
+            }
+        }
+    }
+
+    private static List<Hospital_HospitalWrapperForRest> generateWrapperFromHospital(List<Hospital__c> hospitals) {
+        List<Hospital_HospitalWrapperForRest> resultsHospitals = new List<Hospital_HospitalWrapperForRest>();
+        for (Hospital__c rawHospital : hospitals) {
             resultsHospitals.add(new Hospital_HospitalWrapperForRest(rawHospital));
         }
         return resultsHospitals;
     }
+
 
     @HttpDelete
     global static List<Hospital_HospitalWrapperForRest> deleteHospitals() {
         RestRequest request = RestContext.request;
         String hospitalIds = request.requestURI.substring(request.requestURI.lastIndexOf('/') + 1);
         List<String> ids = hospitalIds.split(',');
-        System.debug('Id from external service' +ids );
+        System.debug('Id from external service' + ids);
         List<Hospital__c> listToDel = [
                 SELECT Id,
                         External_Id__c,

@@ -11,6 +11,7 @@ global class Hospital_HospitalWrapperForREST{
     webService String postalCode { get; set; }
     webService String street { get; set; }
     webService String externalId { get; set; }
+    webService Boolean status { get; set; }
 
     global Hospital_HospitalWrapperForREST(Hospital__c hospital) {
         hospitalId = hospital.Id;

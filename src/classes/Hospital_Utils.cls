@@ -4,6 +4,20 @@
 
 public with sharing class Hospital_Utils {
 
+    public static Boolean isTriggerEnabled(String csName) {
+        System.debug('csName' + csName);
+        Hosp_TriggerExceptions__c csItem = Hosp_TriggerExceptions__c.getInstance(UserInfo.getUserId());
+        System.debug('csItem' + csItem);
+        Object customSettingObject = csItem.get(csName);
+        System.debug('customSettingObject' + customSettingObject);
+
+        if (customSettingObject == null) {
+            return false;
+        }
+        Boolean customSettingValue = (Boolean) customSettingObject;
+        return customSettingValue;
+    }
+
     User getCurrentUser() {
         return getUser(UserInfo.getUserId());
     }
@@ -15,6 +29,7 @@ public with sharing class Hospital_Utils {
         }
         return userItem[0];
     }
+
     private static String addToWhereIfNotBlank(String fieldName, String checkedField) {
         if (String.isNotBlank(checkedField)) {
             return ' AND ' + fieldName + ' LIKE \'' + checkedField + '%\'';
@@ -25,11 +40,11 @@ public with sharing class Hospital_Utils {
 
     public static String generateHireDoctorHospitalsQuery(Hospital__c hospital) {
         String query = '';
-        if(String.isNotBlank(hospital.Name)) {
+        if (String.isNotBlank(hospital.Name)) {
             query = 'SELECT Id, Name, Country__c, City__c, Website__c FROM Hospital__c WHERE Name LIKE \'' + hospital.Name + '%\'' + addToWhereIfNotBlank('Website__c', hospital.Website__c) + addToWhereIfNotBlank('Country__c', hospital.Country__c);
-        } else if(String.isNotBlank(hospital.Website__c)) {
+        } else if (String.isNotBlank(hospital.Website__c)) {
             query = 'SELECT Id, Name, Country__c, City__c, Website__c FROM Hospital__c WHERE WWW__c LIKE \'' + hospital.Website__c + '%\'' + addToWhereIfNotBlank('Country__c', hospital.Country__c);
-        } else if(String.isNotBlank(hospital.Country__c)) {
+        } else if (String.isNotBlank(hospital.Country__c)) {
             query = 'SELECT Id, Name, Country__c, City__c, WWW__c FROM Hospital__c WHERE Country__c = \'' + hospital.Country__c + '\'';
         }
         System.debug(query);
@@ -87,7 +102,6 @@ public with sharing class Hospital_Utils {
         String ClientId = '3MVG9fTLmJ60pJ5L9cnCubmjX_eLKbZmAPIn3jG3pirLoEoSItoLD82S6Aa.cK.IKpD88y_YhEPmInj3JYCOA';
         String ClientSecret = '4736755902322743893';
         return getAccessToken(username, password, ClientId, ClientSecret);
-//        return '00D1t000000vXus!AQEAQEujDxOeW0V0_oflJ8vWhNHKGrq2sgxTUocP591EhELkQ0gn8RgS7Crj_zrdOA3NsMG.u2NcN.BDNEDskAurSxeM0Qlg';
     }
 
     public static String loginToOriginalOrgGetSessionId() {
@@ -98,4 +112,25 @@ public with sharing class Hospital_Utils {
         return getAccessToken(username, password, ClientId, ClientSecret);
     }
 
+    public static void sendEmailToSystemAdmin(List<String> errorList) {
+        List<Messaging.SingleEmailMessage> emails = new List<Messaging.SingleEmailMessage>();
+        List<String> address = new List<String>();
+
+        address.add('toporowski.piotr.java@gmail.com');
+        Messaging.SingleEmailMessage singleMail = new Messaging.SingleEmailMessage();
+        String body = 'Errors';
+        for (String element : errorList) {
+            body += '\n' + element + '\n';
+        }
+        System.debug('Email body' + body);
+        singleMail.setSenderDisplayName('Salesforce Hospital');
+        singleMail.setSubject('Information about fail inserted hospital record to second org');
+        singleMail.setTreatTargetObjectAsRecipient(false);
+        singleMail.setToAddresses(address);
+        singleMail.setSaveAsActivity(false);
+        singleMail.setHtmlBody(body);
+        emails.add(singleMail);
+
+        Messaging.sendEmail(emails);
+    }
 }

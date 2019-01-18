@@ -6,17 +6,33 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>Doctor__c.City__c</members>
+        <members>Doctor__c.Country__c</members>
+        <members>Doctor__c.Email__c</members>
+        <members>Doctor__c.FirstNameLastName__c</members>
+        <members>Doctor__c.First_Name__c</members>
+        <members>Doctor__c.Last_Name__c</members>
+        <members>Doctor__c.License_Number__c</members>
+        <members>Doctor__c.Phone__c</members>
+        <members>Doctor__c.Street__c</members>
         <members>Hospital__c.City__c</members>
         <members>Hospital__c.Country__c</members>
+        <members>Hospital__c.External_Id__c</members>
         <members>Hospital__c.Parent_Hospital__c</members>
         <members>Hospital__c.Phone__c</members>
         <members>Hospital__c.PostalCode__c</members>
         <members>Hospital__c.Street__c</members>
         <members>Hospital__c.Website__c</members>
+        <members>LogsFromWebService__c.DateTime__c</members>
+        <members>LogsFromWebService__c.External_Id__c</members>
+        <members>LogsFromWebService__c.OperationType__c</members>
+        <members>LogsFromWebService__c.Request__c</members>
+        <members>LogsFromWebService__c.Respond__c</members>
         <name>CustomField</name>
     </types>
     <types>
         <members>Hospital__c</members>
+        <members>LogsFromWebService__c</members>
         <name>CustomObject</name>
     </types>
     <types>

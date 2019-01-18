@@ -166,5 +166,12 @@
         <customTabListAdditionalFields>Website__c</customTabListAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>IfContainsA</fullName>
+        <active>true</active>
+        <errorConditionFormula>CONTAINS(City__c, &apos;b&apos;)</errorConditionFormula>
+        <errorDisplayField>City__c</errorDisplayField>
+        <errorMessage>City cannot contains literal &apos;b&apos;</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
 </CustomObject>

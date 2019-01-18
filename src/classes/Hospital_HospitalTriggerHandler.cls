@@ -2,8 +2,62 @@
  * Created by BRITENET on 10.01.2019.
  */
 
-public class Hospital_HospitalTriggerHandler {
+public class Hospital_HospitalTriggerHandler implements ITrigger{
     public static String endPoint = 'https://eu16.salesforce.com/services/apexrest/Hospital__c/';
+
+    public void beforeInsert(List<Hospital__c> hospitals){
+        Boolean isExecuted = false;
+        while (!isExecuted) {
+            List<Hospital_HospitalWrapperForREST> hospitalsInWrapper = new List<Hospital_HospitalWrapperForREST>();
+            for (Hospital__c hosp : hospitals) {
+                Hospital_HospitalWrapperForREST hospToSend = new Hospital_HospitalWrapperForREST(hosp);
+                hospToSend.status = true;
+                hospitalsInWrapper.add(hospToSend);
+            }
+            String body = '{ "hospitals"  : ' + JSON.serialize(hospitalsInWrapper) + ' }';
+            Hospital_HospitalTriggerHandler.sendHosp(body);
+            isExecuted = true;
+        }
+    }
+
+    public void beforeUpdate(List<Hospital__c> hospitals){
+        Boolean isExecuted = false;
+        while (!isExecuted) {
+            List<Hospital_HospitalWrapperForREST> hospitalsInWrapper = new List<Hospital_HospitalWrapperForREST>();
+            for (Hospital__c hosp : hospitals) {
+                Hospital_HospitalWrapperForREST hospToSend = new Hospital_HospitalWrapperForREST(hosp);
+                hospToSend.status = true;
+                hospitalsInWrapper.add(hospToSend);
+            }
+            String body = '{ "hospitals"  : ' + JSON.serialize(hospitalsInWrapper) + ' }';
+            Hospital_HospitalTriggerHandler.sendHosp(body);
+            isExecuted = true;
+        }
+    }
+
+    public void beforeDelete(List<Hospital__c> hospitalMap){
+        Boolean isExecuted = false;
+        while (!isExecuted) {
+            List<String> hospitalsIds = new List<String>();
+            for (Hospital__c hosp : hospitalMap) {
+                hospitalsIds.add(hosp.External_Id__c);
+            }
+            Hospital_HospitalTriggerHandler.deleteHospitalData(hospitalsIds);
+            isExecuted = true;
+        }
+    }
+
+    public void afterInsert(List<Hospital__c> hospitals){
+
+    }
+
+    public void afterUpdate(List<Hospital__c> hospitals){
+
+    }
+
+    public void afterDelete(List<Hospital__c> hospitals){
+
+    }
 
     @future(Callout=true)
     public static void sendHosp(String hospitalsJson) {
@@ -11,9 +65,9 @@ public class Hospital_HospitalTriggerHandler {
         HttpRequest request = getRequest('PUT', '', hospitalsJson);
 
         HttpResponse response = http.send(request);
-
         LogsFromWebService__c logsFromWebService = new LogsFromWebService__c(DateTime__c =Datetime.now(), OperationType__c ='Send hospital',
-        ParentId__c='', Request__c = request.getBody(), Respond__c = response.getBody());
+        Status__c=String.valueOf(response.getStatusCode()), Request__c = request.getBody(), Respond__c = response.getBody());
+        System.debug('logsFromWebService' + logsFromWebService);
         insert logsFromWebService;
     }
 
@@ -34,7 +88,7 @@ public class Hospital_HospitalTriggerHandler {
         System.debug('response=' + response.getStatusCode());
 
         LogsFromWebService__c logsFromWebService = new LogsFromWebService__c(DateTime__c =Datetime.now(), OperationType__c ='Delete hospital',
-                ParentId__c='', Request__c = request.getBody(), Respond__c = response.getBody());
+        Status__c=String.valueOf(response.getStatusCode()), Request__c = request.getBody(), Respond__c = response.getBody());
         insert logsFromWebService;
     }
 

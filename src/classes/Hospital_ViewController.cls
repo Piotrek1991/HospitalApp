@@ -5,6 +5,7 @@
 public with sharing class Hospital_ViewController {
     public List<Contract__c> contracts { get; set; }
     public String hospitalIdCurrent { get; set; }
+    public static Hospital__c hospitalCurrent { get; set; }
     public String selectedContractId { get; set; }
     private Date dateNow = date.today();
     public Doctor__c doctor { get; set; }
@@ -32,10 +33,20 @@ public with sharing class Hospital_ViewController {
         newHireContract = new Contract__c();
         editStartDateFlag = false;
         isEnyErrorInModalWindow = false;
+        hospitalCurrent = new Hospital__c();
+        getHospital();
     }
 
-    public static Boolean getIsLicenseNoEnabled(){
-        return Hospital_DoctorUtils.isFunctionalityEnabled('HospitalAddressNotEnabled');
+    public void getHospital() {
+        hospitalCurrent = [SELECT Id, Name, Country__c FROM Hospital__c WHERE Id = :hospitalIdCurrent];
+
+    }
+
+    public static Boolean getIsLicenseNoEnabled() {
+        if (hospitalCurrent != null) {
+            return Hospital_DoctorUtils.isFunctionalityEnabled('HospitalAddressNotEnabled', hospitalCurrent.Country__c);
+        }
+        return false;
     }
 
     public List<Contract__c> getContracts() {
@@ -129,9 +140,18 @@ public with sharing class Hospital_ViewController {
     }
 
     public class DoctorWrapper {
-        public Doctor__c doctorWrapper { get; set; }
-        public Contract__c contractWrapper { get; set; }
-        public Boolean doctorWrapperIsSelected { get; set; }
+        public Doctor__c doctorWrapper {
+            get;
+            set;
+        }
+        public Contract__c contractWrapper {
+            get;
+            set;
+        }
+        public Boolean doctorWrapperIsSelected {
+            get;
+            set;
+        }
 
         public DoctorWrapper(Doctor__c doctor) {
             doctorWrapper = new Doctor__c();
@@ -192,10 +212,22 @@ public with sharing class Hospital_ViewController {
     }
 
     public class ContractWrapper {
-        public Doctor__c contractDoctor { get; set; }
-        public Contract__c contractWrapperToSet { get; set; }
-        public String contractWrapperStatus { get; set; }
-        public Boolean contractWrapperEditDate { get; set; }
+        public Doctor__c contractDoctor {
+            get;
+            set;
+        }
+        public Contract__c contractWrapperToSet {
+            get;
+            set;
+        }
+        public String contractWrapperStatus {
+            get;
+            set;
+        }
+        public Boolean contractWrapperEditDate {
+            get;
+            set;
+        }
 
         public ContractWrapper(Doctor__c doctor) {
             contractDoctor = new Doctor__c();
@@ -291,7 +323,7 @@ public with sharing class Hospital_ViewController {
         }
     }
 
-    public void clearHireModalWindow(){
+    public void clearHireModalWindow() {
         clearFieldsAndResultDoctors();
         ApexPages.getMessages().clear();
     }
