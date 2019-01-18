@@ -5,12 +5,8 @@
 public with sharing class Hospital_Utils {
 
     public static Boolean isTriggerEnabled(String csName) {
-        System.debug('csName' + csName);
         Hosp_TriggerExceptions__c csItem = Hosp_TriggerExceptions__c.getInstance(UserInfo.getUserId());
-        System.debug('csItem' + csItem);
         Object customSettingObject = csItem.get(csName);
-        System.debug('customSettingObject' + customSettingObject);
-
         if (customSettingObject == null) {
             return false;
         }

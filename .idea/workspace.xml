@@ -2,38 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baa6cb16-da58-4406-adfa-303923bf028f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalBatchDelete.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalBatchDelete.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalSchedule.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalSchedule.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_LogsBatchDelete.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_LogsBatchDelete.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_LogsBatchDeleteSchedule.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_LogsBatchDeleteSchedule.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_TriggerFactory.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_TriggerFactory.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/ITrigger.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/ITrigger.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Hospital_LogsFromWebService.page" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Hospital_LogsFromWebService.page-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hospital project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Hospital project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlluminatedCloud/New_Connection1/OfflineSymbolTable.zip" beforeDir="false" afterPath="$PROJECT_DIR$/IlluminatedCloud/New_Connection1/OfflineSymbolTable.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/Hospital_HospitalREST.cls" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Hospital_HospitalREST.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/Hospital_HospitalWrapperForREST.cls" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Hospital_HospitalWrapperForREST.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/triggers/Hospital_Hospital.trigger" beforeDir="false" afterPath="$PROJECT_DIR$/build/triggers/Hospital_Hospital.trigger" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_DoctorUtils.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_DoctorUtils.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalBatch.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalBatch.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalBatch.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalBatch.cls-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalComparator.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalComparator.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalREST.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalREST.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalWrapperForREST.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalWrapperForREST.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/Hospital_Utils.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_Utils.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_ViewController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_ViewController.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Doctor__c.object" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Doctor__c.object" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Hospital__c.object" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Hospital__c.object" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/package.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger" beforeDir="false" afterPath="$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1364">
-              <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
+            <state relative-caret-position="1672">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -66,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/classes/Hospital_TriggerFactory.cls">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+            <state relative-caret-position="88">
+              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -76,16 +47,16 @@
         <entry file="file://$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="88">
-              <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/classes/Hospital_Utils.cls">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            <state relative-caret-position="176">
+              <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -182,7 +153,6 @@
         <option value="$PROJECT_DIR$/src/pages/Hospital_LogsFromWebService.page" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalWrapperForREST.cls" />
         <option value="$PROJECT_DIR$/build/classes/Hospital_HospitalWrapperForREST.cls" />
-        <option value="$PROJECT_DIR$/build/triggers/Hospital_Hospital.trigger" />
         <option value="$PROJECT_DIR$/build/classes/Hospital_HospitalREST.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalBatchDelete.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalREST.cls" />
@@ -197,6 +167,7 @@
         <option value="$PROJECT_DIR$/src/classes/ITrigger.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_TriggerFactory.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls" />
+        <option value="$PROJECT_DIR$/build/triggers/Hospital_Hospital.trigger" />
         <option value="$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_Utils.cls" />
       </list>
@@ -365,7 +336,7 @@
                       <entry key="CLASSES/HOSPITAL_PARTNERSOAPSFORCECOM.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_SOBJECTPARTNERSOAPSFORCECOM.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_TRIGGERFACTORY.CLS" value="1547799554412" />
-                      <entry key="CLASSES/HOSPITAL_UTILS.CLS" value="1547800892899" />
+                      <entry key="CLASSES/HOSPITAL_UTILS.CLS" value="1547802984852" />
                       <entry key="CLASSES/HOSPITAL_VIEWCONTROLLER.CLS" value="1547680022928" />
                       <entry key="CLASSES/HOSP_MACIEJDOCTORWRAPPERFORSOAP.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSP_MACIEJSOAPFORDOCTORSWEBSERVICE.CLS" value="1546857577506" />
@@ -402,7 +373,7 @@
                       <entry key="STATICRESOURCES/RESOURCE.RESOURCE" value="1546521443432" />
                       <entry key="TRIGGERS/HOSPITAL_CONTRACT.TRIGGER" value="1546520878867" />
                       <entry key="TRIGGERS/HOSPITAL_DOCTORCONFIRMATION.TRIGGER" value="1546520878867" />
-                      <entry key="TRIGGERS/HOSPITAL_HOSPITAL.TRIGGER" value="1547800553951" />
+                      <entry key="TRIGGERS/HOSPITAL_HOSPITAL.TRIGGER" value="1547802988600" />
                     </map>
                   </option>
                   <option name="lastBuildScope" value="MODULE" />
@@ -3410,18 +3381,6 @@
             <path>
               <item name="New Connection1" type="b2602c69:ProjectViewProjectNode" />
               <item name="New Connection1" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="New Connection1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="New Connection1" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="triggers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="New Connection1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="New Connection1" type="462c0819:PsiDirectoryNode" />
               <item name="IlluminatedCloud" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -3793,7 +3752,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547638926080</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="trigger factory work good without custom settings">
+      <created>1547801125447</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1547801125447</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -3928,7 +3894,8 @@
     <MESSAGE value="add external Id" />
     <MESSAGE value="work: connections between two orgs and talend" />
     <MESSAGE value="before create batch" />
-    <option name="LAST_COMMIT_MESSAGE" value="before create batch" />
+    <MESSAGE value="trigger factory work good without custom settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="trigger factory work good without custom settings" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -4123,13 +4090,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/triggers/Hospital_Hospital.trigger">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorSearchController.cls">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-837">
@@ -4247,23 +4207,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_TriggerFactory.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/IlluminatedCloud/New_Connection1/OfflineSymbolTable.zip!/System/UserInfo.cls">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -4291,17 +4234,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger">
+    <entry file="file://$PROJECT_DIR$/build/triggers/Hospital_Hospital.trigger">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        <state relative-caret-position="660">
+          <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/Hospital_Utils.cls">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        <state relative-caret-position="176">
+          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/triggers/Hospital_Hospital.trigger">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_TriggerFactory.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1672">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
