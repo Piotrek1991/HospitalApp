@@ -21,6 +21,10 @@ public with sharing class Hospital_ViewController {
     public Boolean editStartDateFlag { get; set; }
     public List<Contract__c> contractsToInsert { get; set; }
     public Boolean isEnyErrorInModalWindow { get; set; }
+    public Integer doctorPL { get{return selectEmployers('PL');} set; }
+    public Integer doctorNL { get{return selectEmployers('NL');} set; }
+    public Integer doctorAU { get{return selectEmployers('AU');} set; }
+    public Integer doctorUSA { get{return selectEmployers('USA');} set; }
 
     public Hospital_ViewController(ApexPages.StandardController standardController) {
         hospitalIdCurrent = standardController.getRecord().Id;
@@ -35,6 +39,10 @@ public with sharing class Hospital_ViewController {
         isEnyErrorInModalWindow = false;
         hospitalCurrent = new Hospital__c();
         getHospital();
+    }
+
+    public Integer selectEmployers(String country){
+        return [SELECT COUNT() FROM Doctor__c WHERE Country__c = :country];
     }
 
     public void getHospital() {

@@ -2,34 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baa6cb16-da58-4406-adfa-303923bf028f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_ErrorsBatchDelete.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_ErrorsBatchDelete.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_ErrorsBatchDeleteSchedule.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_ErrorsBatchDeleteSchedule.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_OrgInfoController.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_OrgInfoController.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Hospital_OrgInfo.page" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Hospital_OrgInfo.page-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hospital project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Hospital project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlluminatedCloud/New_Connection1/OfflineSymbolTable.zip" beforeDir="false" afterPath="$PROJECT_DIR$/IlluminatedCloud/New_Connection1/OfflineSymbolTable.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_DoctorComparator.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_DoctorComparator.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalBatch.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalBatch.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalBatchDelete.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalBatchDelete.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalBatchDelete.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalBatchDelete.cls-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_LogsBatchDelete.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_LogsBatchDelete.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_LogsBatchDelete.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_LogsBatchDelete.cls-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_LogsBatchDeleteSchedule.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_LogsBatchDeleteSchedule.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_LogsBatchDeleteSchedule.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_LogsBatchDeleteSchedule.cls-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_TriggerFactory.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_TriggerFactory.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_TriggerFactory.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_TriggerFactory.cls-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/ITrigger.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/ITrigger.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/ITrigger.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/ITrigger.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_ViewController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_ViewController.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Hospital_HospitalView.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Hospital_HospitalView.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Hospital_LogsFromWebService.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Hospital_LogsFromWebService.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Hospital_LogsFromWebService.page-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Hospital_LogsFromWebService.page-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Hospital_MaciejHospitals.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Hospital_MaciejHospitals.page" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,36 +21,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/classes/Hospital_OrgInfoController.cls">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="25" column="80" lean-forward="true" selection-start-line="25" selection-end-line="26" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/Hospital_HospitalView.page">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="249" column="11" selection-start-line="249" selection-start-column="11" selection-end-line="249" selection-end-column="11" />
+            <state relative-caret-position="237">
+              <caret line="246" column="36" selection-start-line="246" selection-start-column="36" selection-end-line="246" selection-end-column="36" />
               <folding>
-                <element signature="n#div#0;n#apex:page#0;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#apex:outputPanel#0;n#apex:form#0;n#apex:outputPanel#1;n#apex:pageBlock#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#apex:page#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Hospital_MaciejHospitals.page">
+        <entry file="file://$PROJECT_DIR$/src/classes/Hospital_ViewController.cls">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-313">
-              <caret line="374" column="50" selection-start-line="374" selection-start-column="50" selection-end-line="374" selection-end-column="75" />
+            <state relative-caret-position="176">
+              <caret line="23" column="27" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="27" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,13 +85,13 @@
       <find>result</find>
       <find>Hosp_HospitalWrapper</find>
       <find>showToastAndHideOthers</find>
-      <find>chart</find>
       <find>generalBlock</find>
       <find>scri</find>
       <find>messageAfterWrongDate</find>
       <find>scr</find>
       <find>script</find>
       <find>map</find>
+      <find>chart</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,7 +129,6 @@
         <option value="$PROJECT_DIR$/build/classes/Hospital_HospitalREST.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalBatchDelete.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalREST.cls" />
-        <option value="$PROJECT_DIR$/src/classes/Hospital_ViewController.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalComparator.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_LogsBatchDelete.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalSchedule.cls" />
@@ -185,6 +149,7 @@
         <option value="$PROJECT_DIR$/src/pages/Hospital_OrgInfo.page" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_ErrorsBatchDeleteSchedule.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_ErrorsBatchDelete.cls" />
+        <option value="$PROJECT_DIR$/src/classes/Hospital_ViewController.cls" />
         <option value="$PROJECT_DIR$/src/pages/Hospital_HospitalView.page" />
       </list>
     </option>
@@ -355,7 +320,7 @@
                       <entry key="CLASSES/HOSPITAL_SOBJECTPARTNERSOAPSFORCECOM.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_TRIGGERFACTORY.CLS" value="1547821698344" />
                       <entry key="CLASSES/HOSPITAL_UTILS.CLS" value="1547802984852" />
-                      <entry key="CLASSES/HOSPITAL_VIEWCONTROLLER.CLS" value="1547680022928" />
+                      <entry key="CLASSES/HOSPITAL_VIEWCONTROLLER.CLS" value="1548060704599" />
                       <entry key="CLASSES/HOSP_MACIEJDOCTORWRAPPERFORSOAP.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSP_MACIEJSOAPFORDOCTORSWEBSERVICE.CLS" value="1546857577506" />
                       <entry key="CLASSES/ITRIGGER.CLS" value="1547821698344" />
@@ -385,7 +350,7 @@
                       <entry key="PAGES/HOSPITAL_DOCTORVIEW.PAGE" value="1547573978540" />
                       <entry key="PAGES/HOSPITAL_DOCTORVIEWEXPORTTOPDFHANDLER.PAGE" value="1546520878867" />
                       <entry key="PAGES/HOSPITAL_HOSPITALEDIT.PAGE" value="1547545723145" />
-                      <entry key="PAGES/HOSPITAL_HOSPITALVIEW.PAGE" value="1548059819222" />
+                      <entry key="PAGES/HOSPITAL_HOSPITALVIEW.PAGE" value="1548061752589" />
                       <entry key="PAGES/HOSPITAL_LOGSFROMWEBSERVICE.PAGE" value="1547821698344" />
                       <entry key="PAGES/HOSPITAL_MACIEJDOCTORS.PAGE" value="1547460449042" />
                       <entry key="PAGES/HOSPITAL_MACIEJHOSPITALS.PAGE" value="1548004957100" />
@@ -3475,7 +3440,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548059831084" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548061764837" />
     <property name="last_opened_file_path" value="C:/#PROGRAMOWANIE/cdlibrary8" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -3827,7 +3792,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547808434414</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="chart display work">
+      <created>1548059863319</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1548059863319</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -3965,7 +3937,8 @@
     <MESSAGE value="trigger factory work good without custom settings" />
     <MESSAGE value="trigger factory and custom settings work good" />
     <MESSAGE value="before refactoring code" />
-    <option name="LAST_COMMIT_MESSAGE" value="before refactoring code" />
+    <MESSAGE value="chart display work" />
+    <option name="LAST_COMMIT_MESSAGE" value="chart display work" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -4122,16 +4095,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="14" column="63" selection-start-line="14" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_ViewController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4348,16 +4311,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_OrgInfoController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="25" column="80" lean-forward="true" selection-start-line="25" selection-end-line="26" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Hospital_DoctorEdit.page">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -4375,13 +4328,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_OrgInfoController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_ViewController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Hospital_HospitalView.page">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="249" column="11" selection-start-line="249" selection-start-column="11" selection-end-line="249" selection-end-column="11" />
+        <state relative-caret-position="237">
+          <caret line="246" column="36" selection-start-line="246" selection-start-column="36" selection-end-line="246" selection-end-column="36" />
           <folding>
-            <element signature="n#div#0;n#apex:page#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#apex:outputPanel#0;n#apex:form#0;n#apex:outputPanel#1;n#apex:pageBlock#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#apex:page#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
