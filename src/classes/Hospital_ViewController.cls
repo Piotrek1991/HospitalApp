@@ -26,6 +26,7 @@ public with sharing class Hospital_ViewController {
     public Integer doctorAU { get {return selectEmployers('AU');} set; }
     public Integer doctorUSA { get {return selectEmployers('USA');} set; }
     public String employersPerDay { get; set; }
+    public String employersPerDayLabels { get; set; }
 
     public Hospital_ViewController(ApexPages.StandardController standardController) {
         hospitalIdCurrent = standardController.getRecord().Id;
@@ -61,11 +62,14 @@ public with sharing class Hospital_ViewController {
             }
         }
         employersPerDay = '';
+        employersPerDayLabels ='';
         for (Datetime oneElement : elementsToDisplay.keySet()) {
             employersPerDay = employersPerDay + elementsToDisplay.get(oneElement) + ',';
+            employersPerDayLabels = employersPerDayLabels + '\'' + oneElement.format('dd/MM/yyyy') + '\',';
         }
         employersPerDay.substring(0, employersPerDay.length()-1);
-
+        employersPerDayLabels = employersPerDayLabels.substring(0, employersPerDayLabels.length()-1);
+        System.debug('employersPerDayLabels'+ employersPerDayLabels);
         return employersPerDay;
     }
 

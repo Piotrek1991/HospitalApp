@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="baa6cb16-da58-4406-adfa-303923bf028f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_DoctorImportController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_DoctorImportController.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_DoctorProfileImageController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_DoctorProfileImageController.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_DoctorViewPageController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_DoctorViewPageController.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_MaciejDoctorsController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_MaciejDoctorsController.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_MaciejHospitalsController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_MaciejHospitalsController.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_Utils.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_Utils.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/Hospital_ViewController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_ViewController.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Hospital_HospitalView.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Hospital_HospitalView.page" afterDir="false" />
     </list>
@@ -27,20 +21,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/Hospital_HospitalView.page">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="249" column="11" lean-forward="true" selection-start-line="249" selection-start-column="11" selection-end-line="249" selection-end-column="11" />
+            <state relative-caret-position="364">
+              <caret line="247" column="33" selection-start-line="247" selection-start-column="33" selection-end-line="247" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/classes/Hospital_ViewController.cls">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="365">
+              <caret line="67" column="96" selection-start-line="67" selection-start-column="96" selection-end-line="67" selection-end-column="96" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#2187#2206#0" expanded="true" />
@@ -154,8 +148,8 @@
         <option value="$PROJECT_DIR$/src/classes/Hospital_DoctorViewPageController.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_DoctorProfileImageController.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_DoctorImportController.cls" />
-        <option value="$PROJECT_DIR$/src/pages/Hospital_HospitalView.page" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_ViewController.cls" />
+        <option value="$PROJECT_DIR$/src/pages/Hospital_HospitalView.page" />
       </list>
     </option>
   </component>
@@ -325,7 +319,7 @@
                       <entry key="CLASSES/HOSPITAL_SOBJECTPARTNERSOAPSFORCECOM.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_TRIGGERFACTORY.CLS" value="1547821698344" />
                       <entry key="CLASSES/HOSPITAL_UTILS.CLS" value="1548063042983" />
-                      <entry key="CLASSES/HOSPITAL_VIEWCONTROLLER.CLS" value="1548066593267" />
+                      <entry key="CLASSES/HOSPITAL_VIEWCONTROLLER.CLS" value="1548067687289" />
                       <entry key="CLASSES/HOSP_MACIEJDOCTORWRAPPERFORSOAP.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSP_MACIEJSOAPFORDOCTORSWEBSERVICE.CLS" value="1546857577506" />
                       <entry key="CLASSES/ITRIGGER.CLS" value="1547821698344" />
@@ -355,7 +349,7 @@
                       <entry key="PAGES/HOSPITAL_DOCTORVIEW.PAGE" value="1547573978540" />
                       <entry key="PAGES/HOSPITAL_DOCTORVIEWEXPORTTOPDFHANDLER.PAGE" value="1546520878867" />
                       <entry key="PAGES/HOSPITAL_HOSPITALEDIT.PAGE" value="1547545723145" />
-                      <entry key="PAGES/HOSPITAL_HOSPITALVIEW.PAGE" value="1548063551787" />
+                      <entry key="PAGES/HOSPITAL_HOSPITALVIEW.PAGE" value="1548067554631" />
                       <entry key="PAGES/HOSPITAL_LOGSFROMWEBSERVICE.PAGE" value="1547821698344" />
                       <entry key="PAGES/HOSPITAL_MACIEJDOCTORS.PAGE" value="1547460449042" />
                       <entry key="PAGES/HOSPITAL_MACIEJHOSPITALS.PAGE" value="1548004957100" />
@@ -3445,7 +3439,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548066666258" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548067722545" />
     <property name="last_opened_file_path" value="C:/#PROGRAMOWANIE/cdlibrary8" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -3811,7 +3805,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548061778068</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="second chart work in half">
+      <created>1548066715921</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1548066715921</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -3951,7 +3952,8 @@
     <MESSAGE value="before refactoring code" />
     <MESSAGE value="chart display work" />
     <MESSAGE value="one chart work" />
-    <option name="LAST_COMMIT_MESSAGE" value="one chart work" />
+    <MESSAGE value="second chart work in half" />
+    <option name="LAST_COMMIT_MESSAGE" value="second chart work in half" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -4383,22 +4385,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Hospital_HospitalView.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="249" column="11" lean-forward="true" selection-start-line="249" selection-start-column="11" selection-end-line="249" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/Hospital_ViewController.cls">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="365">
+          <caret line="67" column="96" selection-start-line="67" selection-start-column="96" selection-end-line="67" selection-end-column="96" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#2187#2206#0" expanded="true" />
             <element signature="e#2252#2260#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Hospital_HospitalView.page">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="247" column="33" selection-start-line="247" selection-start-column="33" selection-end-line="247" selection-end-column="33" />
         </state>
       </provider>
     </entry>
