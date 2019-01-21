@@ -1,0 +1,101 @@
+<!--
+ - Created by BRITENET on 21.01.2019.
+ -->
+
+<apex:page id="Hospital_OrgInfoApexClasses" controller="Hospital_OrgInfoApexClassesController">
+    <apex:slds />
+    <div class="slds-page-header" role="banner">
+        <div class="slds-grid">
+            <div class="slds-col">
+                <h1 class="slds-text-heading--medium">Apex Classes</h1>
+            </div>
+        </div>
+    </div>
+    <apex:outputPanel id="apexClassesList">
+        <table id="classesResultsList" class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+            <tr class="slds-line-height_reset">
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="{!$Label.Action}">{!$Label.Action}</div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate"
+                         title="{!$ObjectType.ApexClass.Fields.Name.Label}">{!$ObjectType.ApexClass.Fields.Name.Label}
+                    </div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate"
+                         title="{!$ObjectType.ApexClass.Fields.ApiVersion.Label}">{!$ObjectType.ApexClass.Fields.ApiVersion.Label}
+                    </div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate"
+                         title="{!$ObjectType.ApexClass.Fields.CreatedDate.Label}">{!$ObjectType.ApexClass.Fields.CreatedDate.Label}
+                    </div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate"
+                         title="Created By">Created By
+                    </div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate"
+                         title="{!$ObjectType.ApexClass.Fields.LastModifiedDate.Label}">{!$ObjectType.ApexClass.Fields.LastModifiedDate.Label}
+                    </div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate"
+                         title="Last Modified By">Last Modified By
+                    </div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <apex:repeat value="{!listApexClasses}" var="oneClass">
+                <tr class="slds-hint-parent">
+                    <td data-label="User Name">
+                        <div class="slds-truncate">
+                            <apex:form>
+                                <apex:commandLink onComplete="showToast();"
+                                                  style="color: blue;">
+                                    <span>Show body</span>
+                                </apex:commandLink>
+                            </apex:form>
+                        </div>
+                    </td>
+                    <td data-label="{!$ObjectType.ApexClass.Fields.Name.Label}">
+                        <div class="slds-truncate"
+                             title="{!$ObjectType.ApexClass.Fields.Name.Label}">{!oneClass.Name}
+                        </div>
+                    </td>
+                    <td data-label="{!$ObjectType.ApexClass.Fields.ApiVersion.Label}">
+                        <div class="slds-truncate"
+                             title="{!$ObjectType.ApexClass.Fields.ApiVersion.Label}">{!oneClass.ApiVersion}
+                        </div>
+                    </td>
+                    <td data-label="{!$ObjectType.ApexClass.Fields.CreatedDate.Label}">
+                        <div class="slds-truncate"
+                             title="{!$ObjectType.ApexClass.Fields.CreatedDate.Label}">{!oneClass.CreatedDate}
+                        </div>
+                    </td>
+                    <td data-label="Created By">
+                        <div class="slds-truncate"
+                             title="Created By">{!oneClass.CreatedBy.Name}
+                        </div>
+                    </td>
+                    <td data-label="{!$ObjectType.ApexClass.Fields.LastModifiedDate.Label}">
+                        <div class="slds-truncate"
+                             title="{!$ObjectType.ApexClass.Fields.LastModifiedDate.Label}">{!oneClass.LastModifiedDate}
+                        </div>
+                    </td>
+                    <td data-label="{!$ObjectType.ApexClass.Fields.LastModifiedDate.Label}">
+                        <div class="slds-truncate"
+                             title="Last Modified By">{!oneClass.LastModifiedBy.Name}
+                        </div>
+                    </td>
+                </tr>
+            </apex:repeat>
+            </tbody>
+        </table>
+    </apex:outputPanel>
+</apex:page>

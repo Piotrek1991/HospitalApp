@@ -106,6 +106,14 @@
                             <option name="name" value="Hospital_DoctorsSOAPTest" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Hospital_ErrorsBatchDelete" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Hospital_ErrorsBatchDeleteSchedule" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Hospital_GuidUtil" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -178,6 +186,10 @@
                             <option name="name" value="Hospital_MaciejHospitalsMultiMock" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Hospital_OrgInfoController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Hospital_TriggerFactory" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
@@ -222,15 +234,11 @@
                             <option name="name" value="SiteRegisterControllerTest" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="Hospital_OrgInfoController" />
+                            <option name="name" value="Hospital_OrgInfoPagesController" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="Hospital_ErrorsBatchDeleteSchedule" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="Hospital_ErrorsBatchDelete" />
+                            <option name="name" value="Hospital_OrgInfoApexClassesController" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
@@ -353,6 +361,10 @@
                             <option name="name" value="Hospital_MaciejHospitals" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Hospital_OrgInfo" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="IdeasHome" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -383,7 +395,11 @@
                             <option name="name" value="UnderConstruction" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="Hospital_OrgInfo" />
+                            <option name="name" value="Hospital_OrgInfoApexClasses" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Hospital_OrgInfoPages" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
@@ -792,6 +808,18 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="ErrorHandler__c.ClassName__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="ErrorHandler__c.DateTime__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="ErrorHandler__c.Message__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Goal.OrigGoalId__c" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -945,10 +973,19 @@
                       <option name="entries">
                         <list>
                           <MetadataEntry>
+                            <option name="name" value="API_Session_ID" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Action" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="ActiveUser" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Address" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="All_Users" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Are_you_sure" />
@@ -996,6 +1033,9 @@
                             <option name="name" value="Crop" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="DeactiveUser" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Delete" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -1009,6 +1049,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Do_You_really_want_to_delete_this_data" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Do_You_really_want_to_reset_this_user_password" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Doctor" />
@@ -1140,6 +1183,15 @@
                             <option name="name" value="Next" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Number_of_active_user" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Organization_Detail" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Organization_ID" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Phone" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -1153,6 +1205,12 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Remove" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Reports" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Reset_password" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Results" />
@@ -1228,6 +1286,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Upload_picture_title" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="User_Name" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="View" />
@@ -1348,6 +1409,10 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="EmailMessage" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="ErrorHandler__c" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Event" />
@@ -1496,6 +1561,9 @@
                             <option name="name" value="Doctor__c-en_US" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="ErrorHandler__c-en_US" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Hosp_TriggerExceptions__c-en_US" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -1564,6 +1632,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Maciek_s_doctors" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="OrgInfo" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="standard-Account" />
@@ -2171,6 +2242,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="EmailMessage-Email Message Layout" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="ErrorHandler__c-ErrorHandler Layout" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Event-Event Layout" />
@@ -4059,6 +4133,9 @@
                             <option name="name" value="Doctor__c" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="ErrorHandler__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="FlowInterview" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -4294,6 +4371,9 @@
                             <option name="name" value="SiteSamples" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="c3UI" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="jQueryUI" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -4340,6 +4420,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Doctor__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="ErrorHandler__c" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Event" />

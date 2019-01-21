@@ -8,12 +8,18 @@ public class Hospital_OrgInfoController {
     public Integer numberOfActiveUser { get; set; }
     public String orgId { get; set; }
     public String selectedUserId { get; set; }
+    public String thisInstancesName { get; set; }
+    public String sfdcURL { get; set; }
+    public String sessionId { get{return UserInfo.getSessionId();} set; }
+    public Integer userLicense { get{return getTotalNumberOfUserLicense();} set; }
 
     public Hospital_OrgInfoController() {
         getUser();
         usersInOrg = getAllUsersFromOrg();
         numberOfActiveUser = getAmountActiveUser();
         orgId = getOrgId();
+        getOrganizationInfo();
+        sfdcURL = URL.getSalesforceBaseUrl().toExternalForm() + '/';
     }
 
     public void getUser() {
@@ -48,7 +54,33 @@ public class Hospital_OrgInfoController {
         numberOfActiveUser = getAmountActiveUser();
     }
 
+    public void getOrganizationInfo(){
+        Organization orgInfo = [SELECT Id, InstanceName FROM Organization];
+        thisInstancesName = orgInfo.InstanceName;
+    }
+
     public void resetPassword(){
         System.resetPassword(selectedUserId,true);
     }
+
+    public Integer getTotalNumberOfUserLicense(){
+        return [SELECT COUNT() FROM UserLicense];
+    }
+//
+    public PageReference goToApexPage(){
+        PageReference apexClassesPage = Page.Hospital_OrgInfoApexClasses;
+        apexClassesPage.getParameters().put('pageReferenceURL', ApexPages.currentPage().getUrl());
+        apexClassesPage.setRedirect(true);
+
+        return apexClassesPage;
+    }
+
+    public PageReference goToVisualforcePage(){
+        PageReference apexClassesPage = Page.Hospital_OrgInfoPages;
+        apexClassesPage.getParameters().put('pageReferenceURL', ApexPages.currentPage().getUrl());
+        apexClassesPage.setRedirect(true);
+
+        return apexClassesPage;
+    }
+
 }

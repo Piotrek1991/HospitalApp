@@ -3,7 +3,6 @@
  */
 
 public with sharing class Hospital_TriggerFactory {
-
     public static void createHandler(Schema.sObjectType soType) {
         ITrigger handler = getHandler(soType);
         execute(handler);

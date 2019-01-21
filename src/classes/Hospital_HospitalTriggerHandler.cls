@@ -63,17 +63,15 @@ public class Hospital_HospitalTriggerHandler implements ITrigger {
     @future(Callout=true)
     public static void sendHosp(String hospitalsJson) {
         List<LogsWebService__c> logsToInsert = new List<LogsWebService__c>();
-
         Http http = new Http();
         HttpRequest request = getRequest('PUT', '', hospitalsJson);
         HttpResponse response = http.send(request);
 
         List<Hospital_HospitalWrapperForREST> hospitalAfterSend = ((List<Hospital_HospitalWrapperForREST>) JSON.deserialize(response.getBody(), List<Hospital_HospitalWrapperForREST>.class));
-
-//        for (Hospital_HospitalWrapperForREST hospital : hospitalAfterSend) {
-//            logsToInsert.add(new LogsWebService__c(External_Id__c = hospital.externalId, DateTime__c = Datetime.now(),
-//                    OperationType__c = 'Send hospital', ParentHospital_Id__c = hospital.hospitalId, Status__c = hospital.status));
-//        }
+        for (Hospital_HospitalWrapperForREST hospital : hospitalAfterSend) {
+            logsToInsert.add(new LogsWebService__c(External_Id__c = hospital.externalId, DateTime__c = Datetime.now(),
+                    OperationType__c = 'Send hospital', ParentHospital_Id__c = hospital.hospitalId, Status__c = hospital.status));
+        }
         System.debug('logsToInsert' + logsToInsert);
         insert logsToInsert;
 

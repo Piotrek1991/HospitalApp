@@ -3,10 +3,8 @@
  */
 
 public with sharing class Hospital_Utils {
-
-
-    public static void addToErrors(Exception ex, String className){
-        ErrorHandler__c errorHandler = new ErrorHandler__c(Datetime__c = Datetime.now(), ClassName__c=className,
+    public static void addToErrors(Exception ex, String className) {
+        ErrorHandler__c errorHandler = new ErrorHandler__c(Datetime__c = Datetime.now(), ClassName__c = className,
                 Message__c = ex.getMessage());
         Insert errorHandler;
     }

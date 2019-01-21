@@ -12,11 +12,6 @@
     <apex:includeScript value="{! URLFOR($Resource.c3UI,'c3-0.6.12/docs/js/d3-5.4.0.min.js')}"/>
     <apex:includeScript value="{! URLFOR($Resource.c3UI,'c3-0.6.12/docs/js/c3.min.js')}"/>
     <apex:includeScript value="{! URLFOR($Resource.c3UI,'c3-0.6.12/docs/css/c3.css')}"/>
-
-    <!--<apex:includeScript value="{! URLFOR($Resource.c3UI,'d3-5.4.0.min.js')}"/>-->
-    <!--<apex:includeScript value="{! URLFOR($Resource.c3UI,'c3.min.js')}"/>-->
-    <!--<apex:includeScript value="{! URLFOR($Resource.c3UI,'c3.css')}"/>-->
-
     <style>
         #map {
             font-family: Arial;
@@ -49,13 +44,62 @@
                                     onClick="jQuery('#dialog-modal').dialog('open'); return false;"/>
             </apex:form>
         </div>
-           <apex:pageBlockSection id="sectionReports" title="{!$Label.Reports}">
-
-<apex:outputPanel >
-
-</apex:outputPanel>
-
-           </apex:pageBlockSection>
+        <apex:pageBlockSection id="sectionReports" title="{!$Label.Reports}" columns="2">
+            <apex:outputPanel>
+                <div id="chart" style="width: 700px; float:left; height: 350px;">
+                     <span>
+                         <script>
+                         var chart = c3.generate({
+                                  data: {
+                                      columns: [
+                                          ['Number of employees', {!employersPerDay}]
+                                      ],
+                                      type: 'bar'
+                                  },
+                                  axis: {
+                                  x: {
+                                      type: 'category',
+                                      categories: [{!employersPerDayLabels}]
+                                  },
+                                  y: {
+                                         tick: {
+                                    values: [0, 1, 2, 3]
+                                  }
+                                      }
+                                  },
+                                  bindto: '#chart'
+                                  });
+                         </script>
+                     </span>
+                </div>
+            </apex:outputPanel>
+            <apex:outputPanel>
+                <div id="chart1" style="width: 350px; height: 350px; margin: auto;" >
+                    <span>
+                         <script>
+                         var chart2 = c3.generate({
+                         data: {
+                         columns: [
+                         ['PL', {!doctorPL}],
+                         ['USA', {!doctorUSA}],
+                         ['AU', {!doctorAU}],
+                         ['NL', {!doctorNL}],
+                         ],
+                         type : 'donut',
+                         onclick: function (d, i) { console.log("onclick", d, i); },
+                         onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+                         onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+                         },
+                         donut: {
+                         title: "Doctors in country"
+                         },
+                             bindto: '#chart1'
+                         });
+                         </script>
+                     </span>
+                </div>
+            </apex:outputPanel>
+        </apex:pageBlockSection>
         <apex:pageBlockSection id="sectionContracts" title="{!$Label.Contracts}" columns="1">
             <apex:form >
                 <apex:pageBlockTable value="{!contracts}" var="contract" id="contracts_list">
@@ -236,68 +280,6 @@
             </apex:actionFunction>
         </apex:form>
     </div>
-
-<div>
-
-
-    <div id="chart" style="width: 60%; float:left; height: 300px; text-align:left;">
-        <span>
-        <script>
-        var chart = c3.generate({
-    data: {
-        columns: [
-            ['Number of employees', {!employersPerDay}]
-        ],
-        type: 'bar'
-    },
-    axis: {
-    x: {
-        type: 'category',
-        categories: [{!employersPerDayLabels}]
-    },
-    y: {
-           tick: {
-      values: [0, 1, 2, 3]
-    }
-
-        }
-    },
-    bindto: '#chart'
-
-    });
-
-        </script>
-
-        </span>
-
-
-    </div>
-    <div id="chart1" style="width: 40%; height: 300px; float:left;"> <span>
-      <script>
-        var chart2 = c3.generate({
-        data: {
-        columns: [
-        ['PL', {!doctorPL}],
-        ['USA', {!doctorUSA}],
-        ['AU', {!doctorAU}],
-        ['NL', {!doctorNL}],
-        ],
-        type : 'donut',
-        onclick: function (d, i) { console.log("onclick", d, i); },
-        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-        },
-        donut: {
-        title: "Doctors in each country"
-        },
-            bindto: '#chart1'
-        });
-
-        </script>
-    </span>
-    </div>
-</div>
-
     <script type="text/javascript">
     function checkHideModal(isAnyError) {
             let errors = document.getElementById(messageID).textContent;
@@ -325,9 +307,8 @@
                     });
         });
 
-
-        twistSection(document.getElementById('{!$Component.generalBlock.sectionAddress}').getElementsByTagName('img')[0])
-
+        twistSection(document.getElementById('{!$Component.generalBlock.sectionAddress}').getElementsByTagName('img')[0]);
+        twistSection(document.getElementById('{!$Component.Hospital_HospitalView.generalBlock.sectionReports}').getElementsByTagName('img')[0]);
 
         $(document).ready(function () {
 
@@ -349,10 +330,6 @@
                 }
                 });
                 chart.innerHTML;
-                <!--document.getElementById('{!$Component.Hospital_HospitalView.chart}').innerHTML = chart;-->
-
-
-
 
             var myOptions = {
                 zoom: 15,
@@ -402,26 +379,6 @@
                     }
                 }
             }
-
-            var chart = c3.generate({
-           data: {
-               columns: [
-                   ['data1', 75],
-                   ['data2', 120],
-               ],
-               type : 'donut',
-               onclick: function (d, i) { console.log("onclick", d, i); },
-               onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-               onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-           },
-           donut: {
-               title: "Iris Petal Width"
-           }
         });
-
-
-        });
-
-
     </script>
 </apex:page>
