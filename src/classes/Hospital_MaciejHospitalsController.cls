@@ -56,6 +56,7 @@ public with sharing class Hospital_MaciejHospitalsController {
             System.debug('hospitalList --> ' + hospitalList);
             return hospitalList;
         } catch (Exception ex) {
+            Hospital_Utils.addToErrors(ex, 'Hospital_MaciejHospitalsController');
             System.debug('ex --> ' + ex.getMessage());
         }
         return null;
@@ -96,6 +97,7 @@ public with sharing class Hospital_MaciejHospitalsController {
             isAnyProblemWithCallout = false;
             messageSuccessToast = Label.Hospital_successfully_deleted;
         } catch (Exception e) {
+            Hospital_Utils.addToErrors(e, 'Hospital_MaciejHospitalsController');
             isAnyProblemWithCallout = true;
             messageErrorToast = Label.Unable_to_delete_hospital;
         }
@@ -139,6 +141,7 @@ public with sharing class Hospital_MaciejHospitalsController {
             }
             refreshResultsList(insertedHospitals);
         } catch (Exception e) {
+            Hospital_Utils.addToErrors(e, 'Hospital_MaciejHospitalsController');
             isAnyInsertProblem = true;
             messageErrorToast = e.getMessage();
             System.debug('Is Any Insert Problem >>' + e);
@@ -197,6 +200,8 @@ public with sharing class Hospital_MaciejHospitalsController {
 
                 return loginResult.sessionId;
             } catch (Exception ex) {
+                Hospital_Utils.addToErrors(ex, 'Hospital_MaciejHospitalsController');
+
                 System.debug('Login To Maciejs Clinic Exception >> ' + ex.getMessage());
                 return null;
             }

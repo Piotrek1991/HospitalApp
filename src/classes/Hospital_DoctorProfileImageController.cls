@@ -33,6 +33,8 @@ public with sharing class Hospital_DoctorProfileImageController {
             doneuploading = false;
             doneuploadingCroping = false;
         } catch (Exception ex) {
+            Hospital_Utils.addToErrors(ex, 'Hospital_DoctorProfileImageController');
+
             ApexPages.Message msg = new ApexPages.Message(ApexPages.Severity.ERROR, String.format(Label.Unable_to_upload, new List<String>{
                     propFileName
             }));
@@ -47,6 +49,7 @@ public with sharing class Hospital_DoctorProfileImageController {
                 return EditProfilePic(); else
                     return uploadCrop();
         } catch (Exception ex) {
+            Hospital_Utils.addToErrors(ex, 'Hospital_DoctorProfileImageController');
             ApexPages.Message msg = new ApexPages.Message(ApexPages.Severity.ERROR, String.format(Label.Unable_to_upload, new List<String>{
                     propFileName
             }));
@@ -75,6 +78,8 @@ public with sharing class Hospital_DoctorProfileImageController {
                 doneuploading = true;
             }
         } catch (Exception ex) {
+            Hospital_Utils.addToErrors(ex, 'Hospital_DoctorProfileImageController');
+
             ApexPages.Message msg = new ApexPages.Message(ApexPages.Severity.ERROR, String.format(Label.Unable_to_upload, new List<String>{
                     propFileName
             }));

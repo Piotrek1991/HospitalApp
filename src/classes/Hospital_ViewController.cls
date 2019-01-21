@@ -21,10 +21,11 @@ public with sharing class Hospital_ViewController {
     public Boolean editStartDateFlag { get; set; }
     public List<Contract__c> contractsToInsert { get; set; }
     public Boolean isEnyErrorInModalWindow { get; set; }
-    public Integer doctorPL { get{return selectEmployers('PL');} set; }
-    public Integer doctorNL { get{return selectEmployers('NL');} set; }
-    public Integer doctorAU { get{return selectEmployers('AU');} set; }
-    public Integer doctorUSA { get{return selectEmployers('USA');} set; }
+    public Integer doctorPL { get {return selectEmployers('PL');} set; }
+    public Integer doctorNL { get {return selectEmployers('NL');} set; }
+    public Integer doctorAU { get {return selectEmployers('AU');} set; }
+    public Integer doctorUSA { get {return selectEmployers('USA');} set; }
+    public String employersPerDay { get; set; }
 
     public Hospital_ViewController(ApexPages.StandardController standardController) {
         hospitalIdCurrent = standardController.getRecord().Id;
@@ -39,9 +40,36 @@ public with sharing class Hospital_ViewController {
         isEnyErrorInModalWindow = false;
         hospitalCurrent = new Hospital__c();
         getHospital();
+        employersPerDay = getEmployersPerDay();
     }
 
-    public Integer selectEmployers(String country){
+    public String getEmployersPerDay() {
+        List<Contract__c> contractsList = [SELECT Id, Start_Date__c, End_Date__c FROM Contract__c];
+        Map<Datetime, Integer> elementsToDisplay = new Map<Datetime, Integer>();
+        List<String> stringList = new List<String>();
+        Datetime dateTemp = Datetime.now();
+
+        for(Integer i =6; i>=0; i--  ){
+            elementsToDisplay.put(dateTemp.addDays(-i),0);
+        }
+
+        for (Contract__c contract : contractsList) {
+            for(Datetime mapElement : elementsToDisplay.keySet() ){
+                if(contract.Start_Date__c <= mapElement && contract.End_Date__c >= dateTemp){
+                    elementsToDisplay.put(mapElement, elementsToDisplay.get(mapElement) + 1);
+                }
+            }
+        }
+        employersPerDay = '';
+        for (Datetime oneElement : elementsToDisplay.keySet()) {
+            employersPerDay = employersPerDay + elementsToDisplay.get(oneElement) + ',';
+        }
+        employersPerDay.substring(0, employersPerDay.length()-1);
+
+        return employersPerDay;
+    }
+
+    public Integer selectEmployers(String country) {
         return [SELECT COUNT() FROM Doctor__c WHERE Country__c = :country];
     }
 
@@ -314,7 +342,8 @@ public with sharing class Hospital_ViewController {
                     isEnyErrorInModalWindow = true;
                 }
             }
-        } catch (DmlException ex) {
+        } catch (Exception ex) {
+            Hospital_Utils.addToErrors(ex, 'Hospital_ViewController');
             ApexPages.addMessage(new ApexPages.Message(ApexPages.severity.ERROR, ex.getDmlMessage(0)));
             System.debug('Message ' + new ApexPages.Message(ApexPages.severity.ERROR, ex.getDmlMessage(0)));
         }

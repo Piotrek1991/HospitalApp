@@ -186,6 +186,7 @@ public with sharing class Hospital_DoctorViewPageController {
             isSuccess = true;
 
         } catch (DmlException ex) {
+            Hospital_Utils.addToErrors(ex, 'Hospital_DoctorViewPageController');
             isSuccess = false;
             ApexPages.addMessage(new ApexPages.Message(ApexPages.severity.ERROR, ex.getDmlMessage(0)));
         }

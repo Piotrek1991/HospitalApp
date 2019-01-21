@@ -66,6 +66,8 @@ public with sharing class Hospital_MaciejDoctorsController {
             isAnyProblemWithCallout = false;
             upsertDoctorData();
         } catch (Exception e) {
+            Hospital_Utils.addToErrors(e, 'Hospital_MaciejDoctorsController');
+
             ApexPages.Message myMsg = new ApexPages.Message(ApexPages.Severity.ERROR, Label.Failed_duplicate_record);
             ApexPages.addMessage(myMsg);
             isAnyProblemWithCallout = true;
@@ -99,6 +101,7 @@ public with sharing class Hospital_MaciejDoctorsController {
             isAnyProblemWithCallout = false;
             messageSuccessToast = Label.Doctor_successfully_deleted;
         } catch (Exception e) {
+            Hospital_Utils.addToErrors(e, 'Hospital_MaciejDoctorsController');
             isAnyProblemWithCallout = true;
             messageErrorToast = Label.Unable_to_delete_doctor;
         }
@@ -150,6 +153,7 @@ public with sharing class Hospital_MaciejDoctorsController {
 
             return loginResult.sessionId;
         } catch (Exception ex) {
+            Hospital_Utils.addToErrors(e, 'Hospital_MaciejDoctorsController');
             System.debug('Login To Maciejs Clinic Exception >> ' + ex.getMessage());
             return null;
         }

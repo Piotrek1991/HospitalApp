@@ -53,6 +53,7 @@ public with sharing class Hospital_DoctorImportController {
             generateListDoctorImportWrapperFromFile();
             doneUploading = true;
         } catch (Exception e) {
+            Hospital_Utils.addToErrors(e, 'Hospital_DoctorImportController');
             ApexPages.Message msg = new ApexPages.Message(ApexPages.Severity.ERROR, String.format(Label.UnableCSV, new List<String>{
             }));
             doneUploading = false;
@@ -89,6 +90,7 @@ public with sharing class Hospital_DoctorImportController {
                 System.debug('Done upload in checkCorrectImportFile ' + doneUploading);
             }
         } catch (Exception ex) {
+            Hospital_Utils.addToErrors(ex, 'Hospital_DoctorImportController');
             ApexPages.Message msg = new ApexPages.Message(ApexPages.Severity.ERROR, String.format(Label.UnableCSV, new List<String>{
             }));
             ApexPages.addMessage(msg);
@@ -119,7 +121,8 @@ public with sharing class Hospital_DoctorImportController {
 
 
         } catch (Exception ex) {
-        System.debug('Exception during insert to database' + ex.getMessage());
+            Hospital_Utils.addToErrors(ex, 'Hospital_DoctorImportController');
+            System.debug('Exception during insert to database' + ex.getMessage());
         }
         doctorsToImport.clear();
     }

@@ -245,26 +245,44 @@
 
 
     <div id="chart" style="height: 300px; float:left; text-align:left;">
-       <script>
-       var chart = c3.generate({
-                data: {
-                columns: [
-                ['PL', {!doctorPL}],
-                ['USA', {!doctorUSA}],
-                ['AU', {!doctorAU}],
-                ['NL', {!doctorNL}],
-                ],
-                type : 'donut',
-                onclick: function (d, i) { console.log("onclick", d, i); },
-                onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-                onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-                },
-                donut: {
-                title: "Doctors in each country"
-                }
-                });
+        <script>
+        var chart = c3.generate({
+    data: {
+        columns: [
+            ['data2', {!employersPerDay}]
+        ],
+        type: 'bar'
+    },
+    bar: {
+        width: {
+            ratio: 0.5 // this makes bar width 50% of length between ticks
+        }
+        // or
+        //width: 100 // this makes bar width 100px
+    }
+});
 
-       </script>
+        </script>
+       <!--<script>-->
+       <!--var chart = c3.generate({-->
+                <!--data: {-->
+                <!--columns: [-->
+                <!--['PL', {!doctorPL}],-->
+                <!--['USA', {!doctorUSA}],-->
+                <!--['AU', {!doctorAU}],-->
+                <!--['NL', {!doctorNL}],-->
+                <!--],-->
+                <!--type : 'donut',-->
+                <!--onclick: function (d, i) { console.log("onclick", d, i); },-->
+                <!--onmouseover: function (d, i) { console.log("onmouseover", d, i); },-->
+                <!--onmouseout: function (d, i) { console.log("onmouseout", d, i); }-->
+                <!--},-->
+                <!--donut: {-->
+                <!--title: "Doctors in each country"-->
+                <!--}-->
+                <!--});-->
+
+       <!--</script>-->
     </div>
     <div id="chart1" style="height: 200px; float:left;">aaaaaaaaaaaaaa
     </div>
