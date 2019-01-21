@@ -5,7 +5,7 @@
 public with sharing class Hospital_DoctorComparator {
 
     public static String compareBy { get; set; }
-
+    
     public static List<Hosp_MaciejDoctorWrapperForSoap.Hosp_DoctorWrapperForSoap> sortResults(List<Hosp_MaciejDoctorWrapperForSoap.Hosp_DoctorWrapperForSoap> doctorsToSort, Boolean sortAsc) {
         if(doctorsToSort != null) {
             List<Hospital_DoctorComparator.DoctorWrapper> tempDoctorsToSort = new List<Hospital_DoctorComparator.DoctorWrapper>();

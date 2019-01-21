@@ -113,6 +113,10 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Hospital_HospitalBatchDelete" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Hospital_HospitalComparator" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
@@ -136,6 +140,14 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hospital_HospitalWrapperForREST" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Hospital_LogsBatchDelete" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Hospital_LogsBatchDeleteSchedule" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -166,6 +178,10 @@
                             <option name="name" value="Hospital_MaciejHospitalsMultiMock" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Hospital_TriggerFactory" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Hospital_Utils" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -179,6 +195,10 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Hospital_sobjectPartnerSoapSforceCom" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="ITrigger" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="MyProfilePageController" />
@@ -202,23 +222,15 @@
                             <option name="name" value="SiteRegisterControllerTest" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="Hospital_HospitalBatchDelete" />
+                            <option name="name" value="Hospital_OrgInfoController" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="Hospital_LogsBatchDelete" />
+                            <option name="name" value="Hospital_ErrorsBatchDeleteSchedule" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="Hospital_LogsBatchDeleteSchedule" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="ITrigger" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="Hospital_TriggerFactory" />
+                            <option name="name" value="Hospital_ErrorsBatchDelete" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
@@ -331,6 +343,10 @@
                             <option name="name" value="Hospital_HospitalView" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Hospital_LogsFromWebService" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Hospital_MaciejDoctors" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -367,7 +383,7 @@
                             <option name="name" value="UnderConstruction" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="Hospital_LogsFromWebService" />
+                            <option name="name" value="Hospital_OrgInfo" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
@@ -779,6 +795,9 @@
                             <option name="name" value="Goal.OrigGoalId__c" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Hosp_TriggerExceptions__c.Hospital_Hospital__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Hospital_Custom_Settings__c.Value__c" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -858,6 +877,30 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LogsFromWebService__c.Respond__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsFromWebService__c.Status__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsWebService__c.DateTime__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsWebService__c.External_Id__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsWebService__c.OperationType__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsWebService__c.ParentHospital_Id__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsWebService__c.Status__c" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -1319,6 +1362,9 @@
                             <option name="name" value="ForecastingCategoryMapping" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Hosp_TriggerExceptions__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Hospital_Custom_Settings__c" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -1336,6 +1382,10 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LogsFromWebService__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsWebService__c" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -1446,6 +1496,9 @@
                             <option name="name" value="Doctor__c-en_US" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Hosp_TriggerExceptions__c-en_US" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Hospital_Custom_Settings__c-en_US" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -1453,6 +1506,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LogsFromWebService__c-en_US" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsWebService__c-en_US" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -2147,6 +2203,9 @@
                             <option name="name" value="LogsFromWebService__c-LogsFromWebService Layout" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="LogsWebService__c-LogsWebService Layout" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Macro-Macro Layout" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -2532,6 +2591,13 @@
                       <option name="wildcard" value="false" />
                     </MetadataType>
                     <MetadataType>
+                      <option name="entries">
+                        <list>
+                          <MetadataEntry>
+                            <option name="name" value="PlatformCache" />
+                          </MetadataEntry>
+                        </list>
+                      </option>
                       <option name="name" value="PlatformCachePartition" />
                       <option name="wildcard" value="false" />
                     </MetadataType>
@@ -3996,6 +4062,9 @@
                             <option name="name" value="FlowInterview" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Hosp_TriggerExceptions__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Hospital_Custom_Settings__c" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -4009,6 +4078,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LogsFromWebService__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsWebService__c" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Opportunity" />
@@ -4280,6 +4352,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="LogsFromWebService__c" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="LogsWebService__c" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Opportunity" />

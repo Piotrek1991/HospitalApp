@@ -4,7 +4,6 @@
 
 <apex:page id="Hospital_MaciejHospitalsController" controller="Hospital_MaciejHospitalsController">
 
-    <apex:includeScript value="{! URLFOR($Resource.jQueryUI,'jquery-ui-1.12.1/external/jquery/jquery.js')}"/>
     <style>
         .msgIcon {
             display: none!important
@@ -23,6 +22,7 @@
         .message {
             opacity: 1
         }
+
 
     </style>
     <apex:slds/>
@@ -167,7 +167,7 @@
                                                   reRender="modalEditDoc, modalHeader, hospitalsResultsPanelList"
                                                   style="text-decoration: none; color: #514F4D;">
                                     <span>{!$ObjectType.Hospital__c.fields.Name.label}</span>
-                                    <span style="display: {! showSortByNameSignDesc };" >&#9660;</span>
+                                    <span style="display: {! showSortByNameSignDesc };">&#9660;</span>
                                     <span style="display: {! showSortByNameSignAsc };">&#9650;</span>
                                 </apex:commandLink>
                             </apex:form>
@@ -181,7 +181,7 @@
                                                   reRender="modalEditDoc, modalHeader, hospitalsResultsPanelList"
                                                   style="text-decoration: none; color: #514F4D;">
                                     <span>{!$ObjectType.Hospital__c.fields.City__c.label}</span>
-                                    <span style="display: {! showSortByCitySignDesc };" >&#9660;</span>
+                                    <span style="display: {! showSortByCitySignDesc };">&#9660;</span>
                                     <span style="display: {! showSortByCitySignAsc };">&#9650;</span>
                                 </apex:commandLink>
                             </apex:form>
@@ -195,7 +195,7 @@
                                                   reRender="modalEditDoc, modalHeader, hospitalsResultsPanelList"
                                                   style="text-decoration: none; color: #514F4D;">
                                     <span>{!$ObjectType.Hospital__c.fields.Country__c.label}</span>
-                                    <span style="display: {! showSortByCountrySignDesc };" >&#9660;</span>
+                                    <span style="display: {! showSortByCountrySignDesc };">&#9660;</span>
                                     <span style="display: {! showSortByCountrySignAsc };">&#9650;</span>
                                 </apex:commandLink>
                             </apex:form>
@@ -418,6 +418,7 @@
 
             showToast(modalIdToShow);
         }
+
 
     </script>
     <c:Hospital_StatusSlds/>

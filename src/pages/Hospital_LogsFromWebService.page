@@ -2,6 +2,5 @@
  - Created by BRITENET on 16.01.2019.
  -->
 
-<apex:page id="Hospital_LogsFromWebService" standardController="LogsFromWebService__c">
-
+<apex:page id="Hospital_LogsFromWebService">
 </apex:page>

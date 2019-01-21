@@ -15,4 +15,5 @@ public interface ITrigger {
     void afterUpdate(List<SObject> oldSo);
 
     void afterDelete(List<SObject> so);
+    
 }

@@ -62,11 +62,20 @@ public class Hospital_HospitalTriggerHandler implements ITrigger {
 
     @future(Callout=true)
     public static void sendHosp(String hospitalsJson) {
+        List<LogsWebService__c> logsToInsert = new List<LogsWebService__c>();
+
         Http http = new Http();
         HttpRequest request = getRequest('PUT', '', hospitalsJson);
-
         HttpResponse response = http.send(request);
 
+        List<Hospital_HospitalWrapperForREST> hospitalAfterSend = ((List<Hospital_HospitalWrapperForREST>) JSON.deserialize(response.getBody(), List<Hospital_HospitalWrapperForREST>.class));
+
+//        for (Hospital_HospitalWrapperForREST hospital : hospitalAfterSend) {
+//            logsToInsert.add(new LogsWebService__c(External_Id__c = hospital.externalId, DateTime__c = Datetime.now(),
+//                    OperationType__c = 'Send hospital', ParentHospital_Id__c = hospital.hospitalId, Status__c = hospital.status));
+//        }
+        System.debug('logsToInsert' + logsToInsert);
+        insert logsToInsert;
 
         LogsFromWebService__c logsFromWebService = new LogsFromWebService__c(DateTime__c = Datetime.now(), OperationType__c = 'Send hospital',
                 Status__c = String.valueOf(response.getStatusCode()), Request__c = request.getBody(), Respond__c = response.getBody());
@@ -84,6 +93,16 @@ public class Hospital_HospitalTriggerHandler implements ITrigger {
         Http http = new Http();
         HttpRequest request = getRequest('DELETE', hospitalToDeleteId, '');
         HttpResponse response = http.send(request);
+
+        List<Hospital_HospitalWrapperForREST> hospitalAfterSend = ((List<Hospital_HospitalWrapperForREST>) JSON.deserialize(response.getBody(), List<Hospital_HospitalWrapperForREST>.class));
+        List<LogsWebService__c> logsToInsert = new List<LogsWebService__c>();
+
+//        for (Hospital_HospitalWrapperForREST hospital : hospitalAfterSend) {
+//            logsToInsert.add(new LogsWebService__c(External_Id__c = hospital.externalId, DateTime__c = Datetime.now(),
+//                    OperationType__c = 'Delete hospital', ParentHospital_Id__c = hospital.hospitalId, Status__c = hospital.status));
+//        }
+//        insert logsToInsert;
+
 
         LogsFromWebService__c logsFromWebService = new LogsFromWebService__c(DateTime__c = Datetime.now(), OperationType__c = 'Delete hospital',
                 Status__c = String.valueOf(response.getStatusCode()), Request__c = request.getBody(), Respond__c = response.getBody());

@@ -5,6 +5,7 @@
 global class Hospital_HospitalBatch implements Database.Batchable<sObject>, Database.Stateful, Database.AllowsCallouts {
     public static String endPoint = 'https://eu16.salesforce.com/services/apexrest/Hospital__c/';
     private String statusSuccess = '200';
+    private Boolean status = false;
     List<String> errorList = new List<String>();
 
     global Database.QueryLocator start(Database.BatchableContext bc) {
@@ -13,11 +14,32 @@ global class Hospital_HospitalBatch implements Database.Batchable<sObject>, Data
         return Database.getQueryLocator(query);
     }
 
+    String query2 = 'SELECT Id, External_Id__c, DateTime__c, Status__c, OperationType__c, ParentHospital_Id__c FROM LogsWebService__c WHERE Status__c \'' + status + '\'';
+
     global void execute(Database.BatchableContext bc, List<LogsFromWebService__c> logRecords) {
+//    global void execute(Database.BatchableContext bc, List<LogsWebService__c> logRecords) {
+//        List<Hospital_HospitalWrapperForREST> hospitalToSend = new List<Hospital_HospitalWrapperForREST>();
+//
+//        for(LogsWebService__c log : logRecords){
+//            Hospital_HospitalWrapperForREST hospitalWrapper = new Hospital_HospitalWrapperForREST();
+//            hospitalWrapper.status=true;
+//            hospitalWrapper.externalId=log.External_Id__c;
+//            hospitalWrapper.hospitalId=log.ParentHospital_Id__c;
+//
+//            hospitalToSend.add(hospitalWrapper);
+//        }
+
+
+
+
+
+
         List<Hospital_HospitalWrapperForREST> hospitalFromRespond = new List<Hospital_HospitalWrapperForREST>();
         List<Hospital_HospitalWrapperForREST> hospitalWithFail = new List<Hospital_HospitalWrapperForREST>();
         List<Hospital_HospitalWrapperForREST> hospitalWithFailUnique = new List<Hospital_HospitalWrapperForREST>();
         List<LogsFromWebService__c> logsToDelete = new List<LogsFromWebService__c>();
+
+
 
         for (LogsFromWebService__c log : logRecords) {
             String oneRespond = log.Respond__c;

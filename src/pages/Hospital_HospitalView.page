@@ -8,6 +8,14 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <apex:includeScript value="{! URLFOR($Resource.jQueryUI,'jquery-ui-1.12.1/external/jquery/jquery.js')}"/>
+    <apex:includeScript value="{! URLFOR($Resource.c3UI,'c3-0.6.12/docs/js/d3-5.4.0.min.js')}"/>
+    <apex:includeScript value="{! URLFOR($Resource.c3UI,'c3-0.6.12/docs/js/c3.min.js')}"/>
+    <apex:includeScript value="{! URLFOR($Resource.c3UI,'c3-0.6.12/docs/css/c3.css')}"/>
+
+    <!--<apex:includeScript value="{! URLFOR($Resource.c3UI,'d3-5.4.0.min.js')}"/>-->
+    <!--<apex:includeScript value="{! URLFOR($Resource.c3UI,'c3.min.js')}"/>-->
+    <!--<apex:includeScript value="{! URLFOR($Resource.c3UI,'c3.css')}"/>-->
 
     <style>
         #map {
@@ -41,6 +49,8 @@
                                     onClick="jQuery('#dialog-modal').dialog('open'); return false;"/>
             </apex:form>
         </div>
+        <apex:pageBlockSection id="sectionReports" title="{!$Label.Reports}">
+        </apex:pageBlockSection>
         <apex:pageBlockSection id="sectionContracts" title="{!$Label.Contracts}" columns="1">
             <apex:form >
                 <apex:pageBlockTable value="{!contracts}" var="contract" id="contracts_list">
@@ -221,6 +231,28 @@
             </apex:actionFunction>
         </apex:form>
     </div>
+    <div id="chart">
+        <script>
+         var chart = c3.generate({
+        data: {
+        columns: [
+        ['data1', 75],
+        ['data2', 120],
+        ],
+        type : 'donut',
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+        },
+        donut: {
+        title: "Iris Petal Width"
+        }
+        });
+
+        </script>
+
+    </div>
+
     <script type="text/javascript">
     function checkHideModal(isAnyError) {
             let errors = document.getElementById(messageID).textContent;
@@ -301,6 +333,26 @@
                     }
                 }
             }
+
+            var chart = c3.generate({
+           data: {
+               columns: [
+                   ['data1', 75],
+                   ['data2', 120],
+               ],
+               type : 'donut',
+               onclick: function (d, i) { console.log("onclick", d, i); },
+               onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+               onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+           },
+           donut: {
+               title: "Iris Petal Width"
+           }
         });
+
+
+        });
+
+
     </script>
 </apex:page>
