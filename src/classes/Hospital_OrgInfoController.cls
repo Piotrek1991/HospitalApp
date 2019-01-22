@@ -3,6 +3,10 @@
  */
 
 public class Hospital_OrgInfoController {
+    public User selectedUser { get; set; }
+    public List<LoginHistory> loginHistory { get; set; }
+    public String activateDeactivate { get; set; }
+    public String emailField { get; set; }
     public User currentUser { get; set; }
     public List<User> usersInOrg { get; set; }
     public Integer numberOfActiveUser { get; set; }
@@ -20,6 +24,7 @@ public class Hospital_OrgInfoController {
         orgId = getOrgId();
         getOrganizationInfo();
         sfdcURL = URL.getSalesforceBaseUrl().toExternalForm() + '/';
+        loginHistory = new List<LoginHistory>();
     }
 
     public void getUser() {
@@ -66,7 +71,52 @@ public class Hospital_OrgInfoController {
     public Integer getTotalNumberOfUserLicense(){
         return [SELECT COUNT() FROM UserLicense];
     }
-//
+
+    public void generateUserAndHistory() {
+        emailField = '';
+
+        for (User user : usersInOrg) {
+            if (user.Id.equals(selectedUserId)) {
+                selectedUser = user;
+                break;
+            }
+        }
+        if (selectedUser.IsActive) {
+            activateDeactivate = 'Deactivate';
+        } else {
+            activateDeactivate = 'Activate';
+        }
+        loginHistory = [
+                SELECT
+                        UserId,
+                        LoginTime,
+                        SourceIp,
+                        Platform,
+                        Browser
+                FROM LoginHistory
+                WHERE UserId = :selectedUserId
+                AND LoginTime = LAST_N_DAYS:30
+                ORDER BY LoginTime DESC
+                LIMIT 1000
+        ];
+    }
+
+    public void changeEmail() {
+        if(String.isNotBlank(emailField)) {
+            selectedUser.Email = emailField;
+            update selectedUser;
+
+            usersInOrg = getAllUsersFromOrg();
+        }
+    }
+
+    public void changeEmailResetPassword() {
+        changeEmail();
+        if (String.isNotBlank(emailField)) {
+            resetPassword();
+        }
+    }
+
     public PageReference goToApexPage(){
         PageReference apexClassesPage = Page.Hospital_OrgInfoApexClasses;
         apexClassesPage.getParameters().put('pageReferenceURL', ApexPages.currentPage().getUrl());
@@ -83,4 +133,11 @@ public class Hospital_OrgInfoController {
         return apexClassesPage;
     }
 
+    public PageReference goToJobsPage(){
+        PageReference jobsPage = Page.Hospital_OrgInfoJobs;
+        jobsPage.getParameters().put('pageReferenceURL', ApexPages.currentPage().getUrl());
+        jobsPage.setRedirect(true);
+
+        return jobsPage;
+    }
 }
