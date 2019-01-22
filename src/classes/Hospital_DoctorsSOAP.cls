@@ -14,6 +14,28 @@ global class Hospital_DoctorsSOAP {
         return doctorsWrapperForSOAP;
     }
 
+    webService static List<Hospital_DoctorWrapperForSOAP> getAllDoctors() {
+        String query = 'SELECT Id, First_Name__c, Last_Name__c, City__c, Country__c FROM Doctor__c';
+        List<Doctor__c> doctors = Database.query(query);
+        List<Hospital_DoctorWrapperForSOAP> doctorsWrapperForSOAP = new List<Hospital_DoctorWrapperForSOAP>();
+
+        for (Doctor__c doctor : doctors) {
+            doctorsWrapperForSOAP.add(new Hospital_DoctorWrapperForSOAP(doctor));
+        }
+        return doctorsWrapperForSOAP;
+    }
+
+    webService static List<Hospital_DoctorWrapperForSOAP> getDoctorFromPoland() {
+        String query = 'SELECT Id, First_Name__c, Last_Name__c, City__c, Country__c FROM Doctor__c WHERE Country__c = \'PL\'';
+        List<Doctor__c> doctors = Database.query(query);
+        List<Hospital_DoctorWrapperForSOAP> doctorsWrapperForSOAP = new List<Hospital_DoctorWrapperForSOAP>();
+
+        for (Doctor__c doctor : doctors) {
+            doctorsWrapperForSOAP.add(new Hospital_DoctorWrapperForSOAP(doctor));
+        }
+        return doctorsWrapperForSOAP;
+    }
+
     webService static Hospital_DoctorWrapperForSOAP upsertDoctor(String doctorId, String firstName, String lastName, String city, String country) {
         Doctor__c doctor = new Doctor__c();
         if (String.isNotBlank(doctorId)) {

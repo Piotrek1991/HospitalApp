@@ -8,14 +8,16 @@ public class Hospital_OrgInfoController {
     public String activateDeactivate { get; set; }
     public String emailField { get; set; }
     public User currentUser { get; set; }
+    public Doctor__c doctor { get; set; }
     public List<User> usersInOrg { get; set; }
     public Integer numberOfActiveUser { get; set; }
     public String orgId { get; set; }
     public String selectedUserId { get; set; }
     public String thisInstancesName { get; set; }
     public String sfdcURL { get; set; }
-    public String sessionId { get{return UserInfo.getSessionId();} set; }
-    public Integer userLicense { get{return getTotalNumberOfUserLicense();} set; }
+    public String sessionId { get {return UserInfo.getSessionId();} set; }
+    public Integer userLicense { get {return getTotalNumberOfUserLicense();} set; }
+    public Boolean isAnyInsertProblem { get; set; }
 
     public Hospital_OrgInfoController() {
         getUser();
@@ -25,6 +27,8 @@ public class Hospital_OrgInfoController {
         getOrganizationInfo();
         sfdcURL = URL.getSalesforceBaseUrl().toExternalForm() + '/';
         loginHistory = new List<LoginHistory>();
+        selectedUser = new User();
+        isAnyInsertProblem = true;
     }
 
     public void getUser() {
@@ -59,28 +63,31 @@ public class Hospital_OrgInfoController {
         numberOfActiveUser = getAmountActiveUser();
     }
 
-    public void getOrganizationInfo(){
+    public void getOrganizationInfo() {
         Organization orgInfo = [SELECT Id, InstanceName FROM Organization];
         thisInstancesName = orgInfo.InstanceName;
     }
 
-    public void resetPassword(){
-        System.resetPassword(selectedUserId,true);
+    public void resetPassword() {
+        System.resetPassword(selectedUserId, true);
     }
 
-    public Integer getTotalNumberOfUserLicense(){
+    public Integer getTotalNumberOfUserLicense() {
         return [SELECT COUNT() FROM UserLicense];
     }
 
     public void generateUserAndHistory() {
+        isAnyInsertProblem = true;
         emailField = '';
+        System.debug('selectedUser' + selectedUser);
 
-        for (User user : usersInOrg) {
-            if (user.Id.equals(selectedUserId)) {
-                selectedUser = user;
+        for (User oneUser : usersInOrg) {
+            if (oneUser.Id.equals(selectedUserId)) {
+                selectedUser = oneUser;
                 break;
             }
         }
+        System.debug('selectedUser' + selectedUser);
         if (selectedUser.IsActive) {
             activateDeactivate = 'Deactivate';
         } else {
@@ -102,22 +109,22 @@ public class Hospital_OrgInfoController {
     }
 
     public void changeEmail() {
-        if(String.isNotBlank(emailField)) {
-            selectedUser.Email = emailField;
+        try {
+            isAnyInsertProblem = false;
             update selectedUser;
-
-            usersInOrg = getAllUsersFromOrg();
+        } catch (Exception ex){
+            isAnyInsertProblem = true;
         }
+        System.debug('isAnyInsertProblem >>'+ isAnyInsertProblem);
+        usersInOrg = getAllUsersFromOrg();
     }
 
     public void changeEmailResetPassword() {
         changeEmail();
-        if (String.isNotBlank(emailField)) {
-            resetPassword();
-        }
+        resetPassword();
     }
 
-    public PageReference goToApexPage(){
+    public PageReference goToApexPage() {
         PageReference apexClassesPage = Page.Hospital_OrgInfoApexClasses;
         apexClassesPage.getParameters().put('pageReferenceURL', ApexPages.currentPage().getUrl());
         apexClassesPage.setRedirect(true);
@@ -125,7 +132,7 @@ public class Hospital_OrgInfoController {
         return apexClassesPage;
     }
 
-    public PageReference goToVisualforcePage(){
+    public PageReference goToVisualforcePage() {
         PageReference apexClassesPage = Page.Hospital_OrgInfoPages;
         apexClassesPage.getParameters().put('pageReferenceURL', ApexPages.currentPage().getUrl());
         apexClassesPage.setRedirect(true);
@@ -133,7 +140,7 @@ public class Hospital_OrgInfoController {
         return apexClassesPage;
     }
 
-    public PageReference goToJobsPage(){
+    public PageReference goToJobsPage() {
         PageReference jobsPage = Page.Hospital_OrgInfoJobs;
         jobsPage.getParameters().put('pageReferenceURL', ApexPages.currentPage().getUrl());
         jobsPage.setRedirect(true);

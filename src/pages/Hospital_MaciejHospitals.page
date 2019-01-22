@@ -22,8 +22,6 @@
         .message {
             opacity: 1
         }
-
-
     </style>
     <apex:slds/>
     <apex:outputPanel id="messages">
@@ -177,7 +175,7 @@
                         <div class="slds-truncate"
                              title="{!$ObjectType.Hospital__c.fields.City__c.label}">
                             <apex:form>
-                                <apex:commandLink action="{! sortByCity }"
+                                <apex:commandLink action="{!sortByCity}"
                                                   reRender="modalEditDoc, modalHeader, hospitalsResultsPanelList"
                                                   style="text-decoration: none; color: #514F4D;">
                                     <span>{!$ObjectType.Hospital__c.fields.City__c.label}</span>
@@ -191,7 +189,7 @@
                         <div class="slds-truncate"
                              title="{!$ObjectType.Hospital__c.fields.Country__c.label}">
                             <apex:form>
-                                <apex:commandLink action="{! sortByCountry }"
+                                <apex:commandLink action="{!sortByCountry}"
                                                   reRender="modalEditDoc, modalHeader, hospitalsResultsPanelList"
                                                   style="text-decoration: none; color: #514F4D;">
                                     <span>{!$ObjectType.Hospital__c.fields.Country__c.label}</span>
@@ -233,13 +231,11 @@
                                  title="{!$ObjectType.Hospital__c.fields.Name.label}">{!hosp.name}
                             </div>
                         </td>
-
                         <td data-label="{!$ObjectType.Hospital__c.fields.City__c.label}">
                             <div class="slds-truncate"
                                  title="{!$ObjectType.Hospital__c.fields.City__c.label}">{!hosp.city}
                             </div>
                         </td>
-
                         <td data-label="{!$ObjectType.Hospital__c.fields.Country__c.label}">
                             <div class="slds-truncate"
                                  title="{!$ObjectType.Hospital__c.fields.Country__c.label}">{!hosp.country}

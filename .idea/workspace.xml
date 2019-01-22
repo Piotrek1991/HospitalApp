@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baa6cb16-da58-4406-adfa-303923bf028f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_OrgInfoJobsController.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Hospital_OrgInfoJobsController.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Hospital_OrgInfoJobs.page" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Hospital_OrgInfoJobs.page-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hospital project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Hospital project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_OrgInfoApexClassesController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_OrgInfoApexClassesController.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_DoctorsSOAP.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_DoctorsSOAP.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_HospitalSOAP.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_HospitalSOAP.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/Hospital_OrgInfoController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_OrgInfoController.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Hospital_OrgInfoPagesController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Hospital_OrgInfoPagesController.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Hospital_MaciejHospitals.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Hospital_MaciejHospitals.page" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Hospital_OrgInfo.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Hospital_OrgInfo.page" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Hospital_OrgInfoApexClasses.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Hospital_OrgInfoApexClasses.page" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Hospital_OrgInfoJobs.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Hospital_OrgInfoJobs.page" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Hospital_OrgInfoPages.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Hospital_OrgInfoPages.page" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,60 +27,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/Hospital_OrgInfo.page">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="831">
-              <caret line="419" column="18" lean-forward="true" selection-start-line="383" selection-start-column="12" selection-end-line="419" selection-end-column="18" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#apex:form#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#2;n#apex:form#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#apex:outputPanel#0;n#apex:outputPanel#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#2;n#apex:form#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#apex:form#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
-                <element signature="n#div#3;n#apex:form#0;n#div#0;n#apex:page#0;n#!!top" />
-                <element signature="n#style#0;n#div#4;n#apex:form#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#apex:page#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Hospital_OrgInfoJobs.page">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="10" lean-forward="true" selection-end-line="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/classes/Hospital_OrgInfoJobsController.cls">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/classes/Hospital_OrgInfoController.cls">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="117" column="5" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
+            <state relative-caret-position="779">
+              <caret line="139" column="31" selection-end-line="149" selection-end-column="1" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#1072#1086#0" expanded="true" />
+                <element signature="e#1128#1142#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/IlluminatedCloud/New_Connection1/OfflineSymbolTable.zip!/LoginHistory.cls">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/Hospital_OrgInfo.page">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="-5990">
+              <caret line="160" column="54" lean-forward="true" selection-start-line="160" selection-start-column="54" selection-end-line="160" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -105,16 +66,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>titl</find>
-      <find>Login To Maciejs Clinic Exception &gt;&gt;</find>
-      <find>hospitalSearchData</find>
-      <find>edit</find>
-      <find>generateQuery</find>
-      <find>External_Id__c</find>
-      <find>delete</find>
-      <find>checkHideDeleteToast</find>
-      <find>delet</find>
-      <find>showToast</find>
       <find>confirmationDialog</find>
       <find>deser</find>
       <find>insert</find>
@@ -129,12 +80,22 @@
       <find>map</find>
       <find>chart</find>
       <find>catch</find>
-      <find>ca</find>
       <find>catc</find>
       <find>CreatedBy</find>
       <find>date</find>
       <find>jobs</find>
       <find>apex:for</find>
+      <find>do_you</find>
+      <find>ca</find>
+      <find>cat</find>
+      <find>checkIsNotBlank</find>
+      <find>selectedUser</find>
+      <find>modalEditOutputPanel</find>
+      <find>isAnyInsertProblem</find>
+      <find>clearFieldsAndResultHospitalSearch</find>
+      <find>hideModal</find>
+      <find>isany</find>
+      <find>displa</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -143,8 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/build/objects/Hospital__c.object" />
-        <option value="$PROJECT_DIR$/build/tests/package.xml" />
         <option value="$PROJECT_DIR$/build/classes/Hospital_Utils.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_MaciejHospitalsControllerTest.cls" />
         <option value="$PROJECT_DIR$/src/pages/Hospital_MaciejDoctors.page" />
@@ -173,7 +132,6 @@
         <option value="$PROJECT_DIR$/src/classes/ITrigger.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalBatch.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_ContractSearchController.cls" />
-        <option value="$PROJECT_DIR$/src/pages/Hospital_MaciejHospitals.page" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_MaciejHospitalsController.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_MaciejDoctorsController.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_DoctorProfileImageController.cls" />
@@ -186,13 +144,16 @@
         <option value="$PROJECT_DIR$/src/classes/Hospital_TriggerFactory.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalTriggerHandler.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_DoctorViewPageController.cls" />
-        <option value="$PROJECT_DIR$/src/pages/Hospital_OrgInfoApexClasses.page" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_OrgInfoApexClassesController.cls" />
-        <option value="$PROJECT_DIR$/src/pages/Hospital_OrgInfoPages.page" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_OrgInfoPagesController.cls" />
-        <option value="$PROJECT_DIR$/src/pages/Hospital_OrgInfoJobs.page" />
-        <option value="$PROJECT_DIR$/src/classes/Hospital_OrgInfoController.cls" />
         <option value="$PROJECT_DIR$/src/classes/Hospital_OrgInfoJobsController.cls" />
+        <option value="$PROJECT_DIR$/src/classes/Hospital_HospitalSOAP.cls" />
+        <option value="$PROJECT_DIR$/src/classes/Hospital_DoctorsSOAP.cls" />
+        <option value="$PROJECT_DIR$/src/pages/Hospital_OrgInfoApexClasses.page" />
+        <option value="$PROJECT_DIR$/src/pages/Hospital_OrgInfoJobs.page" />
+        <option value="$PROJECT_DIR$/src/pages/Hospital_OrgInfoPages.page" />
+        <option value="$PROJECT_DIR$/src/pages/Hospital_MaciejHospitals.page" />
+        <option value="$PROJECT_DIR$/src/classes/Hospital_OrgInfoController.cls" />
         <option value="$PROJECT_DIR$/src/pages/Hospital_OrgInfo.page" />
       </list>
     </option>
@@ -203,7 +164,7 @@
         <entry key="Hospital project">
           <value>
             <ModuleWorkspaceSettings>
-              <option name="moduleContentsLastModified" value="1548111612631" />
+              <option name="moduleContentsLastModified" value="1548151100619" />
               <option name="serverMetadataLastPopulated" value="1548072097401" />
             </ModuleWorkspaceSettings>
           </value>
@@ -330,7 +291,7 @@
                       <entry key="CLASSES/HOSPITAL_DOCTORPUBLICSITECONTROLLER.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_DOCTORQUERYBUILDER.CLS" value="1546689612636" />
                       <entry key="CLASSES/HOSPITAL_DOCTORSEARCHCONTROLLER.CLS" value="1546591318935" />
-                      <entry key="CLASSES/HOSPITAL_DOCTORSSOAP.CLS" value="1546951768578" />
+                      <entry key="CLASSES/HOSPITAL_DOCTORSSOAP.CLS" value="1548152956688" />
                       <entry key="CLASSES/HOSPITAL_DOCTORSSOAPTEST.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_DOCTORUTILS.CLS" value="1547763604485" />
                       <entry key="CLASSES/HOSPITAL_DOCTORVIEWPAGECONTROLLER.CLS" value="1548097061132" />
@@ -346,6 +307,7 @@
                       <entry key="CLASSES/HOSPITAL_HOSPITALHIERARCHYCONTROLLER.CLS" value="1546591318935" />
                       <entry key="CLASSES/HOSPITAL_HOSPITALREST.CLS" value="1548072142850" />
                       <entry key="CLASSES/HOSPITAL_HOSPITALSCHEDULE.CLS" value="1548072142850" />
+                      <entry key="CLASSES/HOSPITAL_HOSPITALSOAP.CLS" value="1548152299755" />
                       <entry key="CLASSES/HOSPITAL_HOSPITALTRIGGERHANDLER.CLS" value="1548075280053" />
                       <entry key="CLASSES/HOSPITAL_HOSPITALWRAPPERFORREST.CLS" value="1548072142850" />
                       <entry key="CLASSES/HOSPITAL_LOGSBATCHDELETE.CLS" value="1548072142850" />
@@ -359,7 +321,7 @@
                       <entry key="CLASSES/HOSPITAL_MACIEJHOSPITALSINGLEREQUESTMOCK.CLS" value="1546937034100" />
                       <entry key="CLASSES/HOSPITAL_MACIEJHOSPITALSMULTIMOCK.CLS" value="1546987730409" />
                       <entry key="CLASSES/HOSPITAL_ORGINFOAPEXCLASSESCONTROLLER.CLS" value="1548110825512" />
-                      <entry key="CLASSES/HOSPITAL_ORGINFOCONTROLLER.CLS" value="1548150033442" />
+                      <entry key="CLASSES/HOSPITAL_ORGINFOCONTROLLER.CLS" value="1548173914801" />
                       <entry key="CLASSES/HOSPITAL_ORGINFOJOBSCONTROLLER.CLS" value="1548150338099" />
                       <entry key="CLASSES/HOSPITAL_ORGINFOPAGESCONTROLLER.CLS" value="1548111689290" />
                       <entry key="CLASSES/HOSPITAL_PARTNERSOAPSFORCECOM.CLS" value="1546591318935" />
@@ -399,11 +361,11 @@
                       <entry key="PAGES/HOSPITAL_HOSPITALVIEW.PAGE" value="1548071510745" />
                       <entry key="PAGES/HOSPITAL_LOGSFROMWEBSERVICE.PAGE" value="1548072142850" />
                       <entry key="PAGES/HOSPITAL_MACIEJDOCTORS.PAGE" value="1547460449042" />
-                      <entry key="PAGES/HOSPITAL_MACIEJHOSPITALS.PAGE" value="1548004957100" />
-                      <entry key="PAGES/HOSPITAL_ORGINFO.PAGE" value="1548150965616" />
-                      <entry key="PAGES/HOSPITAL_ORGINFOAPEXCLASSES.PAGE" value="1548110573108" />
-                      <entry key="PAGES/HOSPITAL_ORGINFOJOBS.PAGE" value="1548146163631" />
-                      <entry key="PAGES/HOSPITAL_ORGINFOPAGES.PAGE" value="1548111128230" />
+                      <entry key="PAGES/HOSPITAL_MACIEJHOSPITALS.PAGE" value="1548166250796" />
+                      <entry key="PAGES/HOSPITAL_ORGINFO.PAGE" value="1548176868988" />
+                      <entry key="PAGES/HOSPITAL_ORGINFOAPEXCLASSES.PAGE" value="1548159695233" />
+                      <entry key="PAGES/HOSPITAL_ORGINFOJOBS.PAGE" value="1548159790385" />
+                      <entry key="PAGES/HOSPITAL_ORGINFOPAGES.PAGE" value="1548159891276" />
                       <entry key="STATICRESOURCES/RESOURCE.RESOURCE" value="1546521443432" />
                       <entry key="TRIGGERS/HOSPITAL_CONTRACT.TRIGGER" value="1546520878867" />
                       <entry key="TRIGGERS/HOSPITAL_DOCTORCONFIRMATION.TRIGGER" value="1546520878867" />
@@ -3436,11 +3398,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2711" />
-    <option name="y" value="137" />
-    <option name="width" value="792" />
-    <option name="height" value="364" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-7" />
+    <option name="y" value="-7" />
+    <option name="width" value="1550" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -3492,7 +3454,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548151021473" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548177107543" />
     <property name="last_opened_file_path" value="C:/#PROGRAMOWANIE/cdlibrary8" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -3886,7 +3848,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548101802208</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="add orgInfo page with controller">
+      <created>1548151130047</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1548151130047</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -3934,10 +3903,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.1924307" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.24307036" />
       <window_info id="Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -4030,7 +3999,8 @@
     <MESSAGE value="one and second chart work" />
     <MESSAGE value="one and second work good" />
     <MESSAGE value="add orginfopage, orginfoapexclass" />
-    <option name="LAST_COMMIT_MESSAGE" value="add orginfopage, orginfoapexclass" />
+    <MESSAGE value="add orgInfo page with controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="add orgInfo page with controller" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -4044,40 +4014,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorWrapperForSOAP.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalHierarchyController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalEditController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="14" column="63" selection-start-line="14" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorSearchController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorPublicSiteController.cls">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -4091,15 +4027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1782">
           <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorHireController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -4154,13 +4081,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="5" column="93" selection-start-line="5" selection-start-column="93" selection-end-line="5" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_ErrorsBatchDelete.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -4232,16 +4152,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_Utils.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Hospital_DoctorView.page">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3124">
@@ -4288,16 +4198,6 @@
         <state relative-caret-position="-877" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorImportController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/IlluminatedCloud/New_Connection1/OfflineSymbolTable.zip!/System/Datetime.cls">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -4326,16 +4226,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_MaciejHospitalsController.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="165" column="16" selection-start-line="165" selection-start-column="16" selection-end-line="165" selection-end-column="16" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/IlluminatedCloud/New_Connection1/OfflineSymbolTable.zip!/ApexClass.cls">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -4350,20 +4240,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Hospital_MaciejHospitals.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="211" column="74" lean-forward="true" selection-start-line="211" selection-start-column="74" selection-end-line="211" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Hospital_OrgInfoApexClasses.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/Hospital_OrgInfoPagesController.cls">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -4371,17 +4247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="25" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Hospital_OrgInfoPages.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="108" column="23" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="108" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#apex:commandLink#0;n#apex:form#0;n#div#0;n#td#0;n#tr#0;n#apex:repeat#0;n#tbody#0;n#table#0;n#apex:outputPanel#0;n#apex:page#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#apex:page#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4435,21 +4300,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_OrgInfoController.cls">
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalSOAP.cls">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="117" column="5" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
+        <state relative-caret-position="682">
+          <caret line="33" column="92" selection-start-line="33" selection-start-column="92" selection-end-line="33" selection-end-column="92" />
+          <folding>
+            <element signature="e#1302#1333#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorWrapperForSOAP.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_HospitalWrapperForREST.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="32" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#1072#1086#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorsSOAP.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-920">
+          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#403#434#0" expanded="true" />
+            <element signature="e#937#968#0" expanded="true" />
+            <element signature="e#1458#1489#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Hospital_OrgInfoJobs.page">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="10" lean-forward="true" selection-end-line="68" />
+        <state relative-caret-position="198">
+          <caret line="9" column="73" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Hospital_OrgInfoPages.page">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="81" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Hospital_OrgInfoApexClasses.page">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-641">
+          <caret line="89" column="36" lean-forward="true" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_ErrorsBatchDelete.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_Utils.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-697">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorImportController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="55" column="34" lean-forward="true" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_DoctorHireController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -4460,19 +4405,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Hospital_MaciejHospitals.page">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="44" column="77" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="77" />
+          <folding>
+            <element signature="n#style#0;n#div#4;n#apex:page#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_MaciejHospitalsController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Hospital_OrgInfoController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="139" column="31" selection-end-line="149" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#1128#1142#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Hospital_OrgInfo.page">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="419" column="18" lean-forward="true" selection-start-line="383" selection-start-column="12" selection-end-line="419" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#apex:form#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#2;n#apex:form#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#apex:outputPanel#0;n#apex:outputPanel#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#2;n#apex:form#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#apex:form#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
-            <element signature="n#div#3;n#apex:form#0;n#div#0;n#apex:page#0;n#!!top" />
-            <element signature="n#style#0;n#div#4;n#apex:form#0;n#div#0;n#apex:page#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#apex:page#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="-5990">
+          <caret line="160" column="54" lean-forward="true" selection-start-line="160" selection-start-column="54" selection-end-line="160" selection-end-column="54" />
         </state>
       </provider>
     </entry>

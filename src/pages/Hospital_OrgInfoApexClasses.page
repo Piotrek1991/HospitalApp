@@ -13,7 +13,7 @@
     <div class="slds-page-header" role="banner">
         <div class="slds-grid">
             <div class="slds-col">
-                <h1 class="slds-text-heading--medium">Apex Classes</h1>
+                <h1 class="slds-text-heading--medium">{!$Label.Apex_Classes}</h1>
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
                 </th>
                 <th class="slds-text-title_caps" scope="col">
                     <div class="slds-truncate"
-                         title="Created By">Created By
+                         title="{!$Label.Created_By}">{!$Label.Created_By}
                     </div>
                 </th>
                 <th class="slds-text-title_caps" scope="col">
@@ -51,7 +51,7 @@
                 </th>
                 <th class="slds-text-title_caps" scope="col">
                     <div class="slds-truncate"
-                         title="Last Modified By">Last Modified By
+                         title="{!$Label.Last_Modified_By}">{!$Label.Last_Modified_By}
                     </div>
                 </th>
             </tr>
@@ -87,9 +87,9 @@
                              title="{!$ObjectType.ApexClass.Fields.CreatedDate.Label}">{!oneClass.CreatedDate}
                         </div>
                     </td>
-                    <td data-label="Created By">
+                    <td data-label="{!$Label.Created_By}">
                         <div class="slds-truncate"
-                             title="Created By">{!oneClass.CreatedBy.Name}
+                             title="{!$Label.Created_By}">{!oneClass.CreatedBy.Name}
                         </div>
                     </td>
                     <td data-label="{!$ObjectType.ApexClass.Fields.LastModifiedDate.Label}">
@@ -97,9 +97,9 @@
                              title="{!$ObjectType.ApexClass.Fields.LastModifiedDate.Label}">{!oneClass.LastModifiedDate}
                         </div>
                     </td>
-                    <td data-label="{!$ObjectType.ApexClass.Fields.LastModifiedDate.Label}">
+                    <td data-label="{!$Label.Last_Modified_By}">
                         <div class="slds-truncate"
-                             title="Last Modified By">{!oneClass.LastModifiedBy.Name}
+                             title="{!$Label.Last_Modified_By}">{!oneClass.LastModifiedBy.Name}
                         </div>
                     </td>
                 </tr>

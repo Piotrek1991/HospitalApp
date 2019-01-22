@@ -7,7 +7,7 @@
     <div class="slds-page-header" role="banner">
         <div class="slds-grid">
             <div class="slds-col">
-                <h1 class="slds-text-heading--medium">Apex Jobs</h1>
+                <h1 class="slds-text-heading--medium">{!$Label.Apex_Jobs}</h1>
             </div>
         </div>
     </div>
